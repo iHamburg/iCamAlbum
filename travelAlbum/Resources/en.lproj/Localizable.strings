@@ -1,0 +1,42 @@
+/* 
+  Localizable.strings
+  XappTravelAlbum
+
+  Created by  on 21.01.12.
+  Copyright (c) 2012 Xappsoft. All rights reserved.
+*/
+
+/* Standard */
+
+"Dismiss" = "Dismiss";
+"Done" = "Done";
+"Contact" = "Contact";
+"Rate" = "Rate";
+"Lock" = "Lock";
+"Unlock" = "Unlock";
+"Cancel" = "Cancel";
+
+/* root */
+
+"rateTitle" = "If you like Travel Album, please rate it on the App Store.\nThanks";
+"ratenow"   = "Rate Now";
+"ratelater" = "Remind Me Later";
+"rateno"    = "No, Thanks";
+
+
+ 
+
+/* InfoVC */
+
+"Instruction" = "Instruction";
+"Rate Us" = "Rate Us";
+"Support" = "Support";
+"Share on Facebook" = "Share on Facebook";
+"Share on Twitter" = "Share on Twitter";
+
+/* share */
+"Save in photo album" = "Save in photo album";
+
+/* Instruction*/
+
+"Favorite list is leer." = "Favorite list is leer.";

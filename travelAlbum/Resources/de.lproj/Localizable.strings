@@ -1,0 +1,53 @@
+/* 
+  Localizable.strings
+  XappTravelAlbum
+
+  Created by  on 21.01.12.
+  Copyright (c) 2012 Xappsoft. All rights reserved.
+*/
+"Dismiss" = "Zurück";
+"Done" = "Fertig";
+"Contact" = "Kontakt";
+"Rate" = "Bewerte";
+"Lock" = "Sperren";
+"Unlock" = "Freischalten";
+"Cancel" = "Abbrechen";
+
+/* root */
+
+"rateTitle" = "Wenn du es mag, bitte bewerte es.\n Danke!";
+"ratenow"   = "Rate Now";
+"ratelater" = "Remind Me Later";
+"rateno"    = "No, Thanks";
+
+
+/*---------- My ecard ----------------------*/
+/*rootVC*/
+"PhotoActionTitel" = "Für die Mehrfachauswahl von Fotos verlangt Apple die Einwilligung auf die Standortdaten. Erst dann haben Apps Zugriff auf das Fotoalbum. Es werden keine Daten in irgendeiner Weise in der App gesammelt.\n\nDer Lokalisierungsdienst kann jeder Zeit unter Einstellungen -> Ortungsdienste eingeschaltet bzw. ausgeschaltet werden.";
+"SavePNGAlertTitle" = "Gespeichert!";
+
+"AddAlertTitle" = "Sind Sie sicher, alle Inhalte zu verwerfen und neu aufzubauen?";
+"TextLabelTitel" = "Text";
+"ZettelTitel" = "Segensworter";
+"StickerTitel" = "Animierte Dekoration";
+
+"emailPNG" = "E-Mail";
+"Save PNG" = "Zum Album hinzufügen";
+"emailText1" = "Diese Karte wurde mit ";
+"emailText2" = " erstellt.";
+
+
+//----------------- InfoVC
+
+
+
+
+//"InformationTitle" = "Hilfe & Kontakt";
+//"InformationText" = "\n • Rotation\n\nBild mit 2 Fingern drehen\n\n • Skalieren\n\nBild mit 2 Fingern vergrößern oder verkleinern\n\n • Kopien\n\n2 x Tippen um Bild zu kopieren\n\n • Löschen\n\nBild einfach mit Finger ziehen und wegwerfen\n\n • Text bearbeiten\n\n1xTipp für iPad bzw. 2xTipp für iPhone/iPod auf den vorhandenen Text zu bearbeiten\n\n • Sperren, Freischalten und Bild als Hintergrund einzurichten\n\nLange drücken auf das Objekt";
+//"InfoEmailSubject" = "Feedback für My eCard";
+
+
+
+/*My View*/
+"As Background" = "Als Hintergrund";
+"Default Background" = "Zurück zu den ursprünglichen Hintergrund";

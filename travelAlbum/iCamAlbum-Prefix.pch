@@ -1,0 +1,48 @@
+//
+// Prefix header for all source files of the 'travelAlbum' target in the 'travelAlbum' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+
+#import "Protocols.h"
+#import "Config.h"
+
+#define kManagerShareSaveImgs LString(@"Save  images in photo album")
+#define kManagerShareFB       LString(@"Share images to Facebook")
+#define kManagerSharePDF      LString(@"Share PDF per Email")
+#define kManagerShareApp      LString(@"Share PDF to other Apps")
+#define kManagerShareSendImgs LString(@"Share images per Email")
+
+#define SEnterAlbumName       LString(@"Enter the name of the album")
+#define SDefaultAlbumName     LString(@"Default Album name")
+#define SSetupPW              LString(@"Setup password")
+#define SEnterPWAgain         LString(@"Enter the password again")
+#define SEnterPWToLock        LString(@"Unlock this album")
+#define SEnterPWToValidate    LString(@"Enter the password")
+#define SDeleteAlbum          LString(@"Delete this album?")
+#define SPWNotMatch           LString(@"Error: Passwords don't match")
+#define SEnterWrongPW         LString(@"Error: wrong password")
+#define SNoFavoritedAlbum     LString(@"Warning: No favorited album")
+#define SShowFavoriteList     LString(@"Show favorites")
+#define SAddToFavorite        LString(@"Add to favorites")
+#define SRemoveFromFavorite   LString(@"Remove from favorites")
+#define SAlbumNameAlreadyUsed LString(@"This name is already used")
+
+#define SChangePhotoTitle     LString(@"Change Cover Photo")
+#define SShareText            LString(@"\nCreated via iCamAlbum by Xappsoft")
+
+
+#define SEnterCaption         LString(@"Enter the Caption")
+#define SDefaultCaptionText   LString(@"Add Caption")
+
+#define SMomentChangeBG       LString(@"Background")
+
+#endif

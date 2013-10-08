@@ -1,0 +1,13 @@
+//
+// Prefix header for all source files of the 'UnitTest' target in the 'UnitTest' project
+//
+
+#ifdef __OBJC__
+	#import <UIKit/UIKit.h>
+	#import <Foundation/Foundation.h>
+#import "Protocols.h"
+#import "Config.h"
+#import "Strings.h"
+#import "Utilities.h"
+
+#endif
