@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "VerticalInstructionViewController.h"
+#import "InstructionViewController.h"
 #import "MoreApp.h"
 
 @protocol InfoDelegate;
@@ -15,13 +15,8 @@
 @interface InfoViewController : UIViewController<InstructionDelegate>{
 
 	InstructionViewController *instructionVC;
-	
-	UIButton *backB,*aboutB,*recommendB,*supportB,*facebookB,*twitterB, *downloadB, *instructionB;
-	UIButton *myecardB,*tinyKitchenB,*ncsB, *firstAppB;
-	UIImageView *binder, *ribbon,*featureV;
-	UIScrollView *scrollView;
-	UILabel *otherAppL;
-	UITextView *textV;
+	UIButton *backB;
+
 
 	NSMutableArray *moreApps;
 

@@ -14,14 +14,19 @@
 @interface InstructionViewController : UIViewController<UIScrollViewDelegate>{
 	UIButton *backB;
 	UIPageControl *pageControl;
+    UIScrollView *scrollView;
     
+    NSArray *_imgNames;
     int numOfPages;
-	CGFloat w,h;
+    
+
     
     __unsafe_unretained id<InstructionDelegate> _delegate;
 }
 
 @property (nonatomic, unsafe_unretained) id<InstructionDelegate> delegate;
+@property (nonatomic, strong) NSArray *imgNames;
+
 
 @end
 

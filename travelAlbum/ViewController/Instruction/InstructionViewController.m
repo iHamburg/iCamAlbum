@@ -7,7 +7,6 @@
 //
 
 #import "InstructionViewController.h"
-#import "ViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface InstructionViewController ()
@@ -16,14 +15,12 @@
 
 @implementation InstructionViewController
 
-//@synthesize delegate;
-
 - (void)loadView{
 	self.view = [[UIView alloc]initWithFrame:_r];
 	UIImageView *bgV = [[UIImageView alloc]initWithFrame:self.view.bounds];
 
-	w = self.view.width;
-	h = self.view.height;
+//	w = self.view.width;
+//	h = self.view.height;
     numOfPages = 2;
 	
 	bgV.image = [UIImage imageWithSystemName:@"BG_1024.jpg"];
@@ -32,23 +29,23 @@
 	backB = [UIButton buttonWithFrame:isPad?CGRectMake(964, 5, wBackB, wBackB):CGRectMake(440, 10, wBackB, wBackB) title:nil imageName:@"icon_whiteClose.png" target:self action:@selector(buttonClicked:)];
 	
 	
-	UIScrollView *scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
+	scrollView = [[UIScrollView alloc]initWithFrame:self.view.bounds];
 
 	scrollView.backgroundColor = [UIColor clearColor];
 	scrollView.pagingEnabled = YES;
-	scrollView.contentSize = CGSizeMake(w*numOfPages, 0);
+	scrollView.contentSize = CGSizeMake(_w * numOfPages, 0);
 	scrollView.delegate = self;
 	
 	if (isPad||isPhone5) {
-		NSArray *imgNames = @[@"instruction_1.jpg",@"instruction_2.jpg"];
+//		NSArray *imgNames = @[@"instruction_1.jpg",@"instruction_2.jpg"];
 		
 		CGFloat wImage = isPad?947:400;
 		CGFloat hImage = isPad?658:300;
 		
 		for (int i = 0; i<numOfPages; i++) {
 			
-			UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(w*i+(w-wImage)/2, (h-hImage)/2, wImage, hImage)];
-			imgV.image = [UIImage imageWithSystemName:imgNames[i]];
+			UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(_w*i+(_w-wImage)/2, (_h-hImage)/2, wImage, hImage)];
+			imgV.image = [UIImage imageWithSystemName:_imgNames[i]];
 			imgV.layer.cornerRadius = hImage*0.05;
 			imgV.layer.masksToBounds = YES;
 			
@@ -63,15 +60,15 @@
 
 	}
 	else{ // iphone4 以下
-		NSArray *imgNames = @[@"instruction_960_1.jpg",@"instruction_960_2.jpg"];
+//		NSArray *imgNames = @[@"instruction_960_1.jpg",@"instruction_960_2.jpg"];
 		
 		CGFloat wImage = 480;
 		CGFloat hImage = 320;
 		
 		for (int i = 0; i<numOfPages; i++) {
 			
-			UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(w*i+(w-wImage)/2, (h-hImage)/2, wImage, hImage)];
-			imgV.image = [UIImage imageWithContentsOfFileName:imgNames[i]];
+			UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(_w * i+(_w - wImage)/2, (_h-hImage)/2, wImage, hImage)];
+			imgV.image = [UIImage imageWithContentsOfFileName:_imgNames[i]];
 			imgV.layer.cornerRadius = hImage*0.05;
 			imgV.layer.masksToBounds = YES;
 			
@@ -82,7 +79,7 @@
 	}
 		
 	CGFloat yPageControl = isPad?712:300;
-	pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, yPageControl, w, h-yPageControl)];
+	pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, yPageControl, _w, _h-yPageControl)];
 	pageControl.numberOfPages = numOfPages;
 	pageControl.userInteractionEnabled = NO;
 	
@@ -113,7 +110,7 @@
 
 #pragma mark - ScrollView & PageControl
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)_scrollView{
 	CGFloat xOffset = scrollView.contentOffset.x;
 	int page = xOffset/scrollView.width;
 	pageControl.currentPage = page;

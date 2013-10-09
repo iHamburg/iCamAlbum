@@ -138,6 +138,7 @@ CommandType _command;
 
 
 - (void)loadAdView {
+
     ///启动adview
     [AdView sharedInstance];
 }
@@ -522,7 +523,7 @@ CommandType _command;
 - (void)toInstruction{
 
 	if(!instructionVC){
-		instructionVC = [[VerticalInstructionViewController alloc]init];
+		instructionVC = [[iCAInstructionViewController alloc]init];
 		instructionVC.view.frame = self.view.bounds;
 		instructionVC.delegate = self;
 	}

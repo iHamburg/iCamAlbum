@@ -7,13 +7,10 @@
 //
 
 #import "EAInfoViewController.h"
-#import "MoreApp.h"
+#import "iCAInstructionViewController.h"
 #import "InfoMoreAppCell.h"
 #import "InfoCell.h"
 
-@interface EAInfoViewController ()
-
-@end
 
 @implementation EAInfoViewController
 
@@ -52,6 +49,7 @@
 		[moreApps addObject:app];
 	}
 }
+
 - (void)loadView{
     self.view = [[UIView alloc]initWithFrame:_r];
     self.view.backgroundColor = [UIColor whiteColor];
@@ -188,14 +186,23 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+#pragma mark - Navigation
+- (void)toInstruction{
+    
+    
+    instructionVC = [[iCAInstructionViewController alloc]init];
+    instructionVC.view.frame = self.view.bounds;
+    instructionVC.delegate = self;
+	
+	[self.view addSubview:instructionVC.view];
+}
+
 #pragma mark - Instruction
 - (void)instructionVCWillDismiss:(InstructionViewController *)vc{
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [instructionVC.view setOrigin:CGPointMake(0, -_h)];
     } completion:^(BOOL finished) {
-//
-//        [instructionVC.view removeFromSuperview];
-//        instructionVC = nil;
+
         [self performSelector:@selector(releaseInstruction) withObject:nil afterDelay:1]; 
     }];
 }

@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>71BE0161-CA9A-4764-9B1F-D3366F302E33</string>
+	<string>B6BAB5CF-1E94-47ED-BC76-B20A177A6667</string>
 	<key>IDESourceControlProjectName</key>
 	<string>iCamAlbum</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C1458B01-7AC6-4C5E-8EC6-5A3B5A380FB1</key>
-		<string>https://github.com/iHamburg/EverAlbum.git</string>
+		<key>3DB51F9B-EC67-44F0-845E-7780453F2B63</key>
+		<string>https://github.com/iHamburg/iCamAlbum.git</string>
 		<key>E9D0F794-7AEC-4CD5-9EB4-0FB671C036EC</key>
 		<string>https://github.com/iHamburg/UtilLib.git</string>
 	</dict>
@@ -19,26 +19,26 @@
 	<string>iCamAlbum.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C1458B01-7AC6-4C5E-8EC6-5A3B5A380FB1</key>
+		<key>3DB51F9B-EC67-44F0-845E-7780453F2B63</key>
 		<string>../..</string>
 		<key>E9D0F794-7AEC-4CD5-9EB4-0FB671C036EC</key>
 		<string>../../../../../Public/WorkProject/UtilLib</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/iHamburg/EverAlbum.git</string>
+	<string>https://github.com/iHamburg/iCamAlbum.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C1458B01-7AC6-4C5E-8EC6-5A3B5A380FB1</string>
+	<string>3DB51F9B-EC67-44F0-845E-7780453F2B63</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C1458B01-7AC6-4C5E-8EC6-5A3B5A380FB1</string>
+			<string>3DB51F9B-EC67-44F0-845E-7780453F2B63</string>
 			<key>IDESourceControlWCCName</key>
-			<string>EverAlbum</string>
+			<string>iCamAlbum</string>
 		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>

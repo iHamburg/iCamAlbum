@@ -57,11 +57,11 @@
     int maxNumOfAlbums;
     if (isPaid()||isIAPFullVersion) {
 		maxNumOfAlbums = 9999;
-        //		maxNumOfMoment = 9999;
+
 	}
 	else{
 		maxNumOfAlbums = 4;
-        //		maxNumOfMoment = 5;
+
 	}
     
     return maxNumOfAlbums;

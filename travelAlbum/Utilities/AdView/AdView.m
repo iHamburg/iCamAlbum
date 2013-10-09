@@ -39,16 +39,16 @@ static NSString *MY_BANNER_UNIT_ID=@"a15226a64014da4";   //iCA
     
     [[NSNotificationCenter defaultCenter]postNotificationName:NotificationAdChanged object:self];
 }
-
-- (BOOL)bannerLoaded{
-	if (_isIAD) {
-		return _iadView.bannerLoaded;
-	}
-	else{
-		return _isGADLoaded;
-	}
-    
-}
+//
+//- (BOOL)bannerLoaded{
+//	if (_isIAD) {
+//		return _iadView.bannerLoaded;
+//	}
+//	else{
+//		return _isGADLoaded;
+//	}
+//    
+//}
 
 #pragma mark -
 static id sharedInstance;

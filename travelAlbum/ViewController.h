@@ -10,7 +10,7 @@
 
 #import "FacebookManager.h"
 #import "SlideViewController.h"
-#import "InstructionViewController.h"
+#import "iCAInstructionViewController.h"
 #import "CoachView.h"
 #import "InfoViewController.h"
 

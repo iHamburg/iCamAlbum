@@ -32,7 +32,7 @@
 - (void)shareImage:(UIImage*)image type:(ShareType)type;
 - (void)saveImageInAlbum:(UIImage*)img;
 
-// pdf
+
 
 - (void)sharePDFWithOtherApp:(NSString*)fileName inRect:(CGRect)rect;
 - (void)sendPDFwithName:(NSString*)pdfName;
@@ -44,6 +44,7 @@
 - (void)toRate;
 - (void)linkToAppStoreWithID:(NSString*)appID;
 - (NSString*)stringFromShareType:(ShareType)type;
+
 @end
 
 
