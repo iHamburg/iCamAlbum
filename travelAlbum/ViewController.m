@@ -110,7 +110,6 @@ CommandType _command;
 		_containerRect = CGRectMake(44, 0, 480, 320);
 	}
     
-	_hAdBanner = isPad?66:32;
 }
 
 
@@ -122,14 +121,7 @@ CommandType _command;
 											   object: [UIApplication sharedApplication]];
 	
 	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleWillResignActive) name:UIApplicationWillResignActiveNotification object:[UIApplication sharedApplication]];
- 
-//    [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationIAPRestore object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-//        [self IAPDidFinished];
-//    }];
-//    
-//    [[NSNotificationCenter defaultCenter]addObserverForName:kNotificationIAPFinish object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
-//        [self IAPDidFinished];
-//    }];
+
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(IAPDidFinished) name:kNotificationIAPFinish object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(IAPDidFinished) name:kNotificationIAPRestore object:nil];

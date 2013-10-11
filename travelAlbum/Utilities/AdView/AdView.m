@@ -39,16 +39,7 @@ static NSString *MY_BANNER_UNIT_ID=@"a15226a64014da4";   //iCA
     
     [[NSNotificationCenter defaultCenter]postNotificationName:NotificationAdChanged object:self];
 }
-//
-//- (BOOL)bannerLoaded{
-//	if (_isIAD) {
-//		return _iadView.bannerLoaded;
-//	}
-//	else{
-//		return _isGADLoaded;
-//	}
-//    
-//}
+
 
 #pragma mark -
 static id sharedInstance;
@@ -60,8 +51,8 @@ static id sharedInstance;
     }
     
     if (sharedInstance == nil) {
-		
-		sharedInstance = [[[self class] alloc]initWithFrame:CGRectMake(0, 0, _w, _hAdBanner)];
+		CGFloat hBanner = isPad?66:32;
+		sharedInstance = [[[self class] alloc]initWithFrame:CGRectMake(0, _h, _w, hBanner)];
 	}
 	
 	return sharedInstance;
@@ -92,46 +83,46 @@ static id sharedInstance;
 												   object:nil];
 
 		
-		static NSSet* supportedCountries = nil;
-		if (supportedCountries == nil)
-		{
-			supportedCountries = [NSSet setWithObjects:
-								  @"ES", // spain
-								  @"US", // usa
-								  @"UK", // united kingdom
-								  @"CA", // canada
-								  @"FR", // france
-								  @"DE", // german
-								  @"IT", // italy
-								  @"JP", // japan
-								  nil];
-		}
-		
-		NSLocale* currentLocale = [NSLocale currentLocale];  // get the current locale.
-		NSString* countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
-		NSLog(@"contryCode # %@",countryCode);
-		
-		if ([supportedCountries containsObject:countryCode]) {
-			_iadAvailable = YES;
-		}
-		else{
-			_iadAvailable = NO;
-		}
-		
-		// 优先调用IAD
-		
-		
-		if (_iadAvailable) { // iad
-
-			[self setupIAD];
-		}
-		else{ //gad
-			[self setupGAD];
-		}
+//		static NSSet* supportedCountries = nil;
+//		if (supportedCountries == nil)
+//		{
+//			supportedCountries = [NSSet setWithObjects:
+//								  @"ES", // spain
+//								  @"US", // usa
+//								  @"UK", // united kingdom
+//								  @"CA", // canada
+//								  @"FR", // france
+//								  @"DE", // german
+//								  @"IT", // italy
+//								  @"JP", // japan
+//								  nil];
+//		}
+//		
+//		NSLocale* currentLocale = [NSLocale currentLocale];  // get the current locale.
+//		NSString* countryCode = [currentLocale objectForKey:NSLocaleCountryCode];
+//		NSLog(@"contryCode # %@",countryCode);
+//		
+//		if ([supportedCountries containsObject:countryCode]) {
+//			_iadAvailable = YES;
+//		}
+//		else{
+//			_iadAvailable = NO;
+//		}
+//		
+//		// 优先调用IAD
+//		
+//		
+//		if (_iadAvailable) { // iad
+//
+//			[self setupIAD];
+//		}
+//		else{ //gad
+//			[self setupGAD];
+//		}
 		
 		// 开始时hidden，等到载入iad时才显示
 //		self.hidden = YES;
-	
+	[self setupGAD];
 
     }
     return self;

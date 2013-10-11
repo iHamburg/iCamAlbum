@@ -26,8 +26,6 @@ extern NSString *const NotificationAdChanged;
 
 @property (nonatomic, assign) BOOL isAdDisplaying;
 
-//- (BOOL)bannerLoaded;
-
 
 @end
 

@@ -8,7 +8,7 @@
 
 #import "UtilLib.h"
 
-extern CGFloat _h,_w,_hAdBanner;
+extern CGFloat _h,_w;
 extern CGRect _r,_containerRect;
 
 extern BOOL isFirstOpen,isUpdateOpen;

@@ -151,7 +151,7 @@
 //			[svContainer setOrigin:CGPointMake(0, self.view.height - svContainer.height - banner.height)];
             
             //            NSLog(@"svContainer # %@",svContainer);
-            [banner setOrigin:CGPointMake(0, _h- _hAdBanner)];
+            [banner setOrigin:CGPointMake(0, _h- banner.height)];
             
 		}
 		else{

@@ -227,16 +227,14 @@
 
 - (void)layoutADBanner:(AdView *)banner{
     
-    if (!banner.isAdDisplaying) {
-        [banner setOrigin:CGPointMake(0, _h)];
-    }
+
 	[UIView animateWithDuration:0.25 animations:^{
 		
 		if (banner.isAdDisplaying) { // 从不显示到显示banner
 			
             
             //            NSLog(@"svContainer # %@",svContainer);
-            [banner setOrigin:CGPointMake(0, _h- _hAdBanner)];
+            [banner setOrigin:CGPointMake(0, _h- banner.height)];
             
 		}
 		else{

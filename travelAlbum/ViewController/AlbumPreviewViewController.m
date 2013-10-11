@@ -614,7 +614,7 @@
 		
 		if (banner.isAdDisplaying) { // 从不显示到显示banner
 			
-			[banner setOrigin:CGPointMake(0, _h- _hAdBanner)];
+			[banner setOrigin:CGPointMake(0, _h- banner.height)];
             [bottomBanner setOrigin:CGPointMake(30, _h -bottomBanner.height - banner.height)];
 
 			[root.view addSubview:banner];

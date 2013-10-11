@@ -2747,6 +2747,7 @@
 		26DF2104180511070082B196 /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
+				AF7C305716BDA6320002F3BA /* AdView */,
 				AF9DE2371605CE210029CEF9 /* InfoVC */,
 				AF9DE25B160610860029CEF9 /* Instruction */,
 				AF396EB716C17FD700613879 /* CoachView.h */,
@@ -2872,10 +2873,10 @@
 		AF12F83817A6578C00938805 /* 3rdLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				AFB9A59817ACFA1D00B60CFF /* Admob */,
 				26E5C0BE17F01EC900520692 /* ZDStickerView */,
 				264BF05E17C7B84D00C5A58F /* SMPageControl */,
 				AFB63CD717B278A1009E23EF /* kxMenu */,
-				AF7C305716BDA6320002F3BA /* AdView */,
 				AFF5C29717AF8BA9008C571F /* PagedFlowView */,
 				AF267E171564FDF800CBF5AA /* FlurryAnalytics */,
 				AFABDE2715C3F28600C0C611 /* Facebook */,
@@ -3810,12 +3811,11 @@
 		AF7C305716BDA6320002F3BA /* AdView */ = {
 			isa = PBXGroup;
 			children = (
-				AFB9A59817ACFA1D00B60CFF /* Admob */,
 				AF7C306316BDA6320002F3BA /* AdView.h */,
 				AF7C306416BDA6320002F3BA /* AdView.m */,
 			);
 			name = AdView;
-			path = ../Utilities/AdView;
+			path = Utilities/AdView;
 			sourceTree = "<group>";
 		};
 		AF842D0817AB53AD0035CC12 /* BG */ = {
@@ -4019,7 +4019,8 @@
 				AFB9A5A217ACFA1D00B60CFF /* libGoogleAdMobAds.a */,
 				AFB9A5A317ACFA1D00B60CFF /* README.txt */,
 			);
-			path = Admob;
+			name = Admob;
+			path = ../Utilities/AdView/Admob;
 			sourceTree = "<group>";
 		};
 		AFCBE24215935BEB00233D9C /* View */ = {
@@ -5879,7 +5880,7 @@
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = iCamAlbum;
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B2C861A8-9954-45E8-B367-A3559F3A8518";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B324189F-0E90-4037-B725-9C7437E793AB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Adhoc;

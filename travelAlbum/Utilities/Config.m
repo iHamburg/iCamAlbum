@@ -10,7 +10,7 @@
 #import "mach/mach.h"
 
 
-CGFloat _h,_w,_hAdBanner;
+CGFloat _h,_w;
 CGRect _r,_containerRect;
 
 BOOL isFirstOpen,isUpdateOpen;

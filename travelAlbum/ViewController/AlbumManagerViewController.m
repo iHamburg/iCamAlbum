@@ -155,8 +155,7 @@
 }
 
 - (void)configParameters{
-//    bottomRect = CGRectMake(0, 0.9*_h, _w, 0.1 * _h);
-//    bottomADRect = CGRectMake(0, 0.9*_h - _hAdBanner, _w, 0.1 * _h);
+
 }
 
 - (void)loadView{
@@ -723,11 +722,7 @@
 
 
 - (void)layoutADBanner:(AdView *)banner{
-    
-//    L();
-    if (!banner.isAdDisplaying) {
-        [banner setOrigin:CGPointMake(0, _h)];
-    }
+
 
     [UIView animateWithDuration:0.25 animations:^{
 		
@@ -736,7 +731,7 @@
 			[banner setOrigin:CGPointMake(0, _h - banner.height)];
 			[bgV setOrigin:CGPointMake(0, -banner.height)];
             [bottomBanner setOrigin:CGPointMake(0, _h -bottomBanner.height - banner.height)];
-            [carousel setOrigin:CGPointMake(0, topBanner.height - _hAdBanner)];
+            [carousel setOrigin:CGPointMake(0, topBanner.height - banner.height)];
 			[root.view addSubview:banner];
 		}
 		else{
