@@ -11,7 +11,7 @@ Copyright (C) 2009 Apple Inc. All Rights Reserved.
 
 #import "IpodMusicLibraryViewController.h"
 #import <Foundation/Foundation.h>
-#import "ViewController.h"
+#import "ICARootViewController.h"
 
 @implementation IpodMusicLibraryViewController
 

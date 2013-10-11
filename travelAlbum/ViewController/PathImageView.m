@@ -7,7 +7,7 @@
 //
 
 #import "PathImageView.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 #import "UIBezierPath+Extras.h"
 
 @interface PathImageView()

@@ -7,7 +7,7 @@
 //
 
 #import "SlideViewController.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 
 #define kSlideInterval 0.15
 

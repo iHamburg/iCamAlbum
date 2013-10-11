@@ -7,7 +7,7 @@
 //
 
 #import "AdView.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 #import <QuartzCore/QuartzCore.h>
 
 NSString *const NotificationAdChanged = @"ADChanged";
@@ -23,7 +23,7 @@ NSString *const NotificationAdChanged = @"ADChanged";
 
 
 static bool _isIAD = NO;
-static bool _iadAvailable = NO;
+//static bool _iadAvailable = NO;
 
 static bool _isGADLoaded = NO;
 
@@ -292,7 +292,7 @@ static id sharedInstance;
 	_gadView.layer.shadowColor = [UIColor grayColor].CGColor;
 	
 	_gadView.adUnitID = MY_BANNER_UNIT_ID;
-	_gadView.rootViewController = [ViewController sharedInstance];
+	_gadView.rootViewController = [ICARootViewController sharedInstance];
 	
 	_gadView.delegate = self;
 	[_gadView loadRequest:[GADRequest request]];

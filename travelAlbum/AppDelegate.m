@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CPMotionRecognizingWindow.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 #import "Flurry.h"
 
 
@@ -70,7 +70,7 @@
     
 	self.window = [[CPMotionRecognizingWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-	self.window.rootViewController = [ViewController sharedInstance];
+	self.window.rootViewController = [ICARootViewController sharedInstance];
 	
     [self.window makeKeyAndVisible];
 

@@ -7,7 +7,7 @@
 //
 
 #import "AlbumEditViewController.h"
-#import "PhotoAlbumViewController.h"
+
 #import "MomentView.h"
 #import "EditPhotoViewController.h"
 #import "PhotoCropViewController.h"
@@ -415,7 +415,7 @@
     
     [self shareMomentWithType:type];
     
-    [[ViewController sharedInstance] slideOutFrom:SlideDirectionFromRight];
+    [[ICARootViewController sharedInstance] slideOutFrom:SlideDirectionFromRight];
 }
 
 #pragma mark - ADView

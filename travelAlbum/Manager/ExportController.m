@@ -7,7 +7,7 @@
 //
 
 #import "ExportController.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 
 #import "EALoadingView.h"
 
@@ -118,7 +118,7 @@
 	}
 	
 	
-	[[ViewController sharedInstance] presentModalViewController:mailPicker animated:NO];
+	[[ICARootViewController sharedInstance] presentModalViewController:mailPicker animated:NO];
 }
 
 
@@ -136,7 +136,7 @@
         
     }
     
-	[[ViewController sharedInstance] presentModalViewController:mailPicker animated:NO];
+	[[ICARootViewController sharedInstance] presentModalViewController:mailPicker animated:NO];
 }
 
 - (void)mailComposeController:(MFMailComposeViewController *)controller
@@ -201,11 +201,11 @@
 //                break;
 //        }
 		
-        [[ViewController sharedInstance] dismissModalViewControllerAnimated:YES];
+        [[ICARootViewController sharedInstance] dismissModalViewControllerAnimated:YES];
     }];
     
     // Present the tweet composition view controller modally.
-    [[ViewController sharedInstance] presentModalViewController:tweetViewController animated:YES];
+    [[ICARootViewController sharedInstance] presentModalViewController:tweetViewController animated:YES];
 	
 }
 //
@@ -237,7 +237,7 @@
     documentController.UTI = @"com.adobe.pdf";
 	
     [documentController presentOpenInMenuFromRect:rect
-										   inView:[[ViewController sharedInstance]view]
+										   inView:[[ICARootViewController sharedInstance]view]
 										 animated:YES];
 	
 }
@@ -448,7 +448,7 @@
 	
 	
     [documentController presentOpenInMenuFromRect:CGRectZero
-										   inView:[[ViewController sharedInstance]view]
+										   inView:[[ICARootViewController sharedInstance]view]
 										 animated:YES];
 	
 	

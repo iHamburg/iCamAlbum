@@ -10,7 +10,7 @@
 #import "FileManager.h"
 #import "UtilLib.h"
 #import "ExportController.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 #import "Moment.h"
 
 #define kArchivedNameAlbumNames @"albumFileNames"

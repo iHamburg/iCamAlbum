@@ -23,7 +23,7 @@
 - (void)loadView
 {
 
-	root = [ViewController sharedInstance];
+	root = [ICARootViewController sharedInstance];
 	
 	
 	self.view = [[UIView alloc] initWithFrame:_r];

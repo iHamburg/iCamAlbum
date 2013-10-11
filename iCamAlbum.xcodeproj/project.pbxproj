@@ -65,6 +65,12 @@
 		260D5BE217C66D1B00AA8745 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267D7E1564F83300CBF5AA /* CoreGraphics.framework */; };
 		260D5BE317C66D2100AA8745 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267FC31565019800CBF5AA /* QuartzCore.framework */; };
 		260D5BE417C66D2D00AA8745 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF49620415FC9CA9008821D1 /* StoreKit.framework */; };
+		260DC26F1807AFE500E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC26E1807AFE500E7CADA /* RootViewController.m */; };
+		260DC2701807AFE500E7CADA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC26E1807AFE500E7CADA /* RootViewController.m */; };
+		260DC2731807B31C00E7CADA /* LRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2721807B31C00E7CADA /* LRootViewController.m */; };
+		260DC2741807B31C00E7CADA /* LRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2721807B31C00E7CADA /* LRootViewController.m */; };
+		260DC2771807B32800E7CADA /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2761807B32800E7CADA /* PRootViewController.m */; };
+		260DC2781807B32800E7CADA /* PRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 260DC2761807B32800E7CADA /* PRootViewController.m */; };
 		2613939617E33EFE0029A430 /* BGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2613939517E33EFE0029A430 /* BGViewController.m */; };
 		2613939717E33EFE0029A430 /* BGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2613939517E33EFE0029A430 /* BGViewController.m */; };
 		2613939B17E34B0D0029A430 /* VerticalSwipeInstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2613939A17E34B0D0029A430 /* VerticalSwipeInstructionViewController.m */; };
@@ -465,7 +471,6 @@
 		57A5EF0D163C637E00C8A370 /* PhotoEditRahmenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A5EF0C163C637E00C8A370 /* PhotoEditRahmenView.m */; };
 		57A5EF1A163C6E9000C8A370 /* icon_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 57A5EF19163C6E9000C8A370 /* icon_selected.png */; };
 		57B8973C164AEAB600167394 /* sidebarBGPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 57B8973B164AEAB600167394 /* sidebarBGPattern.png */; };
-		57C3DBA215B8A182009B48AC /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DBA115B8A182009B48AC /* PhotoAlbumViewController.m */; };
 		57C3DBA615B8A18F009B48AC /* PhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DBA515B8A18F009B48AC /* PhotoTableViewController.m */; };
 		57D37425163B1A9C0081C028 /* PathImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D37422163B1A9C0081C028 /* PathImageView.m */; };
 		57D37426163B1A9C0081C028 /* UIBezierPath+Extras.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D37424163B1A9C0081C028 /* UIBezierPath+Extras.m */; };
@@ -777,7 +782,7 @@
 		AF267D851564F83300CBF5AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AF267D831564F83300CBF5AA /* InfoPlist.strings */; };
 		AF267D871564F83300CBF5AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267D861564F83300CBF5AA /* main.m */; };
 		AF267D8B1564F83300CBF5AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267D8A1564F83300CBF5AA /* AppDelegate.m */; };
-		AF267D8E1564F83300CBF5AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267D8D1564F83300CBF5AA /* ViewController.m */; };
+		AF267D8E1564F83300CBF5AA /* ICARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267D8D1564F83300CBF5AA /* ICARootViewController.m */; };
 		AF267E1A1564FDF800CBF5AA /* PhotoAlbumLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DB91564FDF700CBF5AA /* PhotoAlbumLoader.m */; };
 		AF267E231564FDF800CBF5AA /* ControlComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DCC1564FDF800CBF5AA /* ControlComponent.m */; };
 		AF267E261564FDF800CBF5AA /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DD31564FDF800CBF5AA /* Album.m */; };
@@ -1113,7 +1118,7 @@
 		AF9DE265160612910029CEF9 /* icon_whiteClose.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9DE264160612910029CEF9 /* icon_whiteClose.png */; };
 		AFA0E1BB167E1DAA0001D1B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267D861564F83300CBF5AA /* main.m */; };
 		AFA0E1BC167E1DAA0001D1B4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267D8A1564F83300CBF5AA /* AppDelegate.m */; };
-		AFA0E1BD167E1DAA0001D1B4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267D8D1564F83300CBF5AA /* ViewController.m */; };
+		AFA0E1BD167E1DAA0001D1B4 /* ICARootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267D8D1564F83300CBF5AA /* ICARootViewController.m */; };
 		AFA0E1BE167E1DAA0001D1B4 /* PhotoAlbumLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DB91564FDF700CBF5AA /* PhotoAlbumLoader.m */; };
 		AFA0E1BF167E1DAA0001D1B4 /* ControlComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DCC1564FDF800CBF5AA /* ControlComponent.m */; };
 		AFA0E1C0167E1DAA0001D1B4 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DD31564FDF800CBF5AA /* Album.m */; };
@@ -1128,7 +1133,6 @@
 		AFA0E1E2167E1DAA0001D1B4 /* AlbumPreviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267EF01564FECB00CBF5AA /* AlbumPreviewViewController.m */; };
 		AFA0E1E3167E1DAA0001D1B4 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267EF21564FECB00CBF5AA /* AppViewController.m */; };
 		AFA0E1E5167E1DAA0001D1B4 /* CodingObj.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4AC6961569AE0500B8555E /* CodingObj.m */; };
-		AFA0E1E9167E1DAA0001D1B4 /* PhotoAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DBA115B8A182009B48AC /* PhotoAlbumViewController.m */; };
 		AFA0E1EA167E1DAA0001D1B4 /* PhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DBA515B8A18F009B48AC /* PhotoTableViewController.m */; };
 		AFA0E1EC167E1DAA0001D1B4 /* Facebook.m in Sources */ = {isa = PBXBuildFile; fileRef = AFABDE2915C3F28600C0C611 /* Facebook.m */; };
 		AFA0E1ED167E1DAA0001D1B4 /* FBDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = AFABDE2D15C3F28600C0C611 /* FBDialog.m */; };
@@ -1149,7 +1153,6 @@
 		AFA0E20B167E1DAA0001D1B4 /* IconWidget.m in Sources */ = {isa = PBXBuildFile; fileRef = AFE801F71615DCBF00B87190 /* IconWidget.m */; };
 		AFA0E20D167E1DAA0001D1B4 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECEE27162190D7007B1293 /* FacebookManager.m */; };
 		AFA0E20E167E1DAA0001D1B4 /* FBAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF44A1621C326006DE700 /* FBAlbum.m */; };
-		AFA0E20F167E1DAA0001D1B4 /* FBAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF44D1621D651006DE700 /* FBAlbumsViewController.m */; };
 		AFA0E218167E1DAA0001D1B4 /* FBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF483162206F7006DE700 /* FBPhoto.m */; };
 		AFA0E219167E1DAA0001D1B4 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8495B41629F9C40010EFFC /* InfoViewController.m */; };
 		AFA0E21A167E1DAA0001D1B4 /* MoreApp.m in Sources */ = {isa = PBXBuildFile; fileRef = AF15BBE5162ACAF600C41396 /* MoreApp.m */; };
@@ -1504,7 +1507,6 @@
 		AFFB24CF17A76FD70030ECE3 /* LabelModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFB24CE17A76FD70030ECE3 /* LabelModelView.m */; };
 		AFFB24D017A76FD70030ECE3 /* LabelModelView.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFB24CE17A76FD70030ECE3 /* LabelModelView.m */; };
 		AFFBF44B1621C326006DE700 /* FBAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF44A1621C326006DE700 /* FBAlbum.m */; };
-		AFFBF44E1621D651006DE700 /* FBAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF44D1621D651006DE700 /* FBAlbumsViewController.m */; };
 		AFFBF4811621E588006DE700 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFBF4801621E588006DE700 /* ImageIO.framework */; };
 		AFFBF484162206F7006DE700 /* FBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF483162206F7006DE700 /* FBPhoto.m */; };
 		AFFBF48616220F40006DE700 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFBF48516220F40006DE700 /* MediaPlayer.framework */; };
@@ -1582,6 +1584,12 @@
 		260D5BD317C66CEC00AA8745 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
 		260D5BD417C66CEC00AA8745 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		260D5BD517C66CEC00AA8745 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		260DC26D1807AFE500E7CADA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		260DC26E1807AFE500E7CADA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		260DC2711807B31C00E7CADA /* LRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LRootViewController.h; sourceTree = "<group>"; };
+		260DC2721807B31C00E7CADA /* LRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LRootViewController.m; sourceTree = "<group>"; };
+		260DC2751807B32800E7CADA /* PRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRootViewController.h; sourceTree = "<group>"; };
+		260DC2761807B32800E7CADA /* PRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRootViewController.m; sourceTree = "<group>"; };
 		2613939417E33EFE0029A430 /* BGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGViewController.h; sourceTree = "<group>"; };
 		2613939517E33EFE0029A430 /* BGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGViewController.m; sourceTree = "<group>"; };
 		2613939917E34B0D0029A430 /* VerticalSwipeInstructionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VerticalSwipeInstructionViewController.h; sourceTree = "<group>"; };
@@ -1813,8 +1821,6 @@
 		57A5EF0C163C637E00C8A370 /* PhotoEditRahmenView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoEditRahmenView.m; sourceTree = "<group>"; };
 		57A5EF19163C6E9000C8A370 /* icon_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_selected.png; sourceTree = "<group>"; };
 		57B8973B164AEAB600167394 /* sidebarBGPattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sidebarBGPattern.png; path = AlbumEdit/sidebarBGPattern.png; sourceTree = "<group>"; };
-		57C3DBA015B8A181009B48AC /* PhotoAlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoAlbumViewController.h; sourceTree = "<group>"; };
-		57C3DBA115B8A182009B48AC /* PhotoAlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoAlbumViewController.m; sourceTree = "<group>"; };
 		57C3DBA415B8A18F009B48AC /* PhotoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoTableViewController.h; sourceTree = "<group>"; };
 		57C3DBA515B8A18F009B48AC /* PhotoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoTableViewController.m; sourceTree = "<group>"; };
 		57D37421163B1A9C0081C028 /* PathImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PathImageView.h; path = ViewController/PathImageView.h; sourceTree = "<group>"; };
@@ -2039,8 +2045,8 @@
 		AF267D881564F83300CBF5AA /* iCamAlbum-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iCamAlbum-Prefix.pch"; sourceTree = "<group>"; };
 		AF267D891564F83300CBF5AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AF267D8A1564F83300CBF5AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AF267D8C1564F83300CBF5AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AF267D8D1564F83300CBF5AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AF267D8C1564F83300CBF5AA /* ICARootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ICARootViewController.h; sourceTree = "<group>"; };
+		AF267D8D1564F83300CBF5AA /* ICARootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ICARootViewController.m; sourceTree = "<group>"; };
 		AF267D9B1564F83300CBF5AA /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		AF267DB81564FDF700CBF5AA /* PhotoAlbumLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoAlbumLoader.h; path = ../Card/PhotoAlbumLoader.h; sourceTree = "<group>"; };
 		AF267DB91564FDF700CBF5AA /* PhotoAlbumLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoAlbumLoader.m; path = ../Card/PhotoAlbumLoader.m; sourceTree = "<group>"; };
@@ -2451,8 +2457,6 @@
 		AFFB24CE17A76FD70030ECE3 /* LabelModelView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelModelView.m; sourceTree = "<group>"; };
 		AFFBF4491621C326006DE700 /* FBAlbum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBAlbum.h; path = Facebook/FBAlbum.h; sourceTree = "<group>"; };
 		AFFBF44A1621C326006DE700 /* FBAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBAlbum.m; path = Facebook/FBAlbum.m; sourceTree = "<group>"; };
-		AFFBF44C1621D651006DE700 /* FBAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBAlbumsViewController.h; path = ../DataModel/Facebook/FBAlbumsViewController.h; sourceTree = "<group>"; };
-		AFFBF44D1621D651006DE700 /* FBAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBAlbumsViewController.m; path = ../DataModel/Facebook/FBAlbumsViewController.m; sourceTree = "<group>"; };
 		AFFBF4801621E588006DE700 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		AFFBF482162206F7006DE700 /* FBPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBPhoto.h; path = Facebook/FBPhoto.h; sourceTree = "<group>"; };
 		AFFBF483162206F7006DE700 /* FBPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBPhoto.m; path = Facebook/FBPhoto.m; sourceTree = "<group>"; };
@@ -2577,6 +2581,19 @@
 				260D5BD517C66CEC00AA8745 /* SBJsonWriter.m */,
 			);
 			path = JSON;
+			sourceTree = "<group>";
+		};
+		260DC2791807C71300E7CADA /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				260DC26D1807AFE500E7CADA /* RootViewController.h */,
+				260DC26E1807AFE500E7CADA /* RootViewController.m */,
+				260DC2711807B31C00E7CADA /* LRootViewController.h */,
+				260DC2721807B31C00E7CADA /* LRootViewController.m */,
+				260DC2751807B32800E7CADA /* PRootViewController.h */,
+				260DC2761807B32800E7CADA /* PRootViewController.m */,
+			);
+			name = Root;
 			sourceTree = "<group>";
 		};
 		264BF05E17C7B84D00C5A58F /* SMPageControl */ = {
@@ -2747,6 +2764,8 @@
 		26DF2104180511070082B196 /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
+				260DC2791807C71300E7CADA /* Root */,
+				AF490CA115BA94B50071D92A /* PhotoAlbumVC */,
 				AF7C305716BDA6320002F3BA /* AdView */,
 				AF9DE2371605CE210029CEF9 /* InfoVC */,
 				AF9DE25B160610860029CEF9 /* Instruction */,
@@ -2760,17 +2779,6 @@
 			isa = PBXGroup;
 			children = (
 				AF4E048A15FBE999003A7AD8 /* EditSidebar */,
-			);
-			name = deprecated;
-			sourceTree = "<group>";
-		};
-		26E2AD3117CDA2B600BD2F3A /* deprecated */ = {
-			isa = PBXGroup;
-			children = (
-				AFFBF44C1621D651006DE700 /* FBAlbumsViewController.h */,
-				AFFBF44D1621D651006DE700 /* FBAlbumsViewController.m */,
-				57C3DBA015B8A181009B48AC /* PhotoAlbumViewController.h */,
-				57C3DBA115B8A182009B48AC /* PhotoAlbumViewController.m */,
 			);
 			name = deprecated;
 			sourceTree = "<group>";
@@ -3202,8 +3210,8 @@
 			children = (
 				AF267D891564F83300CBF5AA /* AppDelegate.h */,
 				AF267D8A1564F83300CBF5AA /* AppDelegate.m */,
-				AF267D8C1564F83300CBF5AA /* ViewController.h */,
-				AF267D8D1564F83300CBF5AA /* ViewController.m */,
+				AF267D8C1564F83300CBF5AA /* ICARootViewController.h */,
+				AF267D8D1564F83300CBF5AA /* ICARootViewController.m */,
 				AF267DD11564FDF800CBF5AA /* Model */,
 				AFCBE24215935BEB00233D9C /* View */,
 				AF267EE61564FECB00CBF5AA /* ViewController */,
@@ -3350,7 +3358,6 @@
 				AF267EF01564FECB00CBF5AA /* AlbumPreviewViewController.m */,
 				2613939417E33EFE0029A430 /* BGViewController.h */,
 				2613939517E33EFE0029A430 /* BGViewController.m */,
-				AF490CA115BA94B50071D92A /* PhotoAlbumVC */,
 				AF2076EC15F69E46000FF43F /* Edit */,
 				AF2EE7A015F78FE700339C5E /* Preview */,
 				AF222794165E38FA00C0CED8 /* SlideViewController.h */,
@@ -3672,10 +3679,9 @@
 				AF527D4917B77FD400810832 /* FBPhotoTableViewController.m */,
 				AF527D4C17B781CC00810832 /* ImagePhotoTableViewController.h */,
 				AF527D4D17B781CD00810832 /* ImagePhotoTableViewController.m */,
-				26E2AD3117CDA2B600BD2F3A /* deprecated */,
 			);
 			name = PhotoAlbumVC;
-			path = ../View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		AF4E048A15FBE999003A7AD8 /* EditSidebar */ = {
@@ -5404,7 +5410,7 @@
 			files = (
 				AF267D871564F83300CBF5AA /* main.m in Sources */,
 				AF267D8B1564F83300CBF5AA /* AppDelegate.m in Sources */,
-				AF267D8E1564F83300CBF5AA /* ViewController.m in Sources */,
+				AF267D8E1564F83300CBF5AA /* ICARootViewController.m in Sources */,
 				AF267E1A1564FDF800CBF5AA /* PhotoAlbumLoader.m in Sources */,
 				AF267E231564FDF800CBF5AA /* ControlComponent.m in Sources */,
 				AF267E261564FDF800CBF5AA /* Album.m in Sources */,
@@ -5420,9 +5426,9 @@
 				AF267F4F1564FECB00CBF5AA /* AlbumPreviewViewController.m in Sources */,
 				AF267F511564FECB00CBF5AA /* AppViewController.m in Sources */,
 				AF4AC6971569AE0500B8555E /* CodingObj.m in Sources */,
-				57C3DBA215B8A182009B48AC /* PhotoAlbumViewController.m in Sources */,
 				57C3DBA615B8A18F009B48AC /* PhotoTableViewController.m in Sources */,
 				AFABDE4415C3F28600C0C611 /* Facebook.m in Sources */,
+				260DC2731807B31C00E7CADA /* LRootViewController.m in Sources */,
 				AFABDE4815C3F28600C0C611 /* FBDialog.m in Sources */,
 				AFABDE4A15C3F28600C0C611 /* FBFrictionlessRequestSettings.m in Sources */,
 				AFABDE4C15C3F28600C0C611 /* FBLoginDialog.m in Sources */,
@@ -5442,7 +5448,6 @@
 				AFE801F81615DCBF00B87190 /* IconWidget.m in Sources */,
 				AFECEE28162190D8007B1293 /* FacebookManager.m in Sources */,
 				AFFBF44B1621C326006DE700 /* FBAlbum.m in Sources */,
-				AFFBF44E1621D651006DE700 /* FBAlbumsViewController.m in Sources */,
 				AFFBF484162206F7006DE700 /* FBPhoto.m in Sources */,
 				AF8495B51629F9C40010EFFC /* InfoViewController.m in Sources */,
 				AF15BBE6162ACAF700C41396 /* MoreApp.m in Sources */,
@@ -5500,10 +5505,12 @@
 				AFA24F7817A67FAE00F40711 /* IFFilterManager.m in Sources */,
 				AF6C692817A7600000A2BA78 /* ImageModelView.m in Sources */,
 				AFFB24CF17A76FD70030ECE3 /* LabelModelView.m in Sources */,
+				260DC2771807B32800E7CADA /* PRootViewController.m in Sources */,
 				AF7F0C4D17A7F2E900D5141E /* Config.m in Sources */,
 				AF2C5EF617AB900B00E16700 /* GLProgram.m in Sources */,
 				AF2C5EF817AB900B00E16700 /* GPUImageFilter.m in Sources */,
 				AF2C5EFA17AB900B00E16700 /* GPUImageMovie.m in Sources */,
+				260DC26F1807AFE500E7CADA /* RootViewController.m in Sources */,
 				AF2C5EFC17AB900B00E16700 /* GPUImageMovieWriter.m in Sources */,
 				AF2C5EFE17AB900B00E16700 /* GPUImageOpenGLESContext.m in Sources */,
 				AF2C5F0017AB900B00E16700 /* GPUImageOutput.m in Sources */,
@@ -5560,7 +5567,7 @@
 			files = (
 				AFA0E1BB167E1DAA0001D1B4 /* main.m in Sources */,
 				AFA0E1BC167E1DAA0001D1B4 /* AppDelegate.m in Sources */,
-				AFA0E1BD167E1DAA0001D1B4 /* ViewController.m in Sources */,
+				AFA0E1BD167E1DAA0001D1B4 /* ICARootViewController.m in Sources */,
 				AFA0E1BE167E1DAA0001D1B4 /* PhotoAlbumLoader.m in Sources */,
 				AFA0E1BF167E1DAA0001D1B4 /* ControlComponent.m in Sources */,
 				AFA0E1C0167E1DAA0001D1B4 /* Album.m in Sources */,
@@ -5576,9 +5583,9 @@
 				AFA0E1E2167E1DAA0001D1B4 /* AlbumPreviewViewController.m in Sources */,
 				AFA0E1E3167E1DAA0001D1B4 /* AppViewController.m in Sources */,
 				AFA0E1E5167E1DAA0001D1B4 /* CodingObj.m in Sources */,
-				AFA0E1E9167E1DAA0001D1B4 /* PhotoAlbumViewController.m in Sources */,
 				AFA0E1EA167E1DAA0001D1B4 /* PhotoTableViewController.m in Sources */,
 				AFA0E1EC167E1DAA0001D1B4 /* Facebook.m in Sources */,
+				260DC2741807B31C00E7CADA /* LRootViewController.m in Sources */,
 				AFA0E1ED167E1DAA0001D1B4 /* FBDialog.m in Sources */,
 				AFA0E1EE167E1DAA0001D1B4 /* FBFrictionlessRequestSettings.m in Sources */,
 				AFA0E1EF167E1DAA0001D1B4 /* FBLoginDialog.m in Sources */,
@@ -5598,7 +5605,6 @@
 				AFA0E20B167E1DAA0001D1B4 /* IconWidget.m in Sources */,
 				AFA0E20D167E1DAA0001D1B4 /* FacebookManager.m in Sources */,
 				AFA0E20E167E1DAA0001D1B4 /* FBAlbum.m in Sources */,
-				AFA0E20F167E1DAA0001D1B4 /* FBAlbumsViewController.m in Sources */,
 				AFA0E218167E1DAA0001D1B4 /* FBPhoto.m in Sources */,
 				AFA0E219167E1DAA0001D1B4 /* InfoViewController.m in Sources */,
 				AFA0E21A167E1DAA0001D1B4 /* MoreApp.m in Sources */,
@@ -5656,10 +5662,12 @@
 				AFA24F7917A67FAE00F40711 /* IFFilterManager.m in Sources */,
 				AF6C692917A7600000A2BA78 /* ImageModelView.m in Sources */,
 				AFFB24D017A76FD70030ECE3 /* LabelModelView.m in Sources */,
+				260DC2781807B32800E7CADA /* PRootViewController.m in Sources */,
 				AF7F0C4E17A7F2E900D5141E /* Config.m in Sources */,
 				AF2C5EF717AB900B00E16700 /* GLProgram.m in Sources */,
 				AF2C5EF917AB900B00E16700 /* GPUImageFilter.m in Sources */,
 				AF2C5EFB17AB900B00E16700 /* GPUImageMovie.m in Sources */,
+				260DC2701807AFE500E7CADA /* RootViewController.m in Sources */,
 				AF2C5EFD17AB900B00E16700 /* GPUImageMovieWriter.m in Sources */,
 				AF2C5EFF17AB900B00E16700 /* GPUImageOpenGLESContext.m in Sources */,
 				AF2C5F0117AB900B00E16700 /* GPUImageOutput.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import "EALoadingView.h"
 #import "UtilLib.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 @implementation EALoadingView
 
 - (id)initWithFrame:(CGRect)frame
@@ -16,7 +16,7 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
-        window = [[ViewController sharedInstance]view];
+        window = [[ICARootViewController sharedInstance]view];
         loadingLabel.font = [UIFont fontWithName:kFontName size:isPad?18:14];
     }
     return self;

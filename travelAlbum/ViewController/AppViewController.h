@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
+#import "ICARootViewController.h"
+//#import "ICAViewController.h"
 #import "AlbumManager.h"
 #import "MomentManager.h"
 #import "AdView.h"
@@ -19,7 +20,7 @@
 
 	AlbumManager *manager;
     MomentManager *_momentManager;
-	ViewController *root;
+	ICARootViewController *root;
     Album *_album;
 
     

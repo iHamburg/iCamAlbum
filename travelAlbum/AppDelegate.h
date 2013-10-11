@@ -11,12 +11,12 @@
 #import "FacebookManager.h"
 
 
-@class ViewController;
+@class ICARootViewController;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ViewController *viewController;
+@property (strong, nonatomic) ICARootViewController *viewController;
 @property (nonatomic, strong) Facebook *facebook;
 @end

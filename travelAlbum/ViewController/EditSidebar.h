@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 #import "AlbumEditViewController.h"
-#import "PhotoAlbumViewController.h"
+//#import "PhotoAlbumViewController.h"
 #import "AlbumsTableViewController.h"
 
 /**

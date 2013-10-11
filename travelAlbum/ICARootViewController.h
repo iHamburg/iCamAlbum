@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LRootViewController.h"
 
 #import "FacebookManager.h"
 #import "SlideViewController.h"
 #import "iCAInstructionViewController.h"
 #import "CoachView.h"
-#import "InfoViewController.h"
+
 
 
 #define kFirstVersionKey @"firstVersionKey"
@@ -53,40 +54,26 @@ void showMsg(NSString*);
 @class AlbumPreviewViewController;
 @class AlbumManagerViewController;
 
-@interface ViewController : UIViewController<CoachViewDelegate,InstructionDelegate, InfoDelegate>{
+@interface ICARootViewController : LRootViewController<CoachViewDelegate>{
 
     AppViewController *editVC;
 	AlbumPreviewViewController *previewVC;
     AlbumManagerViewController *managerVC;
 
-	InfoViewController *info2VC;
-	InstructionViewController *instructionVC; // 只有一个壳子，还没有写内容
+	 // 只有一个壳子，还没有写内容
 	SlideViewController *slideVC;
 
 	CoachView *_coachView;
-	
 
-    
-	UIPopoverController *popVC;
-
-	CGRect r,containerRect;  // r 是全屏，
-
-	BOOL firstLoadFlag;
-	
-	NSMutableArray *testObjs;
 
 }
-
-@property (nonatomic, strong) UIPopoverController *popVC;
 
 @property (nonatomic, strong) AppViewController *editVC;
 @property (nonatomic, strong) AlbumPreviewViewController *previewVC;
 @property (nonatomic, strong) AlbumManagerViewController *managerVC;
-@property (nonatomic, strong) InfoViewController *info2VC;
-
 @property (nonatomic, assign) CommandType command;
-
-+ (id)sharedInstance;
+//
+//+ (id)sharedInstance;
 
 - (void)setupCacheDocuments;
 - (void)loadMusterAlbum;
@@ -115,7 +102,7 @@ void showMsg(NSString*);
 - (void)saveWhenQuit; // 当quit的时候调用，save 当前album
 
 //- (void)report_memory;
-- (void)test;
+
 
 
 @end

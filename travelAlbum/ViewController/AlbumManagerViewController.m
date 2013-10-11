@@ -228,6 +228,8 @@
   
     [self pageSwitchToCurrentAlbum];
     [self updateAlbum];
+    
+    NSLog(@"manager # %@, topbanner # %@",self.view,topBanner);
 
 }
 

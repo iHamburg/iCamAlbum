@@ -7,7 +7,7 @@
 //
 
 #import "FacebookManager.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 #import "AppDelegate.h"
 #import "Config.h"
 
@@ -95,7 +95,7 @@
     [defaults synchronize];
 	
 	
-    [[ViewController sharedInstance] toAlbumManager];
+    [[ICARootViewController sharedInstance] toAlbumManager];
 }
 
 
@@ -310,7 +310,7 @@
 	// post image
 	NSRange range = [requestStr rangeOfString:@"me/photos"];
 	if (range.location!=NSNotFound) {
-			[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[ViewController sharedInstance]view]];
+			[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[ICARootViewController sharedInstance]view]];
 		return;
 	}
 	
@@ -322,7 +322,7 @@
 	numOfPhotsToUpload --;
 	if (numOfPhotsToUpload <= 0) {
 
-		[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[ViewController sharedInstance]view]];
+		[[LoadingView sharedLoadingView]addTitle:@"Uploaded!" inView:[[ICARootViewController sharedInstance]view]];
 	}
     
  
@@ -491,7 +491,7 @@
 	
     
     if (ISEMPTY(_imgs)) {
-		[[LoadingView sharedLoadingView]addTitle:@"Error: No Images to be uploaded!" inView:[[ViewController sharedInstance]view]];
+		[[LoadingView sharedLoadingView]addTitle:@"Error: No Images to be uploaded!" inView:[[ICARootViewController sharedInstance]view]];
 		return;
 	}
 

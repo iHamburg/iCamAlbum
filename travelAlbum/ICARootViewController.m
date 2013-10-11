@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Xappsoft. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "ICARootViewController.h"
 
 #import "AlbumEditViewController.h"
 #import "AlbumPreviewViewController.h"
@@ -49,13 +49,13 @@ void showMsg(NSString* msg){
 }
 
 
-@implementation ViewController
+@implementation ICARootViewController
 
 
 CommandType _command;
 
 
-@synthesize popVC, editVC, previewVC,info2VC,managerVC;
+@synthesize editVC, previewVC,managerVC;
 
 - (AppViewController*)editVC{
     if (!editVC) {
@@ -82,141 +82,14 @@ CommandType _command;
 //    return managerVC;
 //}
 
-+(id)sharedInstance{
-	
-	static id sharedInstance;
-	
-	if (sharedInstance == nil) {
-		
-		sharedInstance = [[[self class] alloc]init];
-	}
-	return sharedInstance;
-	
-}
-
-- (void)checkSetting{
-	
-    [EASetting sharedInstance];
-    
-    [[EASetting sharedInstance] setIsHomeCoachShouldShown:NO];
-    
-}
-- (void)configUIParameter {
-    _w = self.view.width;
-	_h = self.view.height;
-	_r = r;
-	_containerRect = containerRect;
-    if(isPhone5){
-		_containerRect = CGRectMake(44, 0, 480, 320);
-	}
-    
-}
 
 
-
-- (void)registerNotification {
-    [[NSNotificationCenter defaultCenter] addObserver:self
-											 selector:@selector(handleWillEnterForeground)
-												 name:UIApplicationWillEnterForegroundNotification
-											   object: [UIApplication sharedApplication]];
-	
-	[[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(handleWillResignActive) name:UIApplicationWillResignActiveNotification object:[UIApplication sharedApplication]];
-
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(IAPDidFinished) name:kNotificationIAPFinish object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(IAPDidFinished) name:kNotificationIAPRestore object:nil];
-}
-
-
-
-- (void)loadAdView {
-
-    ///启动adview
-    [AdView sharedInstance];
-}
-//
-//
-//- (void)checkVersion{
-//  CGFloat _firstVersion = [_settingDict[@"firstVersion"] floatValue];
-//  CGFloat _lastVersion = [_settingDict[@"lastVersion"] floatValue];
-//    
-//    
-//    //获得
-//   CGFloat _thisVersion = [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
-//    
-//    if (_firstVersion == 0.0) { // 第一次安装app
-//        isFirstOpen = YES;
-//        isUpdateOpen = YES;
-//        
-//        _firstVersion =  [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
-//        
-//        [_settingDict setObject:[NSString stringWithFloat:_firstVersion] forKey:@"firstVersion"];
-//        
-//        _lastVersion = _firstVersion;
-//        [_settingDict setObject:[NSString stringWithFloat:_lastVersion] forKey:@"lastVersion"];
-//        
-//    }
-//    else{ // 已经安装过app，再次打开
-//        if (_thisVersion > _lastVersion) {
-//            isUpdateOpen = YES;
-//        }
-//        
-//        [_settingDict setObject:[NSString stringWithFloat:_thisVersion] forKey:@"lastVersion"];
-//    }
-//    
-//    NSLog(@"firstVersion # %f, thisVersion # %f, isFirstOpen # %d",_firstVersion,_thisVersion,isFirstOpen);
-//}
-//
-
-/**
- 
-  - 先检查版本
- 
- */
-
-- (void)loadView{
-
-    
-    L();
-//    report_memory();
-    
-	[self checkSetting];
-
-
-	r = [UIScreen mainScreen].bounds;
-	r = CGRectApplyAffineTransform(r, CGAffineTransformMakeRotation(90 * M_PI / 180.));
-	r.origin = CGPointZero;
-	self.view = [[UIView alloc]initWithFrame:r];
-    
-	
-    [self configUIParameter];
-	
-	
-	if (isPad) {
-		popVC = [[UIPopoverController alloc]initWithContentViewController:[[UIViewController alloc]init]];
-		
-	}
-    
-	firstLoadFlag = YES;
-
-	[self registerNotification];
-	
-    [self loadAdView];
- 
-//    NSLog(@"after loadview");
-//    
-//    report_memory();
-}
-
-
-/// manager vc 已经加了
-- (void)loadAppFirstTimeOpen {
-    
+- (void)handleAppFirstTimeOpen{
     [self setupCacheDocuments];
     
     [self loadMusterAlbum];
     
-    [self toInstruction]; 
+    [self toInstruction];
     
     _coachView = [[CoachView alloc] initWithFrame:self.view.bounds];
     
@@ -225,35 +98,13 @@ CommandType _command;
     _coachView.coachImage = img;
     _coachView.delegate = self;
     [self.view insertSubview:_coachView aboveSubview:managerVC.view];
-    
+
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-	
-	L();
-	[super viewDidAppear:animated];
-	
-	if (firstLoadFlag) {
-        firstLoadFlag = NO;
-
-		[self toAlbumManager];
-
-		if (isFirstOpen) {
-			
-			[self loadAppFirstTimeOpen];
-			
-		}
-		else if(isUpdateOpen){
-			
-		}
-	}
-	
-	[self test];
-	
+- (void)handleRootFirstDidAppear{
+     [self toAlbumManager];
+    [self test];
 }
-
-
-
 - (void)dealloc{
 
 	[[NSNotificationCenter defaultCenter]removeObserver:self];
@@ -284,17 +135,6 @@ CommandType _command;
 }
 
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-	return UIInterfaceOrientationIsLandscape(interfaceOrientation);
-}
-
-
-- (NSUInteger)supportedInterfaceOrientations{
-
-	return UIInterfaceOrientationMaskLandscapeLeft | UIInterfaceOrientationMaskLandscapeRight;
-}
 
 
 /**
@@ -361,14 +201,18 @@ CommandType _command;
 
 #pragma mark - Notifications
 
-- (void)handleWillEnterForeground{
-	
-//	[self updateSaveWhenUsing];
+- (void)registerNotification {
+    
+    [super registerNotification];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(IAPDidFinished) name:kNotificationIAPFinish object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(IAPDidFinished) name:kNotificationIAPRestore object:nil];
 }
 
+
+
 - (void)handleWillResignActive{
-//	L();
-//	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(updateSaveWhenUsing) object:nil];
+
 	L();
 	[self saveWhenQuit];
 }
@@ -490,23 +334,23 @@ CommandType _command;
 }
 - (void)toInfo{
   
-	if(!info2VC.view){
+	if(!infoVC.view){
 
-		info2VC = [[EAInfoViewController alloc] init];
-		info2VC.view.alpha = 1;
-        info2VC.delegate = self;
+		infoVC = [[EAInfoViewController alloc] init];
+		infoVC.view.alpha = 1;
+        infoVC.delegate = self;
 	}
 
 
 
-     [UIView transitionFromView:managerVC.view toView:info2VC.view duration:0.8 options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
+     [UIView transitionFromView:managerVC.view toView:infoVC.view duration:0.8 options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
 
 }
 
 - (void)closeInfo{
 
-    [UIView transitionFromView:info2VC.view toView:managerVC.view duration:0.8 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL complete){
-        info2VC = nil;
+    [UIView transitionFromView:infoVC.view toView:managerVC.view duration:0.8 options:UIViewAnimationOptionTransitionFlipFromRight completion:^(BOOL complete){
+        infoVC = nil;
     }];
 }
 
@@ -553,11 +397,7 @@ CommandType _command;
 	// 保存当前正在操作的Album
 	[(AlbumEditViewController*)self.editVC saveCurrentAlbum];
 	
-	// save Albums
-    //	[[AlbumManager sharedInstance] saveAlbumNamePlist];
-	
-    //	[self saveSetting];
-    [[EASetting sharedInstance]save];
+
 	
     //
 	[[NSUserDefaults standardUserDefaults]synchronize];
@@ -598,72 +438,8 @@ CommandType _command;
 	
 	}
 	
+    
 }
-
-
-
-//
-//
-/////  当进入editVC时会调用，每2min调用一次，以预防突然的崩溃, 当退出
-//- (void)updateSaveWhenUsing{
-//	
-//	L();
-//
-//	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(updateSaveWhenUsing) object:nil];
-//	
-//	[self saveWhenQuit];
-//	
-//	[self performSelector:@selector(updateSaveWhenUsing) withObject:nil afterDelay:kSaveWhenUsingInterval];
-//	
-//}
-//
-//- (void)cancelUpdateSave{
-//
-//	[NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(updateSaveWhenUsing) object:nil];
-//
-//}
-//#pragma mark -
-//
-//-(void)report_memory {
-//
-//	L();
-//#ifdef DEBUG
-//    struct task_basic_info info;
-//    mach_msg_type_number_t size = sizeof(info);
-//    kern_return_t kerr = task_info(mach_task_self(),
-//                                   TASK_BASIC_INFO,
-//                                   (task_info_t)&info,
-//                                   &size);
-//    if( kerr == KERN_SUCCESS ) {
-//		//        NSLog(@"Memory in use (in bytes): %u", info.resident_size);
-//		NSLog(@"Memory in use (in KB): %u", info.resident_size/1024);
-//    } else {
-//        NSLog(@"Error with task_info(): %s", mach_error_string(kerr));
-//    }
-//
-//	
-//#endif
-//	
-//}
-//
-
-
-//
-//
-//- (void)IAPDidRestored{
-//	L();
-//	
-//	if (isPad) {
-//		[[ViewController sharedInstance]dismissPopVC];
-//	}
-//	else{
-//		[[ViewController sharedInstance]dismissModalViewControllerAnimated:YES];
-//		
-//	}
-//	
-//	[[ViewController sharedInstance]switchToScene:SceneManager];
-//	
-//}
 
 
 #pragma mark - Instruction
@@ -673,7 +449,7 @@ CommandType _command;
 }
 
 - (void)instructionToHome{
-//    NSLog(@"begin animation");
+
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         [instructionVC.view setOrigin:CGPointMake(0, -_h)];
     } completion:^(BOOL finished) {
@@ -693,89 +469,8 @@ CommandType _command;
 #pragma mark - Test
 - (void)test{
     L();
-	testObjs = [NSMutableArray array];
-//	[self testImage:[UIImage imageWithSystemName:@"20130403090938.alb_coverPhoto"]];
-//	[self testVC:[[UINavigationController alloc]initWithRootViewController:[[PhotoAlbumViewController alloc]init]]];
-//	[self testVC:[[PhotoAlbumViewController alloc]init]];
-//	[self testNavVC:[[PhotoAlbum2ViewController alloc]init]];
-//
-//	NSString *path = [[NSBundle mainBundle] pathForResource:@"abc" ofType:@"jpg"];
-//	NSLog(@"path # %@",path);
-//	UIImage *img = [UIImage imageWithContentsOfFileUniversal:@"ddt.jpg"];
-//		NSLog(@"img # %@,scale # %f",NSStringFromCGSize(img.size),img.scale);
-////	img = [img resizedImage:CGSizeMake(300, 200) interpolationQuality:kCGInterpolationDefault];
-//	img = [img imageByScalingAndCroppingForSize:CGSizeMake(300, 200)];
-//		NSLog(@"img # %@,scale # %f",NSStringFromCGSize(img.size),img.scale);
-//	[self testImage:img];
-//	[self testImage:[[UIImage imageNamed:@"abc.jpg"] image]];
-	
-//	[self testGPUImage];
-//	[self testFilterImage];
 
-//    [self testVC:[[AlbumManager2ViewController alloc]init]];
-
-    
-//    [self testView:[[ImageModelView alloc]initWithImage:kPlaceholderImage]];
-//    UIImage *img = [[WebImage alloc]initWithURL:@"http://imgsrc.baidu.com/forum/pic/item/bc27cffc1e178a8253e49120f603738da877e85c.jpg"];
-//    UIImage *img = [[SDWebImageManager sharedManager] imageWithURL:[NSURL URLWithString:[@"http://imgsrc.baidu.com/forum/pic/item/bc27cffc1e178a8253e49120f603738da877e85c.jpg" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
-//    NSLog(@"img # %@",img);
-//    UIImageView *imgV = [[UIImageView alloc]initWithFrame:CGRectMake(100, 100, 400, 300)];
-//    imgV.backgroundColor = [UIColor redColor];
-//    imgV.image = img;
-//    [self testView:imgV];
-    
-//    [[PhotoAlbum2ViewController alloc]init];
-//    
-//    PhotoAlbum2ViewController *vc =  [[PhotoAlbum2ViewController alloc]init];
-//    vc.didSelectedImageBlock = ^(UIImage *image){
-//      
-//        NSLog(@"image # %@",image);
-//    };
-//
-//    [self testVC:vc.nav];
-//    
-//    [self testBlock];
-    
-//    [self testSetStrokeCommand];
-//    [self testEALoadingView];
-    
-//    [self testSaveArray];
-    
-//    [self testAddPhotoToLibrary];
-
-//    [self testLocalize];
-//    [self testView:[[NewsQuadView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)]];
-//    
-//    [self testAlpha];
-//    
-//    Album *album = [[Album alloc]init];
-////    album.photoPreviewImage = kPlaceholderImage;
-//    
-//    saveArchived(album, @"testAlbum");
-//    
-//    Album *album2 = loadArchived(@"testAlbum");
-//    NSLog(@"album2 # %@, photoPreviewImage # %@",album2,album2.photoPreviewImage);
-//    
-//    [self testImage:album2.photoPreviewImage];
-
-//    NSLog(@"ios version # %f, is 6 %d",kVersion,kVersion >= 6);
-    
-//    [self testImage:[UIImage imageNamed:@"coach_home.png"]];
-   
-//    NSLog(@"kh # %f",kHPopNavigationbar);
- 
-//    UIViewController *vc = [[AlbumPreviewViewController alloc] init];
-//    [self.view addSubview:vc.view];
-
-//    InfoViewController *vc = [[InfoViewController alloc] init];
-//    NSLog(@"info # %@",vc);
-//    [self.view addSubview:vc.view];
-    
-//    for (int i = 0; i<20; i++) {
-//        
-//        CGFloat x = arc4random()%(int)(0.6* 100) + 0.3* (100);
-//        NSLog(@"x # %f",x);
-//    }
+    [super test];
 }
 
 - (void)testAlpha{

@@ -9,7 +9,7 @@
 #import "PhotoWidget.h"
 #import "CodingPhoto.h"
 #import "FBPhoto.h"
-#import "ViewController.h"
+#import "ICARootViewController.h"
 #import "FileManager.h"
 
 @implementation PhotoWidget
@@ -259,7 +259,7 @@
 - (void)imageDownloader:(SDWebImageDownloader *)downloader didFailWithError:(NSError *)error{
 	L();
 	NSLog(@"error:%@",[error description]);
-	[[LoadingView sharedLoadingView]addTitle:@"Download Failed." inView:[[ViewController sharedInstance] view]];
+	[[LoadingView sharedLoadingView]addTitle:@"Download Failed." inView:[[ICARootViewController sharedInstance] view]];
 }
 
 #pragma mark -

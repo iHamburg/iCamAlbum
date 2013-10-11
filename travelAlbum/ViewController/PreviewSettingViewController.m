@@ -99,7 +99,7 @@ static NSString* const ChoiceTableViewIndexKeyPath = @"selectedIndex";
 //		[[ViewController sharedInstance]dismissPopVC];
 	}
 	else{
-		[[ViewController sharedInstance]dismissModalViewControllerAnimated:YES];
+		[[ICARootViewController sharedInstance]dismissModalViewControllerAnimated:YES];
 	}
 }
 
