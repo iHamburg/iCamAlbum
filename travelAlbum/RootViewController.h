@@ -15,7 +15,8 @@
     InstructionViewController *instructionVC;
 
     BOOL rootLoadViewFlag;
-	
+	BOOL isFirstOpen, isUpdateOpen;
+    
 	NSMutableArray *testObjs;
 }
 

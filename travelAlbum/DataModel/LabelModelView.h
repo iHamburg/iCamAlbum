@@ -19,7 +19,7 @@
 
 
 + (id)defaultInstance;
-- (id)initWithCodingLabel:(id)codingLabel __deprecated;
+
 
 - (void)applyScale:(float)scale;
 

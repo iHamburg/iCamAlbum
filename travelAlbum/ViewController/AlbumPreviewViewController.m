@@ -10,9 +10,10 @@
 #import "PreviewSettingViewController.h"
 #import "IpodMusicLibraryViewController.h"
 #import "MomentShareView.h"
-#import "ExportController.h"
+#import "ICAExportController.h"
 #import "Protocols.h"
 #import "EALoadingView.h"
+#import "SlideViewController.h"
 
 #define kToolbarInterval 5
 
@@ -299,7 +300,9 @@
     
     [self shareMomentWithType:type];
     
-    [root slideOutFrom:SlideDirectionFromDown];
+//    [root slideOutFrom:SlideDirectionFromDown];
+    
+    [[SlideViewController sharedInstance] hideContainer];
 }
 
 
@@ -359,7 +362,7 @@
 - (IBAction)popShare:(UIButton*)sender{
     CGRect rect = [bottomBanner convertRect:sender.frame toView:self.view];
   
-    if (isIOS6) {
+    if (isIOS6 && NO) {
         [self showActivityVC];
     }
     else{
@@ -398,7 +401,9 @@
         momentShareV.delegate = self;
     }
     
-    [root slideInView:momentShareV from:SlideDirectionFromDown];
+
+    [self.view addSubview:[[SlideViewController sharedInstance] view]];
+	[[SlideViewController sharedInstance] slideInView:momentShareV from:SlideDirectionFromDown];
 }
 
 - (void)showMusicLibrary{
@@ -474,7 +479,7 @@
 	UIImage *img = previewImages[_momentManager.currentMomentIndex];
     
 	///momentView 恢复IMV
-	[[ExportController sharedInstance]shareImage:img type:type];
+	[[ICAExportController sharedInstance]shareImage:img type:type];
     
 }
 

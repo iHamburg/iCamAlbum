@@ -12,20 +12,21 @@
 #import "AlbumPreviewViewController.h"
 #import "mach/mach.h"
 #import "EditPhotoViewController.h"
-#import "ExportController.h"
+#import "ICAExportController.h"
 #import "IFFilterManager.h"
 #import "IAPManager.h"
-#import "EASetting.h"
+
 #import "AlbumsTableViewController.h"
 #import "AlbumManagerViewController.h"
 #import "FileManager.h"
 #import "VerticalInstructionViewController.h"
 #import "VerticalSwipeInstructionViewController.h"
 #import "EAInfoViewController.h"
+#import "iCAInstructionViewController.h"
 
 #import "SDWebImageManager.h"
 #import "ImageModelView.h"
-#import "WebImage.h"
+
 #import "SetStrokeColorCommand.h"
 #import "EALoadingView.h"
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
@@ -85,6 +86,9 @@ CommandType _command;
 
 
 - (void)handleAppFirstTimeOpen{
+   
+    L();
+    
     [self setupCacheDocuments];
     
     [self loadMusterAlbum];
@@ -102,7 +106,8 @@ CommandType _command;
 }
 
 - (void)handleRootFirstDidAppear{
-     [self toAlbumManager];
+    
+    [self toAlbumManager];
     [self test];
 }
 - (void)dealloc{
@@ -130,7 +135,7 @@ CommandType _command;
 		instructionVC = nil;
 	}
 	
-	[[ExportController sharedInstance] didReceiveMemoryWarning];
+	[[ICAExportController sharedInstance] didReceiveMemoryWarning];
 	
 }
 
@@ -356,25 +361,6 @@ CommandType _command;
 
 // 最先一开始和info
 
-- (void)toInstruction{
-
-	if(!instructionVC){
-		instructionVC = [[iCAInstructionViewController alloc]init];
-		instructionVC.view.frame = self.view.bounds;
-		instructionVC.delegate = self;
-	}
-
-//    NSLog(@"instruction.delegate # %@",instructionVC.delegate);
-	
-	[self.view addSubview:instructionVC.view];
-
-
-}
-
-- (void)instructionVCWillDismiss:(InstructionViewController *)vc{
-
-    [self instructionToHome];
-}
 
 #pragma mark - Function
 - (void)IAPDidFinished{
@@ -411,38 +397,26 @@ CommandType _command;
 }
 
 
-#pragma mark - Slide
+#pragma mark - Instruction
 
-
-- (void)slideInView:(UIView *)v from:(SlideDirection)direction{
-		
-	if (!slideVC) {
-		slideVC = [[SlideViewController alloc]init];
-		slideVC.view.alpha = 1;
+- (void)toInstruction{
+    
+	if(!instructionVC){
+		instructionVC = [[iCAInstructionViewController alloc]init];
+		instructionVC.view.frame = self.view.bounds;
+		instructionVC.delegate = self;
 	}
+    
 	
-	[self.view addSubview:slideVC.view];
-	[slideVC slideInView:v from:direction];
-	
-}
-
-- (void)slideOutFrom:(SlideDirection)direction{
-	
-	if (direction == SlideDirectionNone) {
-
-		[slideVC.view removeFromSuperview];
-	}
-	else{
-	
-		[slideVC hideContainer];
-	
-	}
-	
+	[self.view addSubview:instructionVC.view];
+    
     
 }
 
-
-#pragma mark - Instruction
+- (void)instructionVCWillDismiss:(InstructionViewController *)vc{
+    
+    [self instructionToHome];
+}
 - (void)removeInstruction {
     [instructionVC.view removeFromSuperview];
     instructionVC = nil;
@@ -454,7 +428,6 @@ CommandType _command;
         [instructionVC.view setOrigin:CGPointMake(0, -_h)];
     } completion:^(BOOL finished) {
 
-//        [self removeInstruction];
         [self performSelector:@selector(removeInstruction) withObject:nil afterDelay:1];
     }];
     
@@ -471,6 +444,10 @@ CommandType _command;
     L();
 
     [super test];
+    
+//    NSLog(@"loading Str # %@",LoadingStr);
+//    loadingHeight = 12;
+//    NSLog(@"loadingHeight # %f",loadingHeight);
 }
 
 - (void)testAlpha{

@@ -9,12 +9,11 @@
 #import "ImageModelView.h"
 #import "AlbumManager.h"
 #import "FBPhoto.h"
-#import "CodingPhoto.h"
-#import "CodingIcon.h"
+
 #import "FileManager.h"
 #import "PhotoAlbumLoader.h"
 #import "UtilLib.h"
-#import "LoadingView.h"
+
 
 @interface ImageModelView()
 
@@ -151,50 +150,6 @@ static NSArray *lockMenuItems, *unlockMenuItems;  //默认就是类变量，当�
 		
 //		NSLog(@"init with coder # %@",self);
 	return self;
-}
-
-- (id)initWithCodingPhoto:(CodingPhoto*)v{
-	if (self = [super initWithFrame:v.bounds]) {
-		
-		// initWithFrame 已经自动load过了，甚至firstload？？？
-		[self load];
-		
-		self.layer.anchorPoint = v.anchorPoint;
-		self.transform = v.transform;
-		self.center = v.center;
-        
-		self.imgName = v.imgName;
-		self.layer.borderWidth = v.borderWidth;
-		self.layer.borderColor = v.borderColor.CGColor;
-		
-		
-		if (v.croppedFlag) {
-			self.image = [UIImage imageWithSystemName:[self.imgName stringByAppendingString:@"_cropped"]];
-		}
-		else{
-			self.image = [UIImage imageWithSystemName:self.imgName];
-		}
-	}
-
-	return self;
-}
-
-- (id)initWithCodingIcon:(CodingIcon*)v{
-	if (self = [super initWithFrame:v.bounds]) {
-		
-		// initWithFrame 已经自动load过了，甚至firstload？？？
-		[self load];
-		
-		self.layer.anchorPoint = v.anchorPoint;
-		self.transform = v.transform;
-		self.center = v.center;
-        
-		self.imgName = v.imgName;
-	
-	}
-	
-	return self;
-
 }
 
 #pragma mark -

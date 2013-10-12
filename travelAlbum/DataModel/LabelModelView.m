@@ -7,7 +7,7 @@
 //
 
 #import "LabelModelView.h"
-#import "CodingText.h"
+
 #import "Category.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -76,30 +76,6 @@ static NSArray *lockMenuItems, *unlockMenuItems;
 }
 
 
-- (id)initWithCodingLabel:(CodingText*)v{
-	if (self = [super initWithFrame:v.bounds]) {
-		
-		self.layer.anchorPoint = v.anchorPoint;
-		self.transform = v.transform;
-		self.center = v.center;
-		
-		self.text = v.text;
-		self.textColor = v.fontColor;
-		self.textAlignment = v.textAlignment;
-		self.font = [UIFont fontWithName:v.fontName size:v.fontSize];
-		
-		_fontSizeFaktor = v.fontSizeFaktor;
-		_fontName = v.fontName;
-		
-		_bgAlpha = v.bgAlpha;
-		_bgColor = v.backgroundColor;
-		_strokeColor = v.strokeColor;
-		
-		[self load];
-	}
-	return self;
-
-}
 
 /// save
 - (void) encodeWithCoder: (NSCoder *)coder

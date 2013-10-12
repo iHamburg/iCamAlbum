@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Utilities.h"
+
 
 #define FontDisplayString @"Xapp"
 #define NumLabelInRow 3

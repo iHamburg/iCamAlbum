@@ -13,7 +13,7 @@
 #import "PhotoCropViewController.h"
 #import "EditTextViewController.h"
 #import "MomentShareView.h"
-#import "ExportController.h"
+#import "ICAExportController.h"
 #import "IAPManager.h"
 #import "EAKxMenu.h"
 #import "PageManagerViewController.h"
@@ -48,6 +48,8 @@
 - (void)setMomentManager:(MomentManager *)momentManager{
     _momentManager = momentManager;
     _album = momentManager.album;
+    
+//    (Appde)[[UIApplication sharedApplication] delegate]
     
      [self updateAlbum];
     
@@ -415,7 +417,9 @@
     
     [self shareMomentWithType:type];
     
-    [[ICARootViewController sharedInstance] slideOutFrom:SlideDirectionFromRight];
+    [[SlideViewController sharedInstance] hideContainer];
+        
+	
 }
 
 #pragma mark - ADView
@@ -825,7 +829,8 @@
         momentShareV.delegate = self;
     }
     
-      [root slideInView:momentShareV from:SlideDirectionFromRight];
+    [self.view addSubview:[[SlideViewController sharedInstance] view]];
+	[[SlideViewController sharedInstance] slideInView:momentShareV from:SlideDirectionFromRight];
 }
 
 //- (IBAction)showAddCaptionMenu:(CGPoint)point {
@@ -1005,7 +1010,7 @@
 	UIImage *img = [UIImage imageWithView:momentView];
     
 	///momentView 恢复IMV
-	[[ExportController sharedInstance]shareImage:img type:type];
+	[[ICAExportController sharedInstance]shareImage:img type:type];
     
 }
 

@@ -13,9 +13,8 @@
    
 	UIView *selectedPiece;
 
-//    __unsafe_unretained id<ControlComponentDelegate> delegate;
+
 }
-//@property (nonatomic, unsafe_unretained) id<ControlComponentDelegate> delegate;
 
 - (void)addGestureRecognizersToPiece:(UIView *)piece;
 - (void)adjustAnchorPointForGestureRecognizer:(UIGestureRecognizer*)gesture;

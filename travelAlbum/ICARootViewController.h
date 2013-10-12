@@ -11,26 +11,13 @@
 
 #import "FacebookManager.h"
 #import "SlideViewController.h"
-#import "iCAInstructionViewController.h"
 #import "CoachView.h"
 
 
-
-#define kFirstVersionKey @"firstVersionKey"
-#define kLastVersionKey @"lastVersionKey"
+//
 #define kCoachEditOffKey @"coachEditOff"
 #define kCoachManagerOffKey @"coachManagerOff"
 
-typedef enum {
-	SceneNone,
-	SceneManager,
-	SceneEdit,
-	ScenePreview,
-	SceneShare,
-	SceneMoreApp,
-	SceneInfo,
-	SceneInstruction
-}AppScene;
 
 typedef enum {
     CommandNone,
@@ -60,8 +47,6 @@ void showMsg(NSString*);
 	AlbumPreviewViewController *previewVC;
     AlbumManagerViewController *managerVC;
 
-	 // 只有一个壳子，还没有写内容
-	SlideViewController *slideVC;
 
 	CoachView *_coachView;
 
@@ -72,8 +57,7 @@ void showMsg(NSString*);
 @property (nonatomic, strong) AlbumPreviewViewController *previewVC;
 @property (nonatomic, strong) AlbumManagerViewController *managerVC;
 @property (nonatomic, assign) CommandType command;
-//
-//+ (id)sharedInstance;
+
 
 - (void)setupCacheDocuments;
 - (void)loadMusterAlbum;
@@ -94,14 +78,8 @@ void showMsg(NSString*);
 - (void)toInstruction;
 
 
-///SlideVC
-- (void)slideInView:(UIView *)v from:(SlideDirection)direction;
-- (void)slideOutFrom:(SlideDirection)direction;
-
 
 - (void)saveWhenQuit; // 当quit的时候调用，save 当前album
-
-//- (void)report_memory;
 
 
 

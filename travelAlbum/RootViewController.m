@@ -8,9 +8,8 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController ()
-
-@end
+#define kFirstVersionKey @"firstVersionKey"
+#define kLastVersionKey @"lastVersionKey"
 
 @implementation RootViewController
 
@@ -26,42 +25,44 @@
 	
 }
 
-//- (void)checkVersion{
-//  CGFloat _firstVersion = [_settingDict[@"firstVersion"] floatValue];
-//  CGFloat _lastVersion = [_settingDict[@"lastVersion"] floatValue];
-//
-//
-//    //获得
-//   CGFloat _thisVersion = [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
-//
-//    if (_firstVersion == 0.0) { // 第一次安装app
-//        isFirstOpen = YES;
-//        isUpdateOpen = YES;
-//
-//        _firstVersion =  [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
-//
-//        [_settingDict setObject:[NSString stringWithFloat:_firstVersion] forKey:@"firstVersion"];
-//
-//        _lastVersion = _firstVersion;
-//        [_settingDict setObject:[NSString stringWithFloat:_lastVersion] forKey:@"lastVersion"];
-//
-//    }
-//    else{ // 已经安装过app，再次打开
-//        if (_thisVersion > _lastVersion) {
-//            isUpdateOpen = YES;
-//        }
-//
-//        [_settingDict setObject:[NSString stringWithFloat:_thisVersion] forKey:@"lastVersion"];
-//    }
-//
-//    NSLog(@"firstVersion # %f, thisVersion # %f, isFirstOpen # %d",_firstVersion,_thisVersion,isFirstOpen);
-//}
+- (void)checkVersion{
+
+
+   CGFloat firstVersion = [[NSUserDefaults standardUserDefaults]floatForKey:kFirstVersionKey];
+   CGFloat lastVersion = [[NSUserDefaults standardUserDefaults]floatForKey:kLastVersionKey];
+   CGFloat thisVersion = [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
+	
+	if (firstVersion == 0.0) { // 第一次安装app
+		isFirstOpen = YES;
+		
+		firstVersion =  [[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleVersionKey] floatValue];
+		[[NSUserDefaults standardUserDefaults]setFloat:firstVersion forKey:kFirstVersionKey];
+		
+		lastVersion = firstVersion;
+		[[NSUserDefaults standardUserDefaults]setFloat:lastVersion forKey:kLastVersionKey];
+		
+	}
+	else{ // 已经安装过app，再次打开
+		if (thisVersion != lastVersion) {
+			isUpdateOpen = YES;
+		}
+		
+		[[NSUserDefaults standardUserDefaults]setFloat:thisVersion forKey:kLastVersionKey];
+	}
+	
+	
+    NSLog(@"firstVersion # %f, thisVersion # %f, isFirstOpen # %d",firstVersion,thisVersion,isFirstOpen);
+}
 //
 - (void)loadView{
-    
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(
+														 NSDocumentDirectory, NSUserDomainMask, YES);
+	NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSLog(@"docuPath # %@",documentsDirectory);
     
 	rootLoadViewFlag = YES;
     [self registerNotification];
+    [self checkVersion];
 }
 
 - (void)handleAppFirstTimeOpen{
@@ -71,11 +72,14 @@
     
 }
 - (void)viewDidAppear:(BOOL)animated{
+    
     [super viewDidAppear:animated];
     
     if (rootLoadViewFlag) {
         
         rootLoadViewFlag = NO;
+        
+          [self handleRootFirstDidAppear];
         
 		if (isFirstOpen) {
 			
@@ -86,7 +90,8 @@
 			
 		}
         
-        [self handleRootFirstDidAppear];
+      
+     
         [self loadAdView];
 	}
 

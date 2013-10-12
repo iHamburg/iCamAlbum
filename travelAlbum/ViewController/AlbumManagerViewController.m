@@ -12,7 +12,7 @@
 #import "ChangePhotoAlbumsViewController.h"
 #import "EAKxMenu.h"
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
-#import "ExportController.h"
+#import "ICAExportController.h"
 #import "IAPManager.h"
 #import "ImagePhotoTableViewController.h"
 #import "BGViewController.h"

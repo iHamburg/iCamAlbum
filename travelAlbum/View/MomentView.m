@@ -9,8 +9,7 @@
 #import "MomentView.h"
 #import <QuartzCore/QuartzCore.h>
 #import "EditControlComponent.h"
-#import "PhotoWidget.h"
-#import "IconWidget.h"
+
 #import "ImageModelView.h"
 #import "LabelModelView.h"
 #import "UIResponder+MotionRecognizers.h"
@@ -173,9 +172,9 @@ NSString *const NotificationChangeCaption = @"ChangeCaption";
 		
 		/// CodingPhoto 没有gestureRecognizers
 		
-		if ([widget respondsToSelector:@selector(decodedObject)]) {
-			return;
-		}
+//		if ([widget respondsToSelector:@selector(decodedObject)]) {
+//			return;
+//		}
 		
 		// remove gesture
 		NSArray *gestures = widget.gestureRecognizers;

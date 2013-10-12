@@ -10,20 +10,6 @@
 
 
 typedef enum{
-	PopNone,
-	PopShare,
-	PopChangeBG
-	
-} PopOverStatus;
-
-
-
-typedef enum{
-	ViewTagCoverEdit = 444, 
-	ViewTagMax
-}ViewTag;
-
-typedef enum{
 	ShareToAlbum,
 	ShareToFacebook,
 	ShareToTwitter,
@@ -58,17 +44,10 @@ typedef enum{
 @end
 
 
-@protocol ToolbarDelegate <NSObject>
-
-- (void)toolbarButtonPressed:(id)sender;
-
-@end
- 
-
-@protocol CodingDelegate <NSObject>
-
-- (id)decodedObject __deprecated; // load
-
-@end
+//@protocol CodingDelegate <NSObject>
+//
+//- (id)decodedObject __deprecated; // load
+//
+//@end
 
 

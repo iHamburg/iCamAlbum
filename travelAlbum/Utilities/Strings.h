@@ -6,22 +6,23 @@
 #pragma mark - Info
 
 #ifdef FREE //free version
-	#define kAppID 699053198
-    #define SRecommendEmailBody @"<br/>Check it out! <a href=\"http://bit.ly/UT3Uqs\">bit.ly/UT3Uqs</a>"
+	#define kAppID @"699053198"
+
 
 
 #else   // paid version
-    #define kAppID 699048547
+    #define kAppID @"699048547"
 
-    #define SRecommendEmailBody @"<br/>Check it out! <a href=\"http://bit.ly/SntNjm\">bit.ly/SntNjm</a>"
+
 
 #endif
 
 
 #define STwitter @"iCamAlbum - Album your photos \nCheck it out!"
 #define SSupportEmailTitle @"Feedback for iCamAlbum"
-#define SRecommendEmailTitle @"iCamAlbum -- Amazing App for Photo Collage Album"
 
+#define SRecommendEmailTitle @"iCamAlbum -- Amazing App for Photo Collage Album"
+#define SRecommendEmailBody @"<br/>Check it out! <a href=\"http://bit.ly/UT3Uqs\">bit.ly/UT3Uqs</a>"
 // Facebook
 #define SFBCaption @"Album your photos" 
 #define SFBPostImageMsg @"via iCamAlbum"
@@ -32,8 +33,6 @@
 #pragma mark - Export
 
 #ifdef FREE //free version
-
-
 
 
 #else   // paid version

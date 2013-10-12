@@ -7,6 +7,7 @@
 //
 
 #import "BGViewController.h"
+#import "LoadingView.h"
 
 @interface BGViewController ()
 

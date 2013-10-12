@@ -7,7 +7,7 @@
 //
 
 #import "PDFActivity.h"
-#import "ExportController.h"
+#import "ICAExportController.h"
 #import "AlbumManager.h"
 #import "EALoadingView.h"
 
@@ -58,7 +58,7 @@
     
     AlbumManager *manager = [AlbumManager sharedInstance];
     generatePDFWithImages(manager.currentAlbum.momentPreviewImages, [NSString cachesPathForFileName:manager.currentAlbum.pdfName]);
-    [[ExportController sharedInstance]sendPDFwithName:manager.currentAlbum.pdfName];
+    [[ICAExportController sharedInstance]sendPDFwithName:manager.currentAlbum.pdfName];
     
     [self activityDidFinish:YES];
     

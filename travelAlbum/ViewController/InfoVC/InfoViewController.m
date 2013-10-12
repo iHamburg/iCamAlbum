@@ -7,9 +7,9 @@
 //
 
 #import "InfoViewController.h"
-#import "Utilities.h"
+
 #import "MoreApp.h"
-#import "ExportController.h"
+#import "ICAExportController.h"
 #import <QuartzCore/QuartzCore.h>
 #import "FacebookManager.h"
 
@@ -92,7 +92,7 @@
 }
 
 - (void)rateUs{
-    [[ExportController sharedInstance]toRate];
+    [[ICAExportController sharedInstance]toRate];
 }
 
 - (void)instructionVCWillDismiss:(InstructionViewController *)vc{
@@ -105,7 +105,7 @@
 - (void)tweetus{
 	
 
-	[[ExportController sharedInstance]sendTweetWithText:STwitter image:nil];
+	[[ICAExportController sharedInstance]sendTweetWithText:STwitter image:nil];
 }
 - (void)facebook{
 	
@@ -119,7 +119,7 @@
 						  SRecommendEmailBody,@"emailBody",
 						  nil];
 	
-	[[ExportController sharedInstance] sendEmail:dict];
+	[[ICAExportController sharedInstance] sendEmail:dict];
 	
 }
 - (void)supportEmail{
@@ -131,7 +131,7 @@
 	};
 	
     
-	[[ExportController sharedInstance] sendEmail:dict2];
+	[[ICAExportController sharedInstance] sendEmail:dict2];
 }
 
 - (void)appstore{
@@ -150,6 +150,6 @@
     
     NSString *appid = isPaid()?app.pAppid:app.fAppid;
     
-    [[ExportController sharedInstance]linkToAppStoreWithID:appid];
+    [[ICAExportController sharedInstance]linkToAppStoreWithID:appid];
 }
 @end

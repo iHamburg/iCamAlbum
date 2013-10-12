@@ -9,7 +9,7 @@
 #import "AlbumManager.h"
 #import "FileManager.h"
 #import "UtilLib.h"
-#import "ExportController.h"
+#import "ICAExportController.h"
 #import "ICARootViewController.h"
 #import "Moment.h"
 
@@ -387,7 +387,7 @@ static id sharedInstance;
          
          generatePDFWithImages(self.currentAlbum.momentPreviewImages, [NSString cachesPathForFileName:self.currentAlbum.pdfName]);
 
-         [[ExportController sharedInstance]sendPDFwithName:self.currentAlbum.pdfName];
+         [[ICAExportController sharedInstance]sendPDFwithName:self.currentAlbum.pdfName];
 	
      }
 	else if(type == ShareAlbumSaveImages){
@@ -408,7 +408,7 @@ static id sharedInstance;
 
         generatePDFWithImages(self.currentAlbum.momentPreviewImages, [NSString cachesPathForFileName:self.currentAlbum.pdfName]);
         
-        [[ExportController sharedInstance]sharePDFWithOtherApp:self.currentAlbum.pdfName inRect:CGRectMake(_w/2, _h/2, 10, 10)];
+        [[ICAExportController sharedInstance]sharePDFWithOtherApp:self.currentAlbum.pdfName inRect:CGRectMake(_w/2, _h/2, 10, 10)];
     }
 //
 //	NSDictionary *dict = @{
@@ -457,7 +457,7 @@ static id sharedInstance;
 #pragma mark - Intern Fcn
 - (void)sendAlbumAsImagesPerEmail {
     
-    [[ExportController sharedInstance]sendEmailWithImages:self.currentAlbum.momentPreviewImages];
+    [[ICAExportController sharedInstance]sendEmailWithImages:self.currentAlbum.momentPreviewImages];
     
 }
 

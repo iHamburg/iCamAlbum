@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Utilities.h"
+
 #import "EditTextViewController.h"
-#import "TextWidget.h"
+
 
 typedef enum {
 	SettingColorModeText,

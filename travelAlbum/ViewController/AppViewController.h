@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ICARootViewController.h"
-//#import "ICAViewController.h"
 #import "AlbumManager.h"
 #import "MomentManager.h"
 #import "AdView.h"

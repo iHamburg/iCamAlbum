@@ -12,6 +12,7 @@
 #import "FBPhotoTableViewController.h"
 #import "FacebookManager.h"
 #import "ImageConstentWidthCell.h"
+#import "LoadingView.h"
 
 @interface AlbumsTableViewController ()
 

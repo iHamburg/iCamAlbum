@@ -8,7 +8,7 @@
 
 #import "MyColorPlatteView.h"
 #import <QuartzCore/QuartzCore.h>
-#import "Utilities.h"
+
 
 
 @interface MyColorPlatteView ()

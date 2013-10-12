@@ -9,7 +9,7 @@
 #import "EditSideControlViewController.h"
 #import "MomentChangeBGAlbumsTableViewController.h"
 #import "ImageModelAlbumsViewController.h"
-#import "Sticker.h"
+
 #import "LabelModelView.h"
 #import "ImageModelView.h"
 
@@ -19,13 +19,7 @@
 
 @implementation EditSideControlViewController
 
-//- (UINavigationController*)nav{
-//    if (!_nav) {
-//        _nav = [[UINavigationController alloc]initWithRootViewController:self];
-//        _nav.view.frame = CGRectMake(0, 0, self.view.width, self.view.height + kHNavigationbar);
-//    }
-//    return _nav;
-//}
+
 
 - (void)loadView{
     self.title = @"Edit Page";
@@ -242,8 +236,8 @@
     
     NSMutableArray* stickerNames = [NSMutableArray array];
     for (int i = 0; i< [iconWidgetNames count]; i++) {
-        Sticker *sticker = [[Sticker alloc]initWithDictionary:iconWidgetNames[i]];
-        [stickerNames addObject:sticker.imgName];
+//        Sticker *sticker = [[Sticker alloc]initWithDictionary:iconWidgetNames[i]];
+        [stickerNames addObject:iconWidgetNames[i][@"name"]];
     }
     
     return stickerNames;

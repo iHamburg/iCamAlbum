@@ -8,7 +8,7 @@
 
 #import "PhotoTableViewController.h"
 #import "AlbumEditViewController.h"
-#import "PhotoWidget.h"
+
 #import "UIImageView+WebCache.h"
 #import "ImageModelView.h"
 

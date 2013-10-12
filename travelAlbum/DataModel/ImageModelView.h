@@ -21,7 +21,6 @@
 - (id)initWithImageName:(NSString*)imgName;
 
 - (id)initWithFBPhoto:(id)fbPhoto;
-- (id)initWithCodingPhoto:(id)codingPhoto __deprecated;
-- (id)initWithCodingIcon:(id)codingIcon __deprecated;
+
 
 @end

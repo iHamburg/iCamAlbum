@@ -8,9 +8,6 @@
 
 #import "LandScapeNavigationController.h"
 
-@interface LandScapeNavigationController ()
-
-@end
 
 @implementation LandScapeNavigationController
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

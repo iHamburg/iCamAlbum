@@ -7,9 +7,6 @@
 //
 
 #import "EditControlComponent.h"
-#import "PhotoWidget.h"
-#import "TextWidget.h"
-#import "IconWidget.h"
 #import "ImageModelView.h"
 #import "LabelModelView.h"
 
@@ -126,13 +123,13 @@ static CGRect innenRect;
 		}
 		
 		// 如果是text，不改变transform，只改变bounds
-		if ([piece isKindOfClass:[TextWidget class]]  || [piece isKindOfClass:[LabelModelView class]]) {
+		if ( [piece isKindOfClass:[LabelModelView class]]) {
 			
 			float scale = gestureRecognizer.scale;
 			
 			[gestureRecognizer setScale:1];
 
-			[(TextWidget*)piece applyScale:scale];
+			[(LabelModelView*)piece applyScale:scale];
 			
 		}
 		else{

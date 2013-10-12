@@ -6,25 +6,15 @@
 //  Copyright (c) 2013 Xappsoft. All rights reserved.
 //
 
-#import "UtilLib.h"
-
-extern CGFloat _h,_w;
-extern CGRect _r,_containerRect;
-
-extern BOOL isFirstOpen,isUpdateOpen;
 
 
-//extern NSString* const NotificationAddPhotoWidget;
+
 extern NSString* const NotificationEditPhotoWidget;
 extern NSString* const NotificationCropPhotoWidget;
 extern NSString* const NotificationEditLabelModelView;
 
 
 extern int PhotoNum;    
-
-
-///extern function
-void report_memory();
 
 BOOL isPaid(void);
 
@@ -76,7 +66,6 @@ void generatePDFWithImages(NSArray* imgs ,NSString* filePath);
 #pragma mark - UI
 
 
-#define kIsPad2 (isPad?2.0:1.0)
 
 #define kRetinaScale [[UIScreen mainScreen]scale]
 

@@ -31,17 +31,19 @@
 #else
 //	[NSThread sleepForTimeInterval:5];
 #endif
+    
 //---------------- Flurry
-	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+	
 	
 	
 #ifndef DEBUG
 
-	
+	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
 	[Flurry startSession:kFlurryKey];  // 如果不是测试版本，激活flurry
 	
 #endif
 	
+    
 	
 //--------------Facebook
     
@@ -60,10 +62,7 @@
 //	[self customizeAppearance];
 //---------------------------------------
 	
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(
-														 NSDocumentDirectory, NSUserDomainMask, YES);
-	NSString *documentsDirectory = [paths objectAtIndex:0];
-    NSLog(@"docuPath # %@",documentsDirectory);
+
     
 //    L();
 //    report_memory();

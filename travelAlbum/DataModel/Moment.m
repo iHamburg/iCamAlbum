@@ -165,17 +165,17 @@
 /// load 如果是old archive,保存的文件中还存在CodingPhoto， 要处理CodingPhoto，CodingText,用PhotoWidget来替代CodingPhoto
 - (void)decodeElements{
 
-	for (int i = 0; i< _codingElements.count; i++) {
-		UIView *v = _codingElements[i];
-		if ([v respondsToSelector:@selector(decodedObject)]) { // CodingPhoto, CodingText
-			
-//			NSLog(@"widget # %@ to decode",v);
-			[_codingElements replaceObjectAtIndex:i withObject:[(id<CodingDelegate>)v decodedObject]];
-
-			
-		}
-	}
-	
+//	for (int i = 0; i< _codingElements.count; i++) {
+//		UIView *v = _codingElements[i];
+//		if ([v respondsToSelector:@selector(decodedObject)]) { // CodingPhoto, CodingText
+//			
+////			NSLog(@"widget # %@ to decode",v);
+//			[_codingElements replaceObjectAtIndex:i withObject:[(id<CodingDelegate>)v decodedObject]];
+//
+//			
+//		}
+//	}
+//	
 //	NSLog(@"when loading ,elements # %@",_codingElements);
 }
 
