@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SDWebImageDownloader.h"
-
+#import "Protocols.h"
 
 @interface ImageModelView : UIImageView<Widget, SDWebImageDownloaderDelegate>{
 

@@ -9,6 +9,7 @@
 
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
 #import "ExportController.h"
+#import "Protocols.h"
 
 @interface ICAExportController : ExportController< UIAlertViewDelegate, UIDocumentInteractionControllerDelegate>{
 	UIDocumentInteractionController *documentController;

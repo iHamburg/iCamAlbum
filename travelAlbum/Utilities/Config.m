@@ -64,5 +64,16 @@ void generatePDFWithImages(NSArray* imgs ,NSString* filePath){
 	
 }
 
-
+NSArray* getAllFontNames(void){
+    NSArray *array = [UIFont familyNames];
+    NSMutableArray* fontNames_ = [NSMutableArray array];
+    
+    for(NSString *familyName in array)
+    {
+        [fontNames_ addObject:familyName];
+    }
+    [fontNames_ sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    return fontNames_;
+}
 

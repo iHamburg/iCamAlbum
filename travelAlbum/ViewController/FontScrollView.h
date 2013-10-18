@@ -28,7 +28,6 @@
 }
 
 @property (nonatomic, unsafe_unretained) id<FontScrollViewDelegate>delegate;
-//@property (nonatomic, strong) NSMutableArray *fontNames;
 @property (nonatomic, assign) int selectedIndex;
 
 @end

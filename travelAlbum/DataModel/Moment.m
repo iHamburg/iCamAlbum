@@ -8,7 +8,7 @@
 
 #import "Moment.h"
 #import "FileManager.h"
-
+#import "Protocols.h"
 #import "UtilLib.h"
 
 @interface Moment()

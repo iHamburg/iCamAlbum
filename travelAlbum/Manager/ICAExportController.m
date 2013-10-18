@@ -18,9 +18,9 @@
 	if (self = [super init]) {
 		
 		_root = [ICARootViewController sharedInstance];
-        tweetInitText = STwitterPostImageMsg;
-        tweetDefaultImg = kQRImage;
-        appIDStr = kAppID;
+        tweetInitText = UPLOAD_IMAGE_MSG;
+        tweetDefaultImg = nil;
+//        appIDStr = kAppID;
 	}
 	return self;
 }
@@ -100,7 +100,7 @@
 	
 	NSDictionary *pdfMailInfo = @{
 	@"subject":SSharePDFEmailSubject,
-	@"emailBody":SSharePDFEmailBody,
+	@"emailBody":UPLOAD_IMAGE_MSG,
 	@"attachment":@[pdfData, @"application/pdf",pdfName],
 	};
 	
@@ -114,8 +114,8 @@
 	
 	NSDictionary *pdfMailInfo = @{
                                   @"subject":SSharePDFEmailSubject,
-                                  @"emailBody":SSharePDFEmailBody,
-                                  @"attachment":@[pdfData, @"application/pdf",@"iCamAlbum.pdf"],
+                                  @"emailBody":UPLOAD_IMAGE_MSG,
+                                  @"attachment":@[pdfData, @"application/pdf",[NSString stringWithFormat:@"%@.pdf",APPNAME]],
                                   };
 	
 	[self sendEmail:pdfMailInfo];
@@ -139,7 +139,7 @@
 	}
 	else if (type == ShareToTwitter){
 		
-		[self sendTweetWithText:SShareText image:img];
+		[self sendTweetWithText:SHARE_MSG image:img];
 	}
 	else if (type == ShareToEmail){
 		
@@ -147,8 +147,8 @@
 	
 		NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:
 							  SShareImageEmailSubject, @"subject",
-							  SShareText,@"emailBody",
-							  [NSArray arrayWithObjects:contentData,@"image/jpeg",@"iCamAlbum.jpg", nil], @"attachment",
+							  SHARE_MSG,@"emailBody",
+							  [NSArray arrayWithObjects:contentData,@"image/jpeg",[NSString stringWithFormat:@"%@.jpg",APPNAME], nil], @"attachment",
 							  nil];
 		
 		[[ICAExportController sharedInstance] sendEmail:info];
@@ -179,7 +179,7 @@
 
 	ALAssetsLibrary* library  = [[ALAssetsLibrary alloc] init];
     
-	[library saveImage:img toAlbum:kAppName withCompletionBlock:^(NSError *error){
+	[library saveImage:img toAlbum:APPNAME withCompletionBlock:^(NSError *error){
 		//            NSLog(@"saved!");
 		if (!error) {
 			[[LoadingView sharedLoadingView]addTitle:@"Saved!"];

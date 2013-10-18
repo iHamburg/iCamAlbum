@@ -24,7 +24,6 @@
 
 @property (nonatomic, unsafe_unretained) AlbumEditViewController *vc;
 @property (nonatomic, unsafe_unretained) MomentView *momentV;
-//@property (nonatomic, strong) UINavigationController *nav;
 @property (nonatomic, assign) BOOL hasCaption;
 
 @end

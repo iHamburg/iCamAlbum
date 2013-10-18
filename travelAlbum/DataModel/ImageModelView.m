@@ -134,7 +134,8 @@ static NSArray *lockMenuItems, *unlockMenuItems;  //默认就是类变量，当�
           
             self.image = [UIImage imageWithSystemName:_imgName];
         }
-        NSLog(@"Error, initCoder image error# %@",_imgName);    
+        
+//        NSLog(@"Error, initCoder image error# %@",_imgName);    
 //        NSAssert(self.image, @"initCoder image error # %@",_imgName);
         
 //		self.image = [UIImage imageWithSystemName:_imgName];

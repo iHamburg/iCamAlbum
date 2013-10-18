@@ -8,7 +8,7 @@
 
 
 #import "AppViewController.h"
-
+#import "TextViewController.h"
 #import "Moment.h"
 #import "Album.h"
 #import "MomentView.h"
@@ -19,14 +19,14 @@
 
 //@class EditSidebar;
 @class EditPhotoViewController;
-@class EditTextViewController;
+
 @class PhotoCropViewController;
 @class PageManagerViewController;
 @class EditSideControlViewController;
 
-@interface AlbumEditViewController : AppViewController <MomentShareViewDelegate, UIActionSheetDelegate,UIAlertViewDelegate, UIGestureRecognizerDelegate>{
+@interface AlbumEditViewController : AppViewController <TextVCDelegate, MomentShareViewDelegate, UIActionSheetDelegate,UIAlertViewDelegate, UIGestureRecognizerDelegate>{
 
-	EditTextViewController  *textVC;
+	TextViewController  *textVC;
     PhotoCropViewController *photoCropVC;
     EditPhotoViewController *photoVC;  // PhotoEdit
     PageManagerViewController *pageManagerVC;
@@ -87,9 +87,5 @@
 
 - (void)saveCurrentAlbum;
 
-
-//- (id)imvWithImgName:(NSString*)imgName;
-//- (id)imvWithAsset:(ALAsset*)asset;
-//- (id)firstWidgetInPoint:(CGPoint)point;
 
 @end

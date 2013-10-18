@@ -8,7 +8,7 @@
 
 #import "ControlComponent.h"
 #import "MomentView.h"
-
+#import "Protocols.h"
 
 
 @interface EditControlComponent : ControlComponent{

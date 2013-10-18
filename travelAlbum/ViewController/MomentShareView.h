@@ -21,6 +21,6 @@
 
 @protocol MomentShareViewDelegate <NSObject>
 
-- (void)momentShareView:(MomentShareView*)view didShareWithType:(ShareType)type;
+- (void)momentShareView:(MomentShareView*)view didShareWithType:(int)type;
 
 @end

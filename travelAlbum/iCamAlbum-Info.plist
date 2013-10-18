@@ -8,16 +8,8 @@
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
-	<key>CFBundleIconFiles</key>
-	<array>
-		<string>AppIcon57.png</string>
-		<string>AppIcon114.png</string>
-		<string>AppIcon72.png</string>
-		<string>AppIcon144.png</string>
-		<string>Default-Landscape@2x~ipad.png</string>
-	</array>
 	<key>CFBundleIdentifier</key>
-	<string>de.xappsoft.icamalbumpro</string>
+	<string>com.leocat.test.ica09</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -89,8 +81,8 @@
 	</array>
 	<key>UISupportedInterfaceOrientations~iphone</key>
 	<array>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>

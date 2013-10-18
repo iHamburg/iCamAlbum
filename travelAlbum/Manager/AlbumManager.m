@@ -212,7 +212,7 @@ static id sharedInstance;
 	NSString *albumName = kMusterAlbumName;
 	
     Album *album = loadArchived(albumName);
-	album.title = @"iCamAlbum";
+	album.title = APPNAME;
 	return album;
     
 }

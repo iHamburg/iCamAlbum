@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "FontScrollView.h"
+#import "MyColorPlatteView.h"
 #import "EditTextViewController.h"
 
 
@@ -31,7 +32,6 @@ typedef enum {
 	NSArray *tableKeys;
 	NSArray *tableHeaders;
 
-
 	NSString *textFontName;
 	UIColor *textColor, *bgColor;
 	float bgalpha, strokeWidthF; //0 - 1
@@ -50,8 +50,8 @@ typedef enum {
 @property (nonatomic, strong) UIColor *textColor, *bgColor;
 @property (nonatomic, assign) float bgalpha;;
 @property (nonatomic, assign) NSTextAlignment textAlignment;
+//@property (nonatomic, assign) SettingColorMode colorMode;
 
-@property (nonatomic, assign) SettingColorMode colorMode;
 - (void)popBack;
 - (void)reload;
 

@@ -8,25 +8,12 @@
 
 #import "TextViewController.h"
 
-@interface TextViewController ()
-
-@end
-
 @implementation TextViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+- (void)loadView{
+   
+	CGFloat height = 288;
+    self.view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, WTEXTVC, height)];
 }
 
 - (void)didReceiveMemoryWarning

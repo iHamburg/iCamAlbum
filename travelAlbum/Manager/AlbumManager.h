@@ -8,7 +8,7 @@
 
 
 #import "Album.h"
-
+#import "Protocols.h"
 
 @interface AlbumManager : NSObject{
 	

@@ -357,12 +357,12 @@
 	[self authorize];
 	
 	NSMutableDictionary* params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								   FBAppID, @"app_id",
-								   kApplink, @"link",
-								   kFBIconLink, @"picture",
-								   kAppName, @"name",
-								   SFBCaption, @"caption",
-								   SFBDescription, @"description",
+								   FLURRY_KEY, @"app_id",
+								   APPLINK, @"link",
+								   FBICONLINK, @"picture",
+								   APPNAME, @"name",
+								   FB_CAPTION, @"caption",
+								   FB_DESCRIPTION, @"description",
 								   nil];
 	
 	[facebook dialog:@"feed" andParams:params andDelegate:self];
@@ -380,7 +380,7 @@
 	
 	NSData *picData = UIImageJPEGRepresentation(img, 0.8);
     NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-								   SShareText,@"message",
+								   SHARE_MSG,@"message",
                                    picData, @"picture",
                                    nil];
 	
@@ -474,7 +474,7 @@
 		UIImage *img = imgs_[i];
 		NSData *picData = UIImageJPEGRepresentation(img, 0.6);
 		NSMutableDictionary *params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-									   SFBPostImageMsg,@"message",
+									   UPLOAD_IMAGE_MSG,@"message",
 									   picData, @"picture",
 									   nil];
 		
@@ -500,7 +500,7 @@
     
 	NSMutableDictionary *params =[NSMutableDictionary dictionaryWithDictionary: @{
 								  @"name":albumName,
-								  @"description":SShareFBNewAlbumMsg,
+								  @"description":FB_NEW_ALBUM_DESC,
 								  }];
 	
 	imgs = _imgs;

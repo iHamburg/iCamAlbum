@@ -1,47 +1,43 @@
 
-// free: 699053198
-// paid: 699048547
-
-///------------------ Info -------------------//
-#pragma mark - Info
-
-#ifdef FREE //free version
-	#define kAppID @"699053198"
 
 
 
-#else   // paid version
-    #define kAppID @"699048547"
 
 
+#define kManagerShareSaveImgs LString(@"Save  images in photo album")
+#define kManagerShareFB       LString(@"Share images to Facebook")
+#define kManagerSharePDF      LString(@"Share PDF per Email")
+#define kManagerShareApp      LString(@"Share PDF to other Apps")
+#define kManagerShareSendImgs LString(@"Share images per Email")
 
-#endif
+#define SEnterAlbumName       LString(@"Enter the name of the album")
+#define SDefaultAlbumName     LString(@"Default Album name")
+#define SSetupPW              LString(@"Setup password")
+#define SEnterPWAgain         LString(@"Enter the password again")
+#define SEnterPWToLock        LString(@"Unlock this album")
+#define SEnterPWToValidate    LString(@"Enter the password")
+#define SDeleteAlbum          LString(@"Delete this album?")
+#define SPWNotMatch           LString(@"Error: Passwords don't match")
+#define SEnterWrongPW         LString(@"Error: wrong password")
+#define SNoFavoritedAlbum     LString(@"Warning: No favorited album")
+#define SShowFavoriteList     LString(@"Show favorites")
+#define SAddToFavorite        LString(@"Add to favorites")
+#define SRemoveFromFavorite   LString(@"Remove from favorites")
+#define SAlbumNameAlreadyUsed LString(@"This name is already used")
 
+#define SChangePhotoTitle     LString(@"Change Cover Photo")
 
-#define STwitter @"iCamAlbum - Album your photos \nCheck it out!"
-#define SSupportEmailTitle @"Feedback for iCamAlbum"
+#define STextVCTitle          LString(@"Add Text")
 
-#define SRecommendEmailTitle @"iCamAlbum -- Amazing App for Photo Collage Album"
-#define SRecommendEmailBody @"<br/>Check it out! <a href=\"http://bit.ly/UT3Uqs\">bit.ly/UT3Uqs</a>"
-// Facebook
-#define SFBCaption @"Album your photos" 
-#define SFBPostImageMsg @"via iCamAlbum"
-#define SFBDescription @" "
+#define SEnterCaption         LString(@"Enter the Caption")
+#define SDefaultCaptionText   LString(@"Add Caption")
+
+#define SMomentChangeBG       LString(@"Background")
 
 
 ///----------------- Export -------------------//
 #pragma mark - Export
 
-#ifdef FREE //free version
-
-
-#else   // paid version
-
-
-#endif
-#define STwitterPostImageMsg @"\nvia iCamAlbum"
-#define SShareImageEmailBody @"Created via <a href=https://itunes.apple.com/de/app/id699053198?l=en&mt=8>iCamAlbum</a> for iPhone, iPad, and iPod Touch."
-#define SSharePDFEmailBody @"Created via <a href=https://itunes.apple.com/de/app/id699053198?l=en&mt=8>iCamAlbum</a> for iPhone, iPad, and iPod Touch."
 
 /// Everalbum 没有rate的机制
 #define SRateMsgPad @"If you like TinyKitchen and want more free updates, please rate or write your 5-star review on the App Store. This helps and takes less than a minute. Thank you!"
@@ -76,3 +72,7 @@
 #define SIAPTitle (isPad?@"In App Purchase":nil)
 #define SIAPMsg (isPad?@"With this free version you can only use limited number of albums and pages.\nIf you have fun with our app and want to enjoy an unlimited usage, please unlock the full version.":@"Unlock the full version with albums and pages unlimited?")
 
+
+
+#define SShareImageEmailSubject @"A Nice Photo Collage for You"
+#define SSharePDFEmailSubject @"A Nice Photo Collage Album for You"

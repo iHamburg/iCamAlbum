@@ -73,7 +73,7 @@
 - (void)layoutCell:(UITableViewCell *)cell indexPath:(NSIndexPath *)indexPath{
 	if (indexPath.section == 0) { //system
         cell.imageView.image = [[UIImage imageWithSystemName:@"AlbumBG_13.jpg"] imageByScalingAndCroppingForSize:CGSizeMake(55, 55)];
-		cell.textLabel.text = @"iCamAlbum Photos";
+		cell.textLabel.text = [NSString stringWithFormat:@"%@ Photos",APPNAME];
 
 
 	}

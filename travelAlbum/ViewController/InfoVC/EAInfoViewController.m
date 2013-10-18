@@ -10,7 +10,8 @@
 #import "iCAInstructionViewController.h"
 #import "InfoMoreAppCell.h"
 #import "InfoCell.h"
-
+#import "FacebookManager.h"
+#import "ICAExportController.h"
 
 @implementation EAInfoViewController
 
@@ -51,6 +52,9 @@
 }
 
 - (void)loadView{
+    
+    exportController = [ICAExportController sharedInstance];
+    
     self.view = [[UIView alloc]initWithFrame:_r];
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -69,6 +73,8 @@
     
     [self.view addSubview:topBar];
     [self.view addSubview:tv];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -211,5 +217,9 @@
         [instructionVC.view removeFromSuperview];
         instructionVC = nil;
 
+}
+
+- (void)facebook{
+    [[FacebookManager sharedInstance]feed];
 }
 @end

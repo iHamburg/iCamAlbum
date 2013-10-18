@@ -32,7 +32,7 @@
 @synthesize parent, textFontName,textColor,bgColor,textAlignment,bgalpha;
 @synthesize bgAlphaSlider,strokeSwitch;
 
-@synthesize colorMode;
+//@synthesize colorMode;
 
 - (void)setLabelMV:(LabelModelView *)labelMV{
 	_labelMV = labelMV;
@@ -52,7 +52,7 @@
 - (void)loadView{
 
     /// ios7 不能stroke，所以就没有这个选项
-    if (kVersion >= 7.0) {
+    if (isIOS7) {
         tableHeaders = @[@"Text",@"Background",@""];
         tableKeys = @[@[@"Font",@"Color"],
                       @[@"Background",@"Transparency"],
@@ -68,9 +68,11 @@
     }
 	
 	
-	CGFloat w = isPad?360:_w;
+
+    CGFloat w = _w/2;
 	CGFloat h;
-    if (kVersion>=7.0) {
+    
+    if (isIOS7) {
         h = 320;
     }
     else
@@ -113,7 +115,7 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)segmentValueChanged:(id)sender{
-    [parent segmentValueChanged:sender];
+//    [parent segmentValueChanged:sender];
 }
 
 #pragma mark - Table view data source
@@ -231,7 +233,7 @@
 	if (section == 0 && row == 0) { // font
 		if(!fontV){
 			fontV = [[FontScrollView alloc]initWithFrame:self.view.bounds];
-			fontV.delegate = parent;
+//			fontV.delegate = parent;
 			fontVC = [[UIViewController alloc]init];
 			fontVC.view = fontV;
 		}
@@ -241,30 +243,31 @@
 	else if(section == 0 && row == 1){ //text color
 		if (!colorPlatteV) {
 			colorPlatteV = [[MyColorPlatteView alloc] initWithFrame:self.view.bounds];
-			colorPlatteV.delegate = parent;
+//			colorPlatteV.delegate = parent;
 			colorPlatteV.layer.cornerRadius = 10;
 			colorPlatteVC = [[UIViewController alloc]init];
 			colorPlatteVC.view = colorPlatteV;
 			
 		}
-		colorMode = SettingColorModeText;
-		[self.navigationController pushViewController:colorPlatteVC animated:YES];
-	}
+//		colorMode = SettingColorModeText;
+	
+        [self.navigationController pushViewController:colorPlatteVC animated:YES];
+	
+    }
 	else if(section == 1 && row == 0){ // bg color
 		if (!colorPlatteV) {
 			colorPlatteV = [[MyColorPlatteView alloc] initWithFrame:self.view.bounds];
-			colorPlatteV.delegate = parent;
+//			colorPlatteV.delegate = parent;
 			colorPlatteV.layer.cornerRadius = 10;
 			colorPlatteVC = [[UIViewController alloc]init];
 			colorPlatteVC.view = colorPlatteV;
 			
 		}
-		colorMode = SettingColorModeBG;
+//		colorMode = SettingColorModeBG;
 		[self.navigationController pushViewController:colorPlatteVC animated:YES];
 	}
 	
 	// to change barbutton
-	[parent settingDidPush];
 	
 	[tableView deselectRowAtIndexPath:indexPath animated:YES];
 	
@@ -275,7 +278,6 @@
    
     float newValue = sender.value;
     
-    [parent bgSliderDidChangValue:newValue];
     bgalpha = newValue;
     
 }

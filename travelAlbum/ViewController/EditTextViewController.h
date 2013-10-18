@@ -7,40 +7,35 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "AlbumEditViewController.h"
-#import "FontScrollView.h"
+
+
 #import "LabelModelView.h"
-#import "MyColorPlatteView.h"
+#import "TextViewController.h"
 
-@class EditTextSettingViewController;
+@class TextSettingViewController;
 
-@interface EditTextViewController : UIViewController<UITextViewDelegate,MyColorPlatteDelegate, FontScrollViewDelegate>{
-	
-	UIView *editContainer;
+@interface EditTextViewController : TextViewController<UITextViewDelegate>{
 	
 	UITextView *tv;
-	UIButton *keyboardReturnB;
-	UIBarButtonItem *backBB, *cancelBB, *doneBB, *optionBB;
 
-	MyColorPlatteView *colorPlatteV;
-	FontScrollView *fontV;
-	EditTextSettingViewController *settingVC;
-	UINavigationController *settingNav;
+	UIBarButtonItem *cancelBB, *doneBB;
+
+    LabelModelView *_labelMV;
+    
+	TextSettingViewController *settingVC;
 	
 	CGFloat  displayedFontSize;
 	NSString *fontName;
 }
 
 
-@property (nonatomic, unsafe_unretained) AlbumEditViewController *vc;
-@property (nonatomic, strong) UINavigationController *nav;
-@property (nonatomic, strong) LabelModelView *labelMV;
-
 - (void)cancel;
-- (void)settingBack;
-- (void)settingDidPush;
-- (IBAction)segmentValueChanged:(id)sender;
-- (void)bgSliderDidChangValue:(float)newValue;
+//- (IBAction)segmentValueChanged:(id)sender;
+//- (void)bgSliderDidChangValue:(float)newValue;
 
-- (void)pushSetting_phone;
+- (void)changeTextColor:(UIColor *)color;
+- (void)changeBGColor:(UIColor *)color ;
+- (void)changeFontName:(NSString *)fontName;
+- (void)changeTextAlignment:(int)index;
+- (void)changeBGAlpha:(float)newValue;
 @end

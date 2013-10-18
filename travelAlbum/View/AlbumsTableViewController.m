@@ -304,7 +304,7 @@
     imagePhotoTableVC.inputs = imgNames;
     imagePhotoTableVC.numOfColumn = _numOfColumn;
     imagePhotoTableVC.thumbSize = _thumbSize;
-    imagePhotoTableVC.title = @"iCamAlbum";
+    imagePhotoTableVC.title = APPNAME;
     
     [self pushPhotoTableViewController:imagePhotoTableVC];
     

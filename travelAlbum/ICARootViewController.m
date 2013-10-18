@@ -23,7 +23,7 @@
 #import "VerticalSwipeInstructionViewController.h"
 #import "EAInfoViewController.h"
 #import "iCAInstructionViewController.h"
-
+#import "ICAAdView.h"
 #import "SDWebImageManager.h"
 #import "ImageModelView.h"
 
@@ -31,8 +31,8 @@
 #import "EALoadingView.h"
 #import "ALAssetsLibrary+CustomPhotoAlbum.h"
 #import "NewsQuadView.h"
-
-
+#import "FontNameLineScrollView.h"
+#import "MBProgressHUD.h"
 
 #define kSaveWhenUsingInterval 120
 
@@ -83,11 +83,18 @@ CommandType _command;
 //    return managerVC;
 //}
 
+- (void)loadView{
+    [super loadView];
 
+
+}
+
+- (void)loadAdView{
+    [ICAAdView sharedInstance];
+}
 
 - (void)handleAppFirstTimeOpen{
    
-    L();
     
     [self setupCacheDocuments];
     
@@ -108,6 +115,7 @@ CommandType _command;
 - (void)handleRootFirstDidAppear{
     
     [self toAlbumManager];
+  
     [self test];
 }
 - (void)dealloc{
@@ -230,7 +238,9 @@ CommandType _command;
 - (void)toAlbumManager{
     managerVC = [[AlbumManagerViewController alloc] init];
     managerVC.view.alpha = 1;
+    NSLog(@"managerVC # %@",managerVC.view);
 	[self.view addSubview:managerVC.view];
+        NSLog(@"managerVC # %@",managerVC.view);
 }
 
 - (void)expandToPreviewVC{
@@ -448,17 +458,46 @@ CommandType _command;
 //    NSLog(@"loading Str # %@",LoadingStr);
 //    loadingHeight = 12;
 //    NSLog(@"loadingHeight # %f",loadingHeight);
+    
+//    [self testView:[[FontNameLineScrollView alloc] initWithFrame:CGRectMake(100, 100, 400, 60)]];
+    
+    [self expandToEditVC];
+ 
+//    UIView *window1 =  [[[UIApplication sharedApplication] windows] objectAtIndex:0];
+//    UIView *window2 = UIApplication.sharedApplication.keyWindow;
+//    
+//    NSLog(@"window1 # %@; window2 # %@",window1,window2);
+//    NSLog(@"abc # %@");
+    
+//    [self testHUDText];
+}
+
+- (void)testHUDText{
+    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+	
+	// Configure for text only and offset down
+	hud.mode = MBProgressHUDModeText;
+	hud.labelText = @"Some message...";
+    //	hud.margin = 10.f;
+    //	hud.yOffset = 150.f;
+	hud.removeFromSuperViewOnHide = YES;
+	
+	[hud hide:YES afterDelay:3];
 }
 
 - (void)testAlpha{
-    UIImage *png = [UIImage imageWithSystemName:@"Sticker_Tag_10.png"];
-    UIImage *jpg = [UIImage imageWithSystemName:@"AlbumBG_13.jpg"];
+//    UIImage *png = [UIImage imageWithSystemName:@"Sticker_Tag_10.png"];
+//    UIImage *jpg = [UIImage imageWithSystemName:@"AlbumBG_13.jpg"];
     
-    NSLog(@"png # %@, alpha # %d",NSStringFromCGSize(png.size),[png hasAlpha]);
-    NSLog(@"jpg # %@, alpha # %d",NSStringFromCGSize(jpg.size),[jpg hasAlpha]);
+//    NSLog(@"png # %@, alpha # %d",NSStringFromCGSize(png.size),[png hasAlpha]);
+//    NSLog(@"jpg # %@, alpha # %d",NSStringFromCGSize(jpg.size),[jpg hasAlpha]);
+//    
     
 }
 
+- (void)testABC{
+    
+}
 - (void)testLocalize{
     NSString *dismiss = NSLocalizedString(@"Dismiss", nil);
     
@@ -534,9 +573,7 @@ CommandType _command;
 
 - (void)testFilterImage{
 	IFFilterManager *filterManager = [IFFilterManager sharedInstance];
-//	UIImage *newImg = [filterManager filteredImageWithRaw:kPlaceholderImage filterType:IF_1977_FILTER];
-//	UIImage *newImg = [filterManager testImage:IF_HEFE_FILTER];
-//	UIImage *newImg = [filterManager filteredImageWithRawImage: filterType:<#(IFFilterType)#>]
+
 	
 	UIImage *newImg = [filterManager imageByFiltingImage:[UIImage imageNamed:@"new_BG5.jpg"] filterType:IF_1977_FILTER];
 	NSLog(@"img # %@",NSStringFromCGSize(newImg.size));

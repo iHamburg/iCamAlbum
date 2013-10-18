@@ -7,7 +7,6 @@
 //
 
 #import "AlbumPreviewViewController.h"
-#import "PreviewSettingViewController.h"
 #import "IpodMusicLibraryViewController.h"
 #import "MomentShareView.h"
 #import "ICAExportController.h"
@@ -16,7 +15,6 @@
 #import "SlideViewController.h"
 
 #define kToolbarInterval 5
-
 
 
 @implementation AlbumPreviewViewController
@@ -277,9 +275,7 @@
 //	}
 //	
     UIImage *img = [previewImages objectAtIndex:momentIndex];
-//    img = [img imageByScalingAndCroppingForSize:previewView.bounds.size];
-//    NSLog(@"img # %@, scale # %f",NSStringFromCGSize(img.size),img.scale);
-//    NSLog(@"imgV # %@",imgV);
+
 	imgV.image = img;
 
 	return imgV;
@@ -288,7 +284,7 @@
 
 - (void)tableScrollView:(TableScrollView *)scrollView coverAtIndexWasBroughtToFront:(int)index{
 //	L();
-//	pageIndex = index;
+
     _momentManager.currentMomentIndex = index;
 
     [self updateTitle:_momentManager.currentMomentIndex + 1];
@@ -296,15 +292,12 @@
 
 
 #pragma mark - MomentShare
-- (void)momentShareView:(MomentShareView *)view didShareWithType:(ShareType)type{
+- (void)momentShareView:(MomentShareView *)view didShareWithType:(int)type{
     
     [self shareMomentWithType:type];
     
-//    [root slideOutFrom:SlideDirectionFromDown];
-    
     [[SlideViewController sharedInstance] hideContainer];
 }
-
 
 
 #pragma mark - IBOutlet
@@ -372,7 +365,7 @@
 
 - (void)showActivityVC{
     
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[previewImages[_momentManager.currentMomentIndex],SShareText] applicationActivities:nil];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[previewImages[_momentManager.currentMomentIndex],SHARE_MSG] applicationActivities:nil];
     
     activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact,UIActivityTypeCopyToPasteboard];
     activityViewController.completionHandler = ^(NSString *activityType, BOOL complete){
@@ -447,8 +440,6 @@
     
 }
 #pragma mark - Functions
-
-
 
 - (void)showToolbar{
     

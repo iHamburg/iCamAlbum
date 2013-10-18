@@ -15,6 +15,7 @@
 #import "UIResponder+MotionRecognizers.h"
 #import "FBPhoto.h"
 #import "ZDStickerView.h"
+#import "Protocols.h"
 
 NSString *const NotificationChangeCaption = @"ChangeCaption";
 

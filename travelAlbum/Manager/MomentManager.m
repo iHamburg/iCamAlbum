@@ -86,7 +86,7 @@ NSString* const NotificationCurrentMomentIndexChanged = @"currentMomentIndexChan
 
     if (self.numberOfMoments >= self.maxNumOfMoments) {
         
-		[[IAPManager sharedInstance]showBuyRestoreAlert:kIAPFullVersion title:SIAPTitle message:SIAPMsg];
+		[[IAPManager sharedInstance]showBuyRestoreAlert:IAP_KEY title:SIAPTitle message:SIAPMsg];
         return nil;
     }
     

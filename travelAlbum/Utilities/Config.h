@@ -8,17 +8,20 @@
 
 
 
-
+/// extern Fcns
 extern NSString* const NotificationEditPhotoWidget;
 extern NSString* const NotificationCropPhotoWidget;
 extern NSString* const NotificationEditLabelModelView;
 
 
 extern int PhotoNum;    
-
+//
 BOOL isPaid(void);
 
 void generatePDFWithImages(NSArray* imgs ,NSString* filePath);
+
+NSArray* getAllFontNames(void);
+
 
 
 #pragma mark - Constant
@@ -31,12 +34,6 @@ void generatePDFWithImages(NSArray* imgs ,NSString* filePath);
     #define kUniversalPassword @"fh48fhcbslaqpor"
 
 #endif
-
-#define kAppName @"iCamAlbum"
-#define kApplink @"https://itunes.apple.com/de/app/id699053198?l=en&mt=8"
-#define kIAPFullVersion @"de.xappsoft.icamalbumfree.fullversion"
-
-//
 
 
 #pragma mark - File
@@ -57,43 +54,26 @@ void generatePDFWithImages(NSArray* imgs ,NSString* filePath);
 #define kNotificationChangeMomentBGImage @"changeMomentBGImage"
 #define kNotificationEditWidget @"editWidget"
 
-#pragma mark - Setting
-
-#define kSettingFrameEnabled @"frameEnable"
-#define kEditPhotoGuideFlag @"editPhotoGuide"
 
 
 #pragma mark - UI
 
 
-
-#define kRetinaScale [[UIScreen mainScreen]scale]
-
-#define kHNavigationbar (isPad?44.0:32.0)
-#define kHPopNavigationbar (isPad?(isIOS7?44.0:36.0):32.0)
-//#define
 #define kWPhotoWidgetFrame (isPad?10:5)
 #define kwSidebar (isPad?250.0f:160.0f)
-#define kSideBarContentHeight (isPad?724:288) //sidebar 自身是_h, 但content则是作为NaviController的root，所以view的高度是要减去navibar
 
 
 #pragma mark - Others
-#define MAXPICKEDPHOTO 10
-#define kKeyBundleVersion @"bundleVersion"
-#define kFBIconLink @"http://www.xappsoft.de/img/icamalbum_qrcode.png"
+
 #define kJPEGCompressionQuality 0.6
-#define kAlbumMaxNumberOfMoments 20
+
 
 #define kPlaceholderImage [UIImage imageNamed:@"placeholder.jpg"]
 #define kPlaceholderIcon [UIImage imageNamed:@"Info_twitter3.png"]
 #define kPlaceholderIconName @"Info_twitter3.png"
-#define kQRImage [UIImage imageNamed:@"icamalbum_qrcode.png"]
-
 #define kbbbBGImage [UIImage imageNamed:@"toolbarButtonBG.png"]
 
 #define kFontToolbarTitle [UIFont fontWithName:@"Archive" size:isPad?30:16]
-
-
 #define kFontName @"Hero"
 
 #define kColorLabelBlue [UIColor colorWithHEX:@"007AFF"]

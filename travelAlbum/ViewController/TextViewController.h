@@ -8,6 +8,27 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TextViewController : UIViewController
+#define WTEXTVC (isPad?780:_w)
+
+@protocol TextVCDelegate;
+
+
+@interface TextViewController : UIViewController{
+    
+    UILabel *_label;
+    
+    __unsafe_unretained id<TextVCDelegate> _delegate;
+}
+
+@property (nonatomic, unsafe_unretained) id<TextVCDelegate> delegate;
+@property (nonatomic, strong) UILabel *label;
+
+@end
+
+
+@protocol TextVCDelegate <NSObject>
+
+- (void)textVCDidCancel:(TextViewController*)textVC;
+- (void)textVCDidChangeLabel:(UILabel*)label;
 
 @end

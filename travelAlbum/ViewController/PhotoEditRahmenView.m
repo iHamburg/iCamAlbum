@@ -26,12 +26,11 @@
         CGFloat imgW = isPad?60:40;
         CGFloat margin = isPad?20:10;
         
-//		self.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
 		self.backgroundColor = [UIColor clearColor];
 		
         imgVs = [NSMutableArray array];
        
-//        NSArray *colors = [[SpriteManager sharedInstance]rahmenColors];
+
         _rahmenColors = [self createRahmenColors];
         
         UIImage *thumbImg = [UIImage imageNamed:@"DSFilterTileNormal.png"];

@@ -28,7 +28,7 @@
 
 - (NSMutableArray*)createFontNames{
     NSArray *array = [UIFont familyNames];
-   NSMutableArray* fontNames_ = [NSMutableArray array];
+    NSMutableArray* fontNames_ = [NSMutableArray array];
     
     for(NSString *familyName in array)
     {
@@ -37,7 +37,8 @@
     [fontNames_ sortUsingSelector:@selector(localizedCaseInsensitiveCompare:)];
     
     return fontNames_;
-   }
+   
+}
 
 - (NSMutableArray*)createFontLabels:(NSArray*)fontNames_{
     

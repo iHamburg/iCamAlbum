@@ -12,7 +12,7 @@
 #import "FBPhoto.h"
 
 //#define FBAppID @"371156869589289" //Everalbum
-#define FBAppID @"213853645405469"   //iCA
+//#define FBAppID @"213853645405469"   //iCA
 
 @interface FacebookManager : NSObject<FBSessionDelegate, FBRequestDelegate, FBDialogDelegate>{
 	Facebook *facebook;

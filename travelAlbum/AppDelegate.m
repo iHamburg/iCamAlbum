@@ -10,7 +10,7 @@
 #import "CPMotionRecognizingWindow.h"
 #import "ICARootViewController.h"
 #import "Flurry.h"
-
+#import "Appirater.h"
 
 @implementation AppDelegate
 
@@ -18,18 +18,76 @@
 @synthesize viewController = _viewController;
 @synthesize facebook;
 
-#define kFlurryKey @"HWTNY5JZ2YWHQY2ZRG8B" //iCA
+
+- (void)initVariablesICamAlbum
+{
+    //	L();
+	
+    APPNAME = @"iCamAlbum";
+    APPID = isPaid()?@"699048547":@"699053198";
+    APPLINK = @"https://itunes.apple.com/de/app/id699053198?l=en&mt=8";
+    IAP_KEY = @"de.xappsoft.icamalbumfree.fullversion";
+
+    FBICONLINK = @"http://www.xappsoft.de/img/icamalbum_qrcode.png";
+    ADMOB_KEY = @"a15226a64014da4"; // ICA
+    FB_KEY = @"213853645405469";
+    FLURRY_KEY = @"HWTNY5JZ2YWHQY2ZRG8B";
+        
+    TWEETUSTEXT = @"iCamAlbum - Album your photos \nCheck it out!";
+    SUPPORTEMAILSUBJECT = @"Feedback for iCamAlbum";
+    RECOMMENDEMAILSUBJECT = @"iCamAlbum -- Amazing App for Photo Collage Album";
+    RECOMMENDEMAILBODY = @"Check it Out!";
+    FB_CAPTION = @"Album your photos";
+    FB_DESCRIPTION = @"";
+    
+    UPLOAD_IMAGE_MSG = @"via iCamAlbum";
+    FB_NEW_ALBUM_DESC = @"Created via iCamAlbum";
+    SHARE_MSG = @"\nCreated via iCamAlbum by Xappsoft";
+}
+
+- (void)initVariablesMyPhotoAlbum
+{
+    //	L();
+	
+    APPNAME = @"iCamAlbum";
+    APPID = isPaid()?@"699048547":@"699053198";
+    APPLINK = @"https://itunes.apple.com/de/app/id699053198?l=en&mt=8";
+    IAP_KEY = @"de.xappsoft.icamalbumfree.fullversion";
+    
+    FBICONLINK = @"http://www.xappsoft.de/img/icamalbum_qrcode.png";
+    ADMOB_KEY = @"a15226a64014da4"; // ICA
+    FB_KEY = @"213853645405469";
+    FLURRY_KEY = @"HWTNY5JZ2YWHQY2ZRG8B";
+    
+    TWEETUSTEXT = @"iCamAlbum - Album your photos \nCheck it out!";
+    SUPPORTEMAILSUBJECT = @"Feedback for iCamAlbum";
+    RECOMMENDEMAILSUBJECT = @"iCamAlbum -- Amazing App for Photo Collage Album";
+    RECOMMENDEMAILBODY = @"Check it Out!";
+    FB_CAPTION = @"Album your photos";
+    FB_DESCRIPTION = @"";
+    
+    UPLOAD_IMAGE_MSG = @"via iCamAlbum";
+    FB_NEW_ALBUM_DESC = @"Created via iCamAlbum";
+    SHARE_MSG = @"\nCreated via iCamAlbum by Xappsoft";
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//	L();
-	
+    [self initVariablesICamAlbum];
+    
+    [Appirater setAppId:@"552035781"];
+    [Appirater setDaysUntilPrompt:1];
+    [Appirater setUsesUntilPrompt:10];
+    [Appirater setSignificantEventsUntilPrompt:-1];
+    [Appirater setTimeBeforeReminding:2];
+    [Appirater setDebug:YES];
 	
 #if TARGET_IPHONE_SIMULATOR
 	//	NSString *hello = @"Hello, iOS Simulator!";
 	;
 #else
 //	[NSThread sleepForTimeInterval:5];
+    
 #endif
     
 //---------------- Flurry
@@ -39,7 +97,7 @@
 #ifndef DEBUG
 
 	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-	[Flurry startSession:kFlurryKey];  // 如果不是测试版本，激活flurry
+	[Flurry startSession:FLURRY_KEY];  // 如果不是测试版本，激活flurry
 	
 #endif
 	
@@ -47,7 +105,7 @@
 	
 //--------------Facebook
     
-    facebook = [[Facebook alloc] initWithAppId:FBAppID
+    facebook = [[Facebook alloc] initWithAppId:FB_KEY
 								   andDelegate:[FacebookManager sharedInstance]];
 //	NSString *facebookSuffix = isPaid()?@"paid":@"free";
 //	NSLog(@"ispaid # %d",isPaid());
@@ -73,6 +131,8 @@
 	
     [self.window makeKeyAndVisible];
 
+    
+//    [Appirater appLaunched:YES];
 	return YES;
 }
 
@@ -96,8 +156,7 @@
 {
 //	L();
 	
-	
-	// Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+//	[Appirater appEnteredForeground:YES];
 
 //	[[ExportController sharedInstance]estimateRate];
 }

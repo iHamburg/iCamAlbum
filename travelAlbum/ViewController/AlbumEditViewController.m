@@ -7,11 +7,11 @@
 //
 
 #import "AlbumEditViewController.h"
-
+#import "LandScapeNavigationController.h"
 #import "MomentView.h"
 #import "EditPhotoViewController.h"
 #import "PhotoCropViewController.h"
-#import "EditTextViewController.h"
+#import "ICAEditTextViewController.h"
 #import "MomentShareView.h"
 #import "ICAExportController.h"
 #import "IAPManager.h"
@@ -382,6 +382,15 @@
 //	
 //}
 
+#pragma mark - TextVC
+- (void)textVCDidCancel:(TextViewController *)textVC{
+    [self closeTextEdit];
+}
+
+- (void)textVCDidChangeLabel:(LabelModelView *)label{
+    [self finishTextEdit:label];
+}
+
 #pragma mark - AlertView
 
 - (void)showDeleteAlert{
@@ -413,7 +422,7 @@
 
 
 #pragma mark - MomentShare
-- (void)momentShareView:(MomentShareView *)view didShareWithType:(ShareType)type{
+- (void)momentShareView:(MomentShareView *)view didShareWithType:(int)type{
     
     [self shareMomentWithType:type];
     
@@ -717,18 +726,20 @@
 - (IBAction)popTextEdit:(LabelModelView*)textWidget{
 	L();
 	if (!textVC) {
-		textVC = [[EditTextViewController alloc]init];
+		textVC = [[ICAEditTextViewController alloc]init];
 		textVC.view.alpha = 1;
-		textVC.vc = self;
+        textVC.delegate = self;
 	}
     
-    textVC.labelMV = textWidget;
+    textVC.label = textWidget;
 
+    UINavigationController *nav = [[LandScapeNavigationController alloc]initWithRootViewController:textVC];
+    nav.view.frame = CGRectMake(0, 0, textVC.view.width, textVC.view.height + kHPopNavigationbar);
     if (isPad) {
         
-        pop = [[UIPopoverController alloc] initWithContentViewController:textVC.nav];
+        pop = [[UIPopoverController alloc] initWithContentViewController:nav];
 
-        pop.popoverContentSize = textVC.nav.view.size;
+        pop.popoverContentSize = nav.view.size;
         if (isIOS6) {
             [pop presentPopoverFromRect:CGRectMake(_w/2, isIOS7?_h/2:5, 2, 2) inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
  
@@ -738,15 +749,10 @@
             /// patch bug for ios5
              [pop presentPopoverFromRect:CGRectMake(_w/2, 20, 2, 2) inView:self.view permittedArrowDirections:0 animated:YES];
         }
-       
-        
-        
-        
-//        UINavigationController *editSideNav = textVC.nav;
-//        [self.view addSubview:textVC.view];
+
     }
 	else{
-		[root presentModalViewController:textVC.nav animated:YES];
+		[root presentModalViewController:nav animated:YES];
 
 	}
 	
@@ -770,7 +776,6 @@
 
 - (void)finishTextEdit:(LabelModelView*)textWidget{
     
-//	[self addTextWidget:textWidget];
 	[momentView addTextWidget:textWidget];
     
     [self closeTextEdit];
@@ -794,12 +799,8 @@
 
 
 - (void)showActivityVC{
-    //    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"empty" ofType:@"pdf"];
-    //    NSURL *URL = [NSURL fileURLWithPath:filePath];
-    //    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[URL] applicationActivities:@[openInAppActivity]];
     
-    
-    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[[UIImage imageWithView:momentView],SShareText] applicationActivities:nil];
+    UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:@[[UIImage imageWithView:momentView],SHARE_MSG] applicationActivities:nil];
     
     activityViewController.excludedActivityTypes = @[UIActivityTypeAssignToContact,UIActivityTypeCopyToPasteboard];
     activityViewController.completionHandler = ^(NSString *activityType, BOOL complete){

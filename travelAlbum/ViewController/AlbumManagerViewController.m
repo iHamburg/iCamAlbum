@@ -221,6 +221,7 @@
 - (void)viewWillAppear:(BOOL)animated{
 //    L();
     [super viewWillAppear:animated];
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -229,7 +230,7 @@
     [self pageSwitchToCurrentAlbum];
     [self updateAlbum];
     
-    NSLog(@"manager # %@, topbanner # %@",self.view,topBanner);
+//    NSLog(@"manager # %@, topbanner # %@",self.view,topBanner);
 
 }
 
@@ -602,7 +603,7 @@
                 
             }
             else{
-//                [self showWrongPasswordAlert];
+
                showMsg(SEnterWrongPW);
             }
 
@@ -613,7 +614,6 @@
         UITextField *tf = [alertView textFieldAtIndex:0];
         NSString *title = tf.text;
 
-//        NSLog(@"_command # %d",_command);
         
         if (buttonIndex == 1) {
             if ( [manager isPasswordCorrect:title]) {
@@ -801,7 +801,7 @@
 //    NSLog(@"isFavorite listed # %d",manager.isFavoriteListed);
     
     if (manager.numberOfAllAlbums >= manager.maxNumOfAlbums) {
-        [[IAPManager sharedInstance]showBuyRestoreAlert:kIAPFullVersion title:SIAPTitle message:SIAPMsg];
+        [[IAPManager sharedInstance]showBuyRestoreAlert:IAP_KEY title:SIAPTitle message:SIAPMsg];
         return;
     }
     
@@ -1087,7 +1087,7 @@
     
     
     
-    [activityItems addObject:SShareText];
+    [activityItems addObject:SHARE_MSG];
     [activityItems addObject:URL];
     UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:activityItems applicationActivities:@[pdfActivity]];
     
