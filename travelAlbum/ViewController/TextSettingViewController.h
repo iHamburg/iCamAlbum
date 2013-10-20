@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "EditTextViewController.h"
+#import "TextViewController.h"
 #import "LineScrollView.h"
 
 @interface TextSettingViewController : UIViewController<LineScrollViewDelegate,UITableViewDataSource,UITableViewDelegate>{
@@ -24,9 +24,11 @@
 
     
     NSArray *sections;
-    __unsafe_unretained EditTextViewController *_parent;
+    __unsafe_unretained TextViewController *_parent;
 }
 
-@property (nonatomic, unsafe_unretained) EditTextViewController *parent;
+@property (nonatomic, unsafe_unretained) TextViewController *parent;
+
+@property (nonatomic, assign) float bgAlpha;
 
 @end

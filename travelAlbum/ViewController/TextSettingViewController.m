@@ -58,6 +58,18 @@
 
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    [super viewWillAppear:animated];
+ 
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    L();
+    [super viewDidAppear:animated];
+    
+    
+}
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -103,8 +115,7 @@
         [cell.contentView addSubview:bgColorLSV];
     }
     else if(section == 3){ //alpha
-        
-       
+        bgAlphaSlider.value = _bgAlpha;
         [cell.contentView addSubview:bgAlphaSlider];
 
     }

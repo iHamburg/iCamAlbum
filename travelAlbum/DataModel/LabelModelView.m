@@ -110,7 +110,7 @@ static NSArray *lockMenuItems, *unlockMenuItems;
 					  [[UIMenuItem alloc]initWithTitle:@"Edit" action:@selector(menuEditPiece:)],
 					 ];
 	}
-	//
+
 	if (lockFlag) {
 		return lockMenuItems;
 	}

@@ -733,7 +733,8 @@
     
     textVC.label = textWidget;
 
-    UINavigationController *nav = [[LandScapeNavigationController alloc]initWithRootViewController:textVC];
+
+   UINavigationController *nav = [[LandScapeNavigationController alloc]initWithRootViewController:textVC];
     nav.view.frame = CGRectMake(0, 0, textVC.view.width, textVC.view.height + kHPopNavigationbar);
     if (isPad) {
         

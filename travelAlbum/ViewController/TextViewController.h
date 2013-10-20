@@ -12,16 +12,41 @@
 
 @protocol TextVCDelegate;
 
-
-@interface TextViewController : UIViewController{
+@class TextSettingViewController;
+@interface TextViewController : UIViewController<UITextViewDelegate>{
     
     UILabel *_label;
     
+    UITextView *tv;
+	UIBarButtonItem *cancelBB, *doneBB;
+    
+
+    
+	TextSettingViewController *settingVC;
+	
+	CGFloat  displayedFontSize;
+	
+    NSString *fontName;
+    NSString *text;
+    UIColor *textColor;
+    UIColor *bgColor;
+    float bgAlpha;
+    NSTextAlignment textAlignment;
+
     __unsafe_unretained id<TextVCDelegate> _delegate;
 }
 
 @property (nonatomic, unsafe_unretained) id<TextVCDelegate> delegate;
 @property (nonatomic, strong) UILabel *label;
+
+- (void)cancel;
+
+
+- (void)changeTextColor:(UIColor *)color;
+- (void)changeBGColor:(UIColor *)color ;
+- (void)changeFontName:(NSString *)fontName;
+- (void)changeTextAlignment:(int)index;
+- (void)changeBGAlpha:(float)newValue;
 
 @end
 
