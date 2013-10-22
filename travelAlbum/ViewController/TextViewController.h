@@ -20,7 +20,6 @@
     UITextView *tv;
 	UIBarButtonItem *cancelBB, *doneBB;
     
-
     
 	TextSettingViewController *settingVC;
 	

@@ -71,16 +71,21 @@
     SHARE_MSG = @"\nCreated via iCamAlbum by Xappsoft";
 }
 
+- (void)initAppirater
+{
+    [Appirater setAppId:APPID];
+    [Appirater setDaysUntilPrompt:0];
+    [Appirater setUsesUntilPrompt:4];
+    [Appirater setSignificantEventsUntilPrompt:-1];
+    [Appirater setTimeBeforeReminding:2];
+    [Appirater setDebug:YES];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self initVariablesICamAlbum];
     
-    [Appirater setAppId:@"552035781"];
-    [Appirater setDaysUntilPrompt:1];
-    [Appirater setUsesUntilPrompt:10];
-    [Appirater setSignificantEventsUntilPrompt:-1];
-    [Appirater setTimeBeforeReminding:2];
-    [Appirater setDebug:YES];
+    [self initAppirater];
 	
 #if TARGET_IPHONE_SIMULATOR
 	//	NSString *hello = @"Hello, iOS Simulator!";
@@ -90,17 +95,7 @@
     
 #endif
     
-//---------------- Flurry
-	
-	
-	
-#ifndef DEBUG
 
-	NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
-	[Flurry startSession:FLURRY_KEY];  // 如果不是测试版本，激活flurry
-	
-#endif
-	
     
 	
 //--------------Facebook
@@ -131,8 +126,18 @@
 	
     [self.window makeKeyAndVisible];
 
+    if (!isDebug()|| YES) {
+        
+        NSSetUncaughtExceptionHandler(&uncaughtExceptionHandler);
+        [Flurry startSession:FLURRY_KEY];  // 如果不是测试版本，激活flurry
+
+        if (isPad) {
+            [Appirater appLaunched:YES];
+        }
+        
+    }
     
-//    [Appirater appLaunched:YES];
+   
 	return YES;
 }
 
@@ -155,10 +160,13 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
 //	L();
-	
-//	[Appirater appEnteredForeground:YES];
 
 //	[[ExportController sharedInstance]estimateRate];
+//    if (!isDebug() && isPad ) {
+    
+        [Appirater appEnteredForeground:YES];
+
+//    }
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application

@@ -33,6 +33,18 @@ BOOL isPaid(void){
 }
 
 
+BOOL isDebug(void){
+    BOOL flag;
+	
+#ifdef DEBUG
+	flag = YES;
+#else
+	flag= NO;
+#endif
+	
+	return flag;
+}
+
 void generatePDFWithImages(NSArray* imgs ,NSString* filePath){
     
 	//	 Create the PDF context using the default page size of 612 x 792.

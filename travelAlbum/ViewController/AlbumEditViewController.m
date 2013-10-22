@@ -11,7 +11,7 @@
 #import "MomentView.h"
 #import "EditPhotoViewController.h"
 #import "PhotoCropViewController.h"
-#import "ICAEditTextViewController.h"
+#import "EditTextViewController.h"
 #import "MomentShareView.h"
 #import "ICAExportController.h"
 #import "IAPManager.h"
@@ -364,24 +364,6 @@
 }
 
 
-
-//#pragma mark - ActionSheet
-//- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex{
-//	NSLog(@"button clicked: # %d",buttonIndex);
-//	
-//	if (actionSheet == deleteActionSheet) {
-//		if (buttonIndex == 0) { // delete
-//			
-//            //			[self deletePage:_album.momentIndex];
-//            [self deletePage];
-//            
-//			[sidebar close];
-//		}
-//	}
-//	
-//	
-//}
-
 #pragma mark - TextVC
 - (void)textVCDidCancel:(TextViewController *)textVC{
     [self closeTextEdit];
@@ -726,7 +708,7 @@
 - (IBAction)popTextEdit:(LabelModelView*)textWidget{
 	L();
 	if (!textVC) {
-		textVC = [[ICAEditTextViewController alloc]init];
+		textVC = [[EditTextViewController alloc]init];
 		textVC.view.alpha = 1;
         textVC.delegate = self;
 	}

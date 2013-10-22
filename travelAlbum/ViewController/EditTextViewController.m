@@ -47,7 +47,6 @@
     bgColor = _labelMV.bgColor;
     bgAlpha = _labelMV.bgAlpha;
     
-//	settingVC.labelMV = _labelMV;
 
 }
 

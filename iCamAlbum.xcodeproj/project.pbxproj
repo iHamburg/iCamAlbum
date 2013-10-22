@@ -90,8 +90,6 @@
 		262670131809028E00834683 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 262670111809028E00834683 /* ALAssetsLibrary+CustomPhotoAlbum.m */; };
 		262670671809633700834683 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262670661809633700834683 /* TextViewController.m */; };
 		262670681809633700834683 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 262670661809633700834683 /* TextViewController.m */; };
-		2626706C18096FA700834683 /* ICAEditTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2626706B18096FA700834683 /* ICAEditTextViewController.m */; };
-		2626706D18096FA700834683 /* ICAEditTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2626706B18096FA700834683 /* ICAEditTextViewController.m */; };
 		262670701809738400834683 /* TextSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2626706F1809738400834683 /* TextSettingViewController.m */; };
 		262670711809738400834683 /* TextSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2626706F1809738400834683 /* TextSettingViewController.m */; };
 		262670741809792300834683 /* LineScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 262670731809792300834683 /* LineScrollView.m */; };
@@ -483,6 +481,7 @@
 		57C3DBA615B8A18F009B48AC /* PhotoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C3DBA515B8A18F009B48AC /* PhotoTableViewController.m */; };
 		57D37425163B1A9C0081C028 /* PathImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D37422163B1A9C0081C028 /* PathImageView.m */; };
 		57E72B96164ACE2C00CD186E /* PhotoCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E72B95164ACE2C00CD186E /* PhotoCropViewController.m */; };
+		9B24F4F4E88740ABBF407708 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD62A254F3B4E159A06B21A /* libPods.a */; };
 		AF02B42F1709D9FE00F00552 /* CoverPhoto_1@2x~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF02B4231709D9FE00F00552 /* CoverPhoto_1@2x~ipad.jpg */; };
 		AF02B4301709D9FE00F00552 /* CoverPhoto_1@2x~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF02B4231709D9FE00F00552 /* CoverPhoto_1@2x~ipad.jpg */; };
 		AF02B4311709D9FE00F00552 /* CoverPhoto_1~ipad.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF02B4241709D9FE00F00552 /* CoverPhoto_1~ipad.jpg */; };
@@ -792,7 +791,6 @@
 		AF267E291564FDF800CBF5AA /* Moment.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DD91564FDF800CBF5AA /* Moment.m */; };
 		AF267EF51564FECB00CBF5AA /* AlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267E8B1564FECB00CBF5AA /* AlbumManager.m */; };
 		AF267EFD1564FECB00CBF5AA /* ICAExportController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267E931564FECB00CBF5AA /* ICAExportController.m */; };
-		AF267F391564FECB00CBF5AA /* MyColorPlatteView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267ED81564FECB00CBF5AA /* MyColorPlatteView.m */; };
 		AF267F3F1564FECB00CBF5AA /* TableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267EDF1564FECB00CBF5AA /* TableScrollView.m */; };
 		AF267F451564FECB00CBF5AA /* MomentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267EE51564FECB00CBF5AA /* MomentView.m */; };
 		AF267F471564FECB00CBF5AA /* AlbumEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267EE81564FECB00CBF5AA /* AlbumEditViewController.m */; };
@@ -956,8 +954,6 @@
 		AF49620515FC9CA9008821D1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF49620415FC9CA9008821D1 /* StoreKit.framework */; };
 		AF4A4EE6160CEE8200F7535A /* IpodMusicLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4A4EE5160CEE8200F7535A /* IpodMusicLibraryViewController.m */; };
 		AF4A4EE8160CEEA700F7535A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4A4EE7160CEEA700F7535A /* AudioToolbox.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		AF4A5E7D169B43C40091C0A4 /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4A5E7C169B43C40091C0A4 /* FXLabel.m */; };
-		AF4A5E7E169B43C40091C0A4 /* FXLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4A5E7C169B43C40091C0A4 /* FXLabel.m */; };
 		AF4A68D117B396A900BDA88E /* Info_facebook3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4A68CF17B396A900BDA88E /* Info_facebook3.png */; };
 		AF4A68D217B396A900BDA88E /* Info_facebook3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4A68CF17B396A900BDA88E /* Info_facebook3.png */; };
 		AF4A68D317B396A900BDA88E /* Info_twitter3.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4A68D017B396A900BDA88E /* Info_twitter3.png */; };
@@ -974,7 +970,6 @@
 		AF4E84761646847700F62EB5 /* SwaggerLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4E846B1646847700F62EB5 /* SwaggerLight.ttf */; };
 		AF4E84771646847700F62EB5 /* Universal-college_DEMO-version.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4E846C1646847700F62EB5 /* Universal-college_DEMO-version.ttf */; };
 		AF4E84781646847700F62EB5 /* Zian free promo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AF4E846D1646847700F62EB5 /* Zian free promo.ttf */; };
-		AF4E847B1646849200F62EB5 /* FontScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4E84791646849200F62EB5 /* FontScrollView.m */; };
 		AF4FE8EC1696F6EC00294E5B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4FE8EB1696F6EC00294E5B /* iAd.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		AF4FE8ED16970C1D00294E5B /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4FE8EB1696F6EC00294E5B /* iAd.framework */; };
 		AF50A0C61628730A00C12633 /* blackButtonBG.png in Resources */ = {isa = PBXBuildFile; fileRef = AF50A0C51628730A00C12633 /* blackButtonBG.png */; };
@@ -1111,7 +1106,6 @@
 		AFA0E1C1167E1DAA0001D1B4 /* Moment.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DD91564FDF800CBF5AA /* Moment.m */; };
 		AFA0E1C7167E1DAA0001D1B4 /* AlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267E8B1564FECB00CBF5AA /* AlbumManager.m */; };
 		AFA0E1C9167E1DAA0001D1B4 /* ICAExportController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267E931564FECB00CBF5AA /* ICAExportController.m */; };
-		AFA0E1DD167E1DAA0001D1B4 /* MyColorPlatteView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267ED81564FECB00CBF5AA /* MyColorPlatteView.m */; };
 		AFA0E1DE167E1DAA0001D1B4 /* TableScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267EDF1564FECB00CBF5AA /* TableScrollView.m */; };
 		AFA0E1DF167E1DAA0001D1B4 /* MomentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267EE51564FECB00CBF5AA /* MomentView.m */; };
 		AFA0E1E0167E1DAA0001D1B4 /* AlbumEditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267EE81564FECB00CBF5AA /* AlbumEditViewController.m */; };
@@ -1133,7 +1127,6 @@
 		AFA0E218167E1DAA0001D1B4 /* FBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF483162206F7006DE700 /* FBPhoto.m */; };
 		AFA0E221167E1DAA0001D1B4 /* PathImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57D37422163B1A9C0081C028 /* PathImageView.m */; };
 		AFA0E223167E1DAA0001D1B4 /* PhotoEditRahmenView.m in Sources */ = {isa = PBXBuildFile; fileRef = 57A5EF0C163C637E00C8A370 /* PhotoEditRahmenView.m */; };
-		AFA0E225167E1DAA0001D1B4 /* FontScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4E84791646849200F62EB5 /* FontScrollView.m */; };
 		AFA0E226167E1DAA0001D1B4 /* PhotoCropViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57E72B95164ACE2C00CD186E /* PhotoCropViewController.m */; };
 		AFA0E228167E1DAA0001D1B4 /* PagedFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF1AE8B5164EC9B8009FEF46 /* PagedFlowView.m */; };
 		AFA0E22E167E1DAA0001D1B4 /* IAPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB7A48165C00EC00A304D5 /* IAPItem.m */; };
@@ -1450,8 +1443,6 @@
 		AFD563C517BE6AFC0013D8DC /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC43A116120362003AAB45 /* FileManager.m */; };
 		AFD563D317BE6CCA0013D8DC /* FBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF483162206F7006DE700 /* FBPhoto.m */; };
 		AFD563D517BE6CCA0013D8DC /* CoverModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8D62CF1664D05B00CCD6DD /* CoverModel.m */; };
-		AFD6EE8B1695B2A400F92847 /* EditTextSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD6EE8A1695B2A400F92847 /* EditTextSettingViewController.m */; };
-		AFD6EE8C1695B2A400F92847 /* EditTextSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFD6EE8A1695B2A400F92847 /* EditTextSettingViewController.m */; };
 		AFD7F01216CEC050009D8986 /* appIcon_InstaHat~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD7F01016CEC04F009D8986 /* appIcon_InstaHat~ipad.png */; };
 		AFD7F01316CEC050009D8986 /* appIcon_InstaHat~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD7F01016CEC04F009D8986 /* appIcon_InstaHat~ipad.png */; };
 		AFD7F01416CEC050009D8986 /* appIcon_InstaHat@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AFD7F01116CEC04F009D8986 /* appIcon_InstaHat@2x~ipad.png */; };
@@ -1567,8 +1558,6 @@
 		262670111809028E00834683 /* ALAssetsLibrary+CustomPhotoAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ALAssetsLibrary+CustomPhotoAlbum.m"; sourceTree = "<group>"; };
 		262670651809633700834683 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		262670661809633700834683 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
-		2626706A18096FA700834683 /* ICAEditTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICAEditTextViewController.h; sourceTree = "<group>"; };
-		2626706B18096FA700834683 /* ICAEditTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAEditTextViewController.m; sourceTree = "<group>"; };
 		2626706E1809738400834683 /* TextSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextSettingViewController.h; sourceTree = "<group>"; };
 		2626706F1809738400834683 /* TextSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextSettingViewController.m; sourceTree = "<group>"; };
 		262670721809792300834683 /* LineScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineScrollView.h; sourceTree = "<group>"; };
@@ -1781,6 +1770,7 @@
 		26FFD05D17CC86FD000B2AAA /* EAKxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAKxMenu.m; sourceTree = "<group>"; };
 		26FFD06817CCE1B8000B2AAA /* AlbumPhotoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumPhotoTableViewController.h; sourceTree = "<group>"; };
 		26FFD06917CCE1B8000B2AAA /* AlbumPhotoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumPhotoTableViewController.m; sourceTree = "<group>"; };
+		4FD62A254F3B4E159A06B21A /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		5702A38A1639297600CF581C /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		5702A38C1639298000CF581C /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		5702A38E1639299300CF581C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2016,8 +2006,6 @@
 		AF267E8B1564FECB00CBF5AA /* AlbumManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumManager.m; sourceTree = "<group>"; };
 		AF267E921564FECB00CBF5AA /* ICAExportController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICAExportController.h; sourceTree = "<group>"; };
 		AF267E931564FECB00CBF5AA /* ICAExportController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAExportController.m; sourceTree = "<group>"; };
-		AF267ED71564FECB00CBF5AA /* MyColorPlatteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyColorPlatteView.h; path = "../Utilities/View & ViewController/MyColorPlatteView.h"; sourceTree = "<group>"; };
-		AF267ED81564FECB00CBF5AA /* MyColorPlatteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyColorPlatteView.m; path = "../Utilities/View & ViewController/MyColorPlatteView.m"; sourceTree = "<group>"; };
 		AF267EDE1564FECB00CBF5AA /* TableScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableScrollView.h; path = ../../View/TableScrollView.h; sourceTree = "<group>"; };
 		AF267EDF1564FECB00CBF5AA /* TableScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableScrollView.m; path = ../../View/TableScrollView.m; sourceTree = "<group>"; };
 		AF267EE41564FECB00CBF5AA /* MomentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MomentView.h; path = View/MomentView.h; sourceTree = "<group>"; };
@@ -2179,8 +2167,6 @@
 		AF4A4EE4160CEE8200F7535A /* IpodMusicLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IpodMusicLibraryViewController.h; sourceTree = "<group>"; };
 		AF4A4EE5160CEE8200F7535A /* IpodMusicLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IpodMusicLibraryViewController.m; sourceTree = "<group>"; };
 		AF4A4EE7160CEEA700F7535A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		AF4A5E7B169B43C40091C0A4 /* FXLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FXLabel.h; path = ../Utilities/FXLabel.h; sourceTree = "<group>"; };
-		AF4A5E7C169B43C40091C0A4 /* FXLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FXLabel.m; path = ../Utilities/FXLabel.m; sourceTree = "<group>"; };
 		AF4A68CF17B396A900BDA88E /* Info_facebook3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_facebook3.png; sourceTree = "<group>"; };
 		AF4A68D017B396A900BDA88E /* Info_twitter3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Info_twitter3.png; sourceTree = "<group>"; };
 		AF4A9B7F1664108900EA2A8F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -2197,8 +2183,6 @@
 		AF4E846B1646847700F62EB5 /* SwaggerLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwaggerLight.ttf; sourceTree = "<group>"; };
 		AF4E846C1646847700F62EB5 /* Universal-college_DEMO-version.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Universal-college_DEMO-version.ttf"; sourceTree = "<group>"; };
 		AF4E846D1646847700F62EB5 /* Zian free promo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Zian free promo.ttf"; sourceTree = "<group>"; };
-		AF4E84791646849200F62EB5 /* FontScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontScrollView.m; sourceTree = "<group>"; };
-		AF4E847A1646849200F62EB5 /* FontScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontScrollView.h; sourceTree = "<group>"; };
 		AF4FE8EB1696F6EC00294E5B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		AF50A0C51628730A00C12633 /* blackButtonBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blackButtonBG.png; path = ../blackButtonBG.png; sourceTree = "<group>"; };
 		AF527D4817B77FD400810832 /* FBPhotoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBPhotoTableViewController.h; sourceTree = "<group>"; };
@@ -2357,8 +2341,6 @@
 		AFD563B817BE63E10013D8DC /* UnitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnitTest.h; sourceTree = "<group>"; };
 		AFD563B917BE63E10013D8DC /* UnitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnitTest.m; sourceTree = "<group>"; };
 		AFD563BB17BE63E10013D8DC /* UnitTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UnitTest-Prefix.pch"; sourceTree = "<group>"; };
-		AFD6EE891695B2A400F92847 /* EditTextSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTextSettingViewController.h; sourceTree = "<group>"; };
-		AFD6EE8A1695B2A400F92847 /* EditTextSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTextSettingViewController.m; sourceTree = "<group>"; };
 		AFD7F01016CEC04F009D8986 /* appIcon_InstaHat~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon_InstaHat~ipad.png"; sourceTree = "<group>"; };
 		AFD7F01116CEC04F009D8986 /* appIcon_InstaHat@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "appIcon_InstaHat@2x~ipad.png"; sourceTree = "<group>"; };
 		AFDDB401166DFD7D00045E96 /* Icon_AppstoreDownload~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon_AppstoreDownload~ipad.png"; sourceTree = "<group>"; };
@@ -2375,6 +2357,7 @@
 		AFFBF48516220F40006DE700 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AFFC43A016120362003AAB45 /* FileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileManager.h; sourceTree = "<group>"; };
 		AFFC43A116120362003AAB45 /* FileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileManager.m; sourceTree = "<group>"; };
+		CF5F89F566B347B380E800F0 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2409,6 +2392,7 @@
 				AF267D7B1564F83300CBF5AA /* UIKit.framework in Frameworks */,
 				AF267D7D1564F83300CBF5AA /* Foundation.framework in Frameworks */,
 				AF267D7F1564F83300CBF5AA /* CoreGraphics.framework in Frameworks */,
+				9B24F4F4E88740ABBF407708 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2496,15 +2480,6 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
-		26094DDC180865AA00049931 /* FXLabel */ = {
-			isa = PBXGroup;
-			children = (
-				AF4A5E7B169B43C40091C0A4 /* FXLabel.h */,
-				AF4A5E7C169B43C40091C0A4 /* FXLabel.m */,
-			);
-			name = FXLabel;
-			sourceTree = "<group>";
-		};
 		260B9F9F17C5DC6B007FE4E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -2558,19 +2533,6 @@
 				2663B07C180AF3EC00F785A6 /* ICAAdView.m */,
 			);
 			name = AdView;
-			sourceTree = "<group>";
-		};
-		266FDE44180A6F3200DE3AF1 /* deprecated */ = {
-			isa = PBXGroup;
-			children = (
-				AFD6EE891695B2A400F92847 /* EditTextSettingViewController.h */,
-				AFD6EE8A1695B2A400F92847 /* EditTextSettingViewController.m */,
-				AF4E84791646849200F62EB5 /* FontScrollView.m */,
-				AF4E847A1646849200F62EB5 /* FontScrollView.h */,
-				AF267ED71564FECB00CBF5AA /* MyColorPlatteView.h */,
-				AF267ED81564FECB00CBF5AA /* MyColorPlatteView.m */,
-			);
-			name = deprecated;
 			sourceTree = "<group>";
 		};
 		26859F2717CB9F44000099B0 /* Command */ = {
@@ -2838,7 +2800,6 @@
 		AF12F83817A6578C00938805 /* 3rdLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				26094DDC180865AA00049931 /* FXLabel */,
 				26094D731808526100049931 /* iCarousel */,
 				26094D761808526100049931 /* SDWebImage */,
 				26E5C0BE17F01EC900520692 /* ZDStickerView */,
@@ -3026,8 +2987,6 @@
 				262670661809633700834683 /* TextViewController.m */,
 				AFBADE6316139BD30004492A /* EditTextViewController.h */,
 				AFBADE6416139BD30004492A /* EditTextViewController.m */,
-				2626706A18096FA700834683 /* ICAEditTextViewController.h */,
-				2626706B18096FA700834683 /* ICAEditTextViewController.m */,
 				2626706E1809738400834683 /* TextSettingViewController.h */,
 				2626706F1809738400834683 /* TextSettingViewController.m */,
 				262670721809792300834683 /* LineScrollView.h */,
@@ -3036,7 +2995,6 @@
 				2626707718097A5E00834683 /* FontNameLineScrollView.m */,
 				2626707A1809875C00834683 /* ColorLineScrollView.h */,
 				2626707B1809875C00834683 /* ColorLineScrollView.m */,
-				266FDE44180A6F3200DE3AF1 /* deprecated */,
 			);
 			name = TextVC;
 			sourceTree = "<group>";
@@ -3128,6 +3086,7 @@
 				AFD563B217BE63E10013D8DC /* UnitTest */,
 				AF267D791564F83300CBF5AA /* Frameworks */,
 				AF267D771564F83300CBF5AA /* Products */,
+				CF5F89F566B347B380E800F0 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3172,6 +3131,7 @@
 				AF267D7C1564F83300CBF5AA /* Foundation.framework */,
 				AF267D7E1564F83300CBF5AA /* CoreGraphics.framework */,
 				AF267D9B1564F83300CBF5AA /* SenTestingKit.framework */,
+				4FD62A254F3B4E159A06B21A /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -3978,9 +3938,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF267DAC1564F83300CBF5AA /* Build configuration list for PBXNativeTarget "iCamAlbum Pro" */;
 			buildPhases = (
+				66AA24008797456BAA71F02C /* Check Pods Manifest.lock */,
 				AF267D721564F83300CBF5AA /* Sources */,
 				AF267D731564F83300CBF5AA /* Frameworks */,
 				AF267D741564F83300CBF5AA /* Resources */,
+				B0307340353F416C90216B2C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -5221,6 +5183,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		66AA24008797456BAA71F02C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		AFD563AC17BE63E10013D8DC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -5233,6 +5210,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		B0307340353F416C90216B2C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -5252,7 +5244,6 @@
 				2626707C1809875C00834683 /* ColorLineScrollView.m in Sources */,
 				AF267EFD1564FECB00CBF5AA /* ICAExportController.m in Sources */,
 				2626707818097A5E00834683 /* FontNameLineScrollView.m in Sources */,
-				AF267F391564FECB00CBF5AA /* MyColorPlatteView.m in Sources */,
 				AF267F3F1564FECB00CBF5AA /* TableScrollView.m in Sources */,
 				AF267F451564FECB00CBF5AA /* MomentView.m in Sources */,
 				AF267F471564FECB00CBF5AA /* AlbumEditViewController.m in Sources */,
@@ -5277,7 +5268,6 @@
 				26094D8B1808526100049931 /* iCarousel.m in Sources */,
 				57D37425163B1A9C0081C028 /* PathImageView.m in Sources */,
 				57A5EF0D163C637E00C8A370 /* PhotoEditRahmenView.m in Sources */,
-				AF4E847B1646849200F62EB5 /* FontScrollView.m in Sources */,
 				26094D991808526100049931 /* UIButton+WebCache.m in Sources */,
 				57E72B96164ACE2C00CD186E /* PhotoCropViewController.m in Sources */,
 				26094D951808526100049931 /* SDWebImageManager.m in Sources */,
@@ -5291,9 +5281,6 @@
 				AF8D62D01664D05B00CCD6DD /* CoverModel.m in Sources */,
 				AF0745551670C323005693C3 /* ImageConstentWidthCell.m in Sources */,
 				26C9F3CF17F13BC1008ACB53 /* EditSideControlViewController.m in Sources */,
-				AFD6EE8B1695B2A400F92847 /* EditTextSettingViewController.m in Sources */,
-				2626706C18096FA700834683 /* ICAEditTextViewController.m in Sources */,
-				AF4A5E7D169B43C40091C0A4 /* FXLabel.m in Sources */,
 				AF12F8F717A657A200938805 /* IFFiltersViewController.m in Sources */,
 				AF12F90F17A657A200938805 /* IF1977Filter.m in Sources */,
 				AF12F91117A657A200938805 /* IFAmaroFilter.m in Sources */,
@@ -5392,7 +5379,6 @@
 				2626707D1809875C00834683 /* ColorLineScrollView.m in Sources */,
 				AFA0E1C9167E1DAA0001D1B4 /* ICAExportController.m in Sources */,
 				2626707918097A5E00834683 /* FontNameLineScrollView.m in Sources */,
-				AFA0E1DD167E1DAA0001D1B4 /* MyColorPlatteView.m in Sources */,
 				AFA0E1DE167E1DAA0001D1B4 /* TableScrollView.m in Sources */,
 				AFA0E1DF167E1DAA0001D1B4 /* MomentView.m in Sources */,
 				AFA0E1E0167E1DAA0001D1B4 /* AlbumEditViewController.m in Sources */,
@@ -5417,7 +5403,6 @@
 				26094D8C1808526100049931 /* iCarousel.m in Sources */,
 				AFA0E221167E1DAA0001D1B4 /* PathImageView.m in Sources */,
 				AFA0E223167E1DAA0001D1B4 /* PhotoEditRahmenView.m in Sources */,
-				AFA0E225167E1DAA0001D1B4 /* FontScrollView.m in Sources */,
 				26094D9A1808526100049931 /* UIButton+WebCache.m in Sources */,
 				AFA0E226167E1DAA0001D1B4 /* PhotoCropViewController.m in Sources */,
 				26094D961808526100049931 /* SDWebImageManager.m in Sources */,
@@ -5431,9 +5416,6 @@
 				AFA0E231167E1DAA0001D1B4 /* CoverModel.m in Sources */,
 				AFA0E233167E1DAA0001D1B4 /* ImageConstentWidthCell.m in Sources */,
 				26C9F3D017F13BC1008ACB53 /* EditSideControlViewController.m in Sources */,
-				AFD6EE8C1695B2A400F92847 /* EditTextSettingViewController.m in Sources */,
-				2626706D18096FA700834683 /* ICAEditTextViewController.m in Sources */,
-				AF4A5E7E169B43C40091C0A4 /* FXLabel.m in Sources */,
 				AF12F8F817A657A200938805 /* IFFiltersViewController.m in Sources */,
 				AF12F91017A657A200938805 /* IF1977Filter.m in Sources */,
 				AF12F91217A657A200938805 /* IFAmaroFilter.m in Sources */,
@@ -5636,6 +5618,7 @@
 		};
 		2609D4DE1805A5B30019C242 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5F89F566B347B380E800F0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xin Chen";
@@ -5643,6 +5626,7 @@
 				GCC_PREFIX_HEADER = "travelAlbum/iCamAlbum-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
 					"Tapku/src/**",
 					"~/Public/WorkProject/UtilLib/**",
 				);
@@ -5652,7 +5636,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/travelAlbum/FlurryAnalytics\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = iCamAlbum;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8D519B98-7AE7-40FA-990E-226F8E5FB91D";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
@@ -5776,6 +5760,7 @@
 		};
 		AF267DAD1564F83300CBF5AA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5F89F566B347B380E800F0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
@@ -5785,6 +5770,7 @@
 				GCC_PREFIX_HEADER = "travelAlbum/iCamAlbum-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
 					"Tapku/src/**",
 					"~/Public/WorkProject/UtilLib/**",
 				);
@@ -5794,7 +5780,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/travelAlbum/FlurryAnalytics\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = iCamAlbum_P;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8ECE83B6-A93A-4147-B296-20379CA000FF";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
@@ -5804,6 +5790,7 @@
 		};
 		AF267DAE1564F83300CBF5AA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5F89F566B347B380E800F0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Xin Chen";
@@ -5811,6 +5798,7 @@
 				GCC_PREFIX_HEADER = "travelAlbum/iCamAlbum-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
 				HEADER_SEARCH_PATHS = (
+					"$(inherited)/**",
 					"Tapku/src/**",
 					"~/Public/WorkProject/UtilLib/**",
 				);
@@ -5820,7 +5808,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/travelAlbum/FlurryAnalytics\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = iCamAlbum;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8D519B98-7AE7-40FA-990E-226F8E5FB91D";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";

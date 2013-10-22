@@ -24,7 +24,9 @@
 
     
     NSArray *sections;
+   
     __unsafe_unretained TextViewController *_parent;
+
 }
 
 @property (nonatomic, unsafe_unretained) TextViewController *parent;

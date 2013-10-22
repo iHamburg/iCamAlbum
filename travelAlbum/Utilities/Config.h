@@ -17,6 +17,7 @@ extern NSString* const NotificationEditLabelModelView;
 extern int PhotoNum;    
 //
 BOOL isPaid(void);
+BOOL isDebug(void);
 
 void generatePDFWithImages(NSArray* imgs ,NSString* filePath);
 
