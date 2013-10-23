@@ -130,10 +130,7 @@
     photoInputs = [NSMutableArray array];
 	
     [self loadAssetsGroups];
-    
-//    [self loadFBAlbums];
-
-    
+ 
 	
 }
 

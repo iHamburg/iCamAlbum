@@ -124,6 +124,7 @@
 		2638A0A417DB712B000270D8 /* AlbumCoverIconBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2638A0A317DB712B000270D8 /* AlbumCoverIconBG2.png */; };
 		2638A0A517DB712B000270D8 /* AlbumCoverIconBG2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2638A0A317DB712B000270D8 /* AlbumCoverIconBG2.png */; };
 		2638A0A617DB7561000270D8 /* AppIcon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 269289E017DACFEC00F59D87 /* AppIcon114.png */; };
+		2644C63B1816C43C00CF1482 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2644C63A1816C43C00CF1482 /* libPods.a */; };
 		264BC57317C891EA00340303 /* IMVTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 264BC57217C891EA00340303 /* IMVTests.m */; };
 		264BF02517C712BA00C5A58F /* Moment.m in Sources */ = {isa = PBXBuildFile; fileRef = AF267DD91564FDF800CBF5AA /* Moment.m */; };
 		264BF04617C7A2B700C5A58F /* SettingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 264BF04517C7A2B700C5A58F /* SettingTests.m */; };
@@ -1046,8 +1047,6 @@
 		AF7BA2BE16553FB6008DA87F /* Sticker_others_7~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AF7BA2A516553FB6008DA87F /* Sticker_others_7~ipad.png */; };
 		AF7BA2BF16553FB6008DA87F /* Sticker_others_8@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AF7BA2A616553FB6008DA87F /* Sticker_others_8@2x~ipad.png */; };
 		AF7BA2C016553FB6008DA87F /* Sticker_others_8~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = AF7BA2A716553FB6008DA87F /* Sticker_others_8~ipad.png */; };
-		AF7C306A16BDBE9F0002F3BA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7C306916BDBE9E0002F3BA /* AdSupport.framework */; };
-		AF7C306E16BDBF710002F3BA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7C306D16BDBF710002F3BA /* SystemConfiguration.framework */; };
 		AF7F0C4417A7EBC100D5141E /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7F0C4317A7EBC100D5141E /* libz.1.2.5.dylib */; };
 		AF7F0C4617A7EBD300D5141E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7F0C4517A7EBD300D5141E /* MobileCoreServices.framework */; };
 		AF7F0C4817A7EBDB00D5141E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7F0C4717A7EBDB00D5141E /* CFNetwork.framework */; };
@@ -1138,14 +1137,10 @@
 		AFA0E23B167E1DAA0001D1B4 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFBF48516220F40006DE700 /* MediaPlayer.framework */; };
 		AFA0E23C167E1DAA0001D1B4 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFBF4801621E588006DE700 /* ImageIO.framework */; };
 		AFA0E23D167E1DAA0001D1B4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4A4EE7160CEEA700F7535A /* AudioToolbox.framework */; };
-		AFA0E23E167E1DAA0001D1B4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF49620415FC9CA9008821D1 /* StoreKit.framework */; };
 		AFA0E23F167E1DAA0001D1B4 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267FBB1565019800CBF5AA /* AddressBook.framework */; };
 		AFA0E240167E1DAA0001D1B4 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267FBC1565019800CBF5AA /* AssetsLibrary.framework */; };
 		AFA0E241167E1DAA0001D1B4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267FBE1565019800CBF5AA /* CoreLocation.framework */; };
 		AFA0E242167E1DAA0001D1B4 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267FBF1565019800CBF5AA /* libxml2.dylib */; };
-		AFA0E244167E1DAA0001D1B4 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267FC21565019800CBF5AA /* MessageUI.framework */; };
-		AFA0E245167E1DAA0001D1B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267FC31565019800CBF5AA /* QuartzCore.framework */; };
-		AFA0E246167E1DAA0001D1B4 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267FC41565019800CBF5AA /* Twitter.framework */; };
 		AFA0E247167E1DAA0001D1B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267D7A1564F83300CBF5AA /* UIKit.framework */; };
 		AFA0E248167E1DAA0001D1B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267D7C1564F83300CBF5AA /* Foundation.framework */; };
 		AFA0E249167E1DAA0001D1B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF267D7E1564F83300CBF5AA /* CoreGraphics.framework */; };
@@ -1579,6 +1574,7 @@
 		2638A09B17DB5B68000270D8 /* icon_previewSettingWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_previewSettingWhite.png; sourceTree = "<group>"; };
 		2638A0A017DB70C3000270D8 /* AlbumCoverIconBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlbumCoverIconBG.png; sourceTree = "<group>"; };
 		2638A0A317DB712B000270D8 /* AlbumCoverIconBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlbumCoverIconBG2.png; sourceTree = "<group>"; };
+		2644C63A1816C43C00CF1482 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		264BC57117C891EA00340303 /* IMVTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVTests.h; sourceTree = "<group>"; };
 		264BC57217C891EA00340303 /* IMVTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVTests.m; sourceTree = "<group>"; };
 		264BF04417C7A2B700C5A58F /* SettingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTests.h; sourceTree = "<group>"; };
@@ -2400,6 +2396,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2644C63B1816C43C00CF1482 /* libPods.a in Frameworks */,
 				2663B080180AF6E000F785A6 /* CoreMedia.framework in Frameworks */,
 				2663B07F180AF6CA00F785A6 /* CoreVideo.framework in Frameworks */,
 				26D4212F1808FBF000DBC74C /* Security.framework in Frameworks */,
@@ -2407,22 +2404,16 @@
 				AF66CA0017ABD02900E932EE /* CFNetwork.framework in Frameworks */,
 				AF66C9FF17ABD02500E932EE /* MobileCoreServices.framework in Frameworks */,
 				AF66C9FE17ABD00C00E932EE /* libz.1.2.5.dylib in Frameworks */,
-				AF7C306E16BDBF710002F3BA /* SystemConfiguration.framework in Frameworks */,
-				AF7C306A16BDBE9F0002F3BA /* AdSupport.framework in Frameworks */,
 				AF4FE8ED16970C1D00294E5B /* iAd.framework in Frameworks */,
 				AFA0E236167E1DAA0001D1B4 /* AVFoundation.framework in Frameworks */,
 				AFA0E237167E1DAA0001D1B4 /* OpenGLES.framework in Frameworks */,
 				AFA0E23B167E1DAA0001D1B4 /* MediaPlayer.framework in Frameworks */,
 				AFA0E23C167E1DAA0001D1B4 /* ImageIO.framework in Frameworks */,
 				AFA0E23D167E1DAA0001D1B4 /* AudioToolbox.framework in Frameworks */,
-				AFA0E23E167E1DAA0001D1B4 /* StoreKit.framework in Frameworks */,
 				AFA0E23F167E1DAA0001D1B4 /* AddressBook.framework in Frameworks */,
 				AFA0E240167E1DAA0001D1B4 /* AssetsLibrary.framework in Frameworks */,
 				AFA0E241167E1DAA0001D1B4 /* CoreLocation.framework in Frameworks */,
 				AFA0E242167E1DAA0001D1B4 /* libxml2.dylib in Frameworks */,
-				AFA0E244167E1DAA0001D1B4 /* MessageUI.framework in Frameworks */,
-				AFA0E245167E1DAA0001D1B4 /* QuartzCore.framework in Frameworks */,
-				AFA0E246167E1DAA0001D1B4 /* Twitter.framework in Frameworks */,
 				AFA0E247167E1DAA0001D1B4 /* UIKit.framework in Frameworks */,
 				AFA0E248167E1DAA0001D1B4 /* Foundation.framework in Frameworks */,
 				AFA0E249167E1DAA0001D1B4 /* CoreGraphics.framework in Frameworks */,
@@ -3103,6 +3094,7 @@
 		AF267D791564F83300CBF5AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2644C63A1816C43C00CF1482 /* libPods.a */,
 				260B9F9E17C5DC6B007FE4E2 /* UtilLib.xcodeproj */,
 				268C767617DC09630004BDFA /* Security.framework */,
 				AF7F0C4717A7EBDB00D5141E /* CFNetwork.framework */,
@@ -5646,6 +5638,7 @@
 		};
 		2609D4DF1805A5B30019C242 /* Adhoc */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5F89F566B347B380E800F0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -5658,6 +5651,7 @@
 				HEADER_SEARCH_PATHS = (
 					"Tapku/src/**",
 					"~/Public/WorkProject/UtilLib/**",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/travelAlbum/Everalbum copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -5665,7 +5659,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/travelAlbum/FlurryAnalytics\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = iCamAlbum;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B324189F-0E90-4037-B725-9C7437E793AB";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
@@ -5818,6 +5812,7 @@
 		};
 		AFA0E434167E1DAA0001D1B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5F89F566B347B380E800F0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -5833,6 +5828,7 @@
 				HEADER_SEARCH_PATHS = (
 					"Tapku/src/**",
 					"~/Public/WorkProject/UtilLib/**",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/travelAlbum/Everalbum copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -5840,7 +5836,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/travelAlbum/FlurryAnalytics\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = iCamAlbum_F;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "1A3BCDA1-155D-44BD-BDF7-39E1D573F26F";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
@@ -5850,6 +5846,7 @@
 		};
 		AFA0E435167E1DAA0001D1B4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF5F89F566B347B380E800F0 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -5862,6 +5859,7 @@
 				HEADER_SEARCH_PATHS = (
 					"Tapku/src/**",
 					"~/Public/WorkProject/UtilLib/**",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/travelAlbum/Everalbum copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -5869,7 +5867,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/travelAlbum/FlurryAnalytics\"",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_NAME = iCamAlbum;
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B2C861A8-9954-45E8-B367-A3559F3A8518";
 				WARNING_CFLAGS = "-Wno-arc-performSelector-leaks";
