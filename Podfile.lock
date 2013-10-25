@@ -13,6 +13,7 @@ PODS:
     - FoundationExtension/FoundationExtension
   - GIKPopoverBackgroundView/Core (0.0.1)
   - SevenSwitch (1.3.0)
+  - ShipLib (1.7.3)
   - UI7Kit (0.9.9):
     - UI7Kit/All
   - UI7Kit/All (0.9.9):
@@ -149,6 +150,7 @@ PODS:
 
 DEPENDENCIES:
   - Appirater
+  - ShipLib
   - UI7Kit
 
 SPEC CHECKSUMS:
@@ -157,6 +159,7 @@ SPEC CHECKSUMS:
   FoundationExtension: 9ea775b06ff4a3914db341cefdcaa8180c6e0366
   GIKPopoverBackgroundView: 6163da8cb906689732e5900c1484e6a411ce4da3
   SevenSwitch: f1ae106a4fcb459829ba5a6a3265e7e9f873f80c
+  ShipLib: 3629c70a6895ea32cad5e16e9d5809445051e52b
   UI7Kit: cc047d4196ab61952d5e0784fae34e785af7f780
   UIKitResources: 3f3b1787af49bb881fc5b6dba2d34d2d4682f0e7
 

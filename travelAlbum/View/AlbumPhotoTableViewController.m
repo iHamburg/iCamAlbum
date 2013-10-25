@@ -34,6 +34,8 @@
 
 
 - (void)layout:(int)index imgV:(UIImageView *)imgV {
+    // 反向image
+    
     ALAsset *asset = _inputs[index];
     imgV.image = [UIImage imageWithCGImage:asset.thumbnail];
     imgV.tag = index+1;

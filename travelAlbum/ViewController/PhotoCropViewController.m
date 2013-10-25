@@ -93,7 +93,7 @@
     L();
     [super viewWillAppear:animated];
     
-    [self layoutADBanner:[AdView sharedInstance]];
+    [self layoutADBanner:[ICAAdView sharedInstance]];
 }
 
 #pragma mark - PathImageView

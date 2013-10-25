@@ -11,7 +11,7 @@
 #import "MomentView.h"
 #import "EditPhotoViewController.h"
 #import "PhotoCropViewController.h"
-#import "EditTextViewController.h"
+#import "ICATextViewController.h"
 #import "MomentShareView.h"
 #import "ICAExportController.h"
 #import "IAPManager.h"
@@ -19,6 +19,7 @@
 #import "PageManagerViewController.h"
 #import "EditSideControlViewController.h"
 #import "EALoadingView.h"
+//#import "ICAValidator.h"
 
 #define kToolbarInterval 5
 
@@ -49,7 +50,6 @@
     _momentManager = momentManager;
     _album = momentManager.album;
     
-//    (Appde)[[UIApplication sharedApplication] delegate]
     
      [self updateAlbum];
     
@@ -290,8 +290,6 @@
 	
 	L();
 
-
-
 	textVC = nil;
 
 	
@@ -418,9 +416,9 @@
 - (void)layoutADBanner:(AdView *)banner{
     
 //    L();
-    if (!banner.isAdDisplaying) {
-          [banner setOrigin:CGPointMake(0, _h)];
-    }
+//    NSLog(@"banner # %@,isdisplay # %d",banner, banner.isAdDisplaying);
+  
+  
     [UIView animateWithDuration:0.25 animations:^{
 		
 		if (banner.isAdDisplaying) { // 从不显示到显示banner
@@ -576,12 +574,12 @@
         editSideControlVC.momentV = momentView;
     }
     
-//    UINavigationController *editSideNav = editSideControlVC.nav;
-    UINavigationController *editSideNav = [[UINavigationController alloc] initWithRootViewController:editSideControlVC];
+
+    editSideNav = [[UINavigationController alloc] initWithRootViewController:editSideControlVC];
     editSideNav.view.frame = CGRectMake(0, 0, editSideControlVC.view.width, editSideControlVC.view.height + kHNavigationbar);
 
     [self.view insertSubview:editSideNav.view belowSubview:momentContainer];
-//    [self.view insertSubview:editSideControlVC.view belowSubview:momentContainer];
+
     
     CGFloat w = editSideControlVC.view.width;
     [UIView animateWithDuration:.3 animations:^{
@@ -708,7 +706,7 @@
 - (IBAction)popTextEdit:(LabelModelView*)textWidget{
 	L();
 	if (!textVC) {
-		textVC = [[EditTextViewController alloc]init];
+		textVC = [[ICATextViewController alloc]init];
 		textVC.view.alpha = 1;
         textVC.delegate = self;
 	}
@@ -1070,6 +1068,18 @@
 //  NSLog(@"self.album # %@, _album # %@",self.album,_album);
     
 //    [self popTextEdit:[LabelModelView defaultInstance]];
+    
+    L();
+//    validator = [[Validator alloc] initWithViewController:self];
+//    
+////    Validator.i = 12;
+//    validator.completionHandler = ^(BOOL completed){
+//        NSLog(@"do complete;");
+//        [self showDeleteAlert];
+//    };
+//    
+//    [validator validate];
 //
+  
 }
 @end

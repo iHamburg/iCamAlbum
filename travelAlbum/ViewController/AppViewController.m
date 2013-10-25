@@ -8,6 +8,7 @@
 
 #import "AppViewController.h"
 
+
 @implementation AppViewController
 
 
@@ -47,12 +48,14 @@
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
 	
+    
+    [self layoutADBanner:[ICAAdView sharedInstance]];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    [self layoutADBanner:[AdView sharedInstance]];
+    [self layoutADBanner:[ICAAdView sharedInstance]];
 }
 
 //- (void)dealloc{
@@ -111,14 +114,7 @@
 	if ([NSNull null] == (NSNull*)newObject)
 		newObject = nil;
 	
-	/// 加入了对adview的observer
-//	if([keyPath isEqualToString:kKeyPathAdDisplaying]){ // target： AlbumManager.currentMomentIndex
-//		
-//		NSLog(@"isAdDisplaying # %@",newObject);
-//
-//        AdView *adview = [AdView sharedInstance];
-//		[self layoutBanner:adview loaded:adview.isAdDisplaying];
-//	} /5
+
 }
 
 - (void)handleAdviewNotification:(NSNotification*)notification{
@@ -129,10 +125,6 @@
 - (void)layoutADBanner:(UIView*)banner{
     
 }
-
-//- (void)layoutBanner:(UIView*)banner loaded:(BOOL)loaded{
-//	
-//}
 
 
 - (void)test{}

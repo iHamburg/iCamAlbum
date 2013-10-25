@@ -155,7 +155,7 @@
     // Return the number of rows in the section.
 	
 	if (section == 0) {
-//		return 1;
+
         if (isAlbumOpened) {
             return 4;
         }

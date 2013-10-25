@@ -39,6 +39,7 @@ install_resource()
       ;;
   esac
 }
+install_resource "ShipLib/ShipLibResources.bundle"
 install_resource "UI7Kit/Resources/UI7NavigationBarBackButton.png"
 install_resource "UI7Kit/Resources/UI7NavigationBarBackButton@2x.png"
 install_resource "UI7Kit/Resources/PopoverBackgroundArrowDown.png"

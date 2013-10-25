@@ -109,7 +109,7 @@
 - (void)viewWillAppear:(BOOL)animated{
 	[super viewWillAppear:animated];
 	
-    [self layoutADBanner:[AdView sharedInstance]];
+    [self layoutADBanner:[ICAAdView sharedInstance]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

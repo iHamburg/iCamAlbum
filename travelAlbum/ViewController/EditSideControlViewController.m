@@ -86,13 +86,6 @@
     
 }
 
-//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-//    return 1.0f;
-//}
-
-//- (NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section{
-//    return @"ABC";
-//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
@@ -184,7 +177,7 @@
          [[NSNotificationCenter defaultCenter]postNotificationName:kNotificationChangeMomentBGImage object:asset];
     }
     else if(photoAlbum == addPhotoATVC){
-//        [_vc addPhoto:asset];
+
          [_momentV addElementRandomed:[_momentV convertPhotoElementToImv:asset]];
     }
 }
@@ -203,19 +196,20 @@
     changeBGATVC.imgNames = [self createPageBGImageNames];
     
     [self.navigationController pushViewController:changeBGATVC animated:YES];
+    
 }
 
 - (NSArray*)createPageBGImageNames{
+    
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"Material" ofType:@"plist"];
     NSDictionary *materialDict = [NSDictionary dictionaryWithContentsOfFile:plistPath];
 	
     NSArray* pageBGNames = [materialDict objectForKey:@"PageBGs"];
-//    NSArray* page_ChrismasImageNames = materialDict[@"PageBG_Christmas"];
     
     
     NSMutableArray *imgNames = [NSMutableArray array];
     [imgNames addObjectsFromArray:pageBGNames];
-//	[imgNames addObjectsFromArray:page_ChrismasImageNames];
+
     
     return imgNames;
 }
@@ -227,6 +221,7 @@
     addPhotoATVC.imgNames = [self createStickerNames];
     
     [self.navigationController pushViewController:addPhotoATVC animated:YES];
+    
 }
 
 - (NSArray*)createStickerNames{
@@ -236,7 +231,7 @@
     
     NSMutableArray* stickerNames = [NSMutableArray array];
     for (int i = 0; i< [iconWidgetNames count]; i++) {
-//        Sticker *sticker = [[Sticker alloc]initWithDictionary:iconWidgetNames[i]];
+
         [stickerNames addObject:iconWidgetNames[i][@"name"]];
     }
     

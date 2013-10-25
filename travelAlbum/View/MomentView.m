@@ -44,6 +44,7 @@ NSString *const NotificationChangeCaption = @"ChangeCaption";
 	_momentChanged = NO;
 
 //    NSLog(@"bgname # %@, bgurl # %@",_moment.bgImageName,_moment.bgURL);
+    
     if (!ISEMPTY(_moment.bgImageName)) {
          bgV.image = [[UIImage imageWithContentsOfFileUniversal:_moment.bgImageName] imageByScalingAndCroppingForSize:self.bounds.size];
     }
@@ -51,7 +52,7 @@ NSString *const NotificationChangeCaption = @"ChangeCaption";
         [PhotoAlbumLoader loadUrls:@[_moment.bgURL] withKey:@"BG" delegate:self];
     }
     
-//    NSLog(@"_moment.codingElements # %@",_moment.codingElements);
+
     for (UIView<Widget> *v in _moment.codingElements) {
 		
 		[self addGestureRecognizers:v];

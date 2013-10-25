@@ -160,9 +160,6 @@
 		268366A717DE0EFC00606F53 /* icon_Preview_playlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 2683669E17DE0EFC00606F53 /* icon_Preview_playlist.png */; };
 		268366A817DE0EFC00606F53 /* icon_Preview_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 2683669F17DE0EFC00606F53 /* icon_Preview_share.png */; };
 		268366A917DE0EFC00606F53 /* icon_Preview_share.png in Resources */ = {isa = PBXBuildFile; fileRef = 2683669F17DE0EFC00606F53 /* icon_Preview_share.png */; };
-		26859F1517CB8C06000099B0 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 26859F1417CB8C06000099B0 /* Command.m */; };
-		26859F1617CB8C06000099B0 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 26859F1417CB8C06000099B0 /* Command.m */; };
-		26859F1717CB8C06000099B0 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 26859F1417CB8C06000099B0 /* Command.m */; };
 		26859F1A17CB8C5E000099B0 /* SetStrokeColorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 26859F1917CB8C5E000099B0 /* SetStrokeColorCommand.m */; };
 		26859F1B17CB8C5E000099B0 /* SetStrokeColorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 26859F1917CB8C5E000099B0 /* SetStrokeColorCommand.m */; };
 		26859F1C17CB8C5E000099B0 /* SetStrokeColorCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 26859F1917CB8C5E000099B0 /* SetStrokeColorCommand.m */; };
@@ -415,6 +412,18 @@
 		26DD866D17F540F0009FC0D6 /* LandScapeNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DD866B17F540F0009FC0D6 /* LandScapeNavigationController.m */; };
 		26DF210718051B9D0082B196 /* iCAInstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DF210618051B9D0082B196 /* iCAInstructionViewController.m */; };
 		26DF210818051B9D0082B196 /* iCAInstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DF210618051B9D0082B196 /* iCAInstructionViewController.m */; };
+		26E15D9B1818BF7500AFAFA8 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15D981818BF7500AFAFA8 /* Command.m */; };
+		26E15D9C1818BF7500AFAFA8 /* Command.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15D981818BF7500AFAFA8 /* Command.m */; };
+		26E15D9D1818BF7500AFAFA8 /* StartupCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15D9A1818BF7500AFAFA8 /* StartupCommand.m */; };
+		26E15D9E1818BF7500AFAFA8 /* StartupCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15D9A1818BF7500AFAFA8 /* StartupCommand.m */; };
+		26E15DA11818BF9E00AFAFA8 /* ICAStartupCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15DA01818BF9E00AFAFA8 /* ICAStartupCommand.m */; };
+		26E15DA21818BF9E00AFAFA8 /* ICAStartupCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15DA01818BF9E00AFAFA8 /* ICAStartupCommand.m */; };
+		26E15DB01818F36000AFAFA8 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15DAF1818F36000AFAFA8 /* Validator.m */; };
+		26E15DB11818F36000AFAFA8 /* Validator.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15DAF1818F36000AFAFA8 /* Validator.m */; };
+		26E15DB41818F4BC00AFAFA8 /* EnterPreviewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15DB31818F4BC00AFAFA8 /* EnterPreviewValidator.m */; };
+		26E15DB51818F4BC00AFAFA8 /* EnterPreviewValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15DB31818F4BC00AFAFA8 /* EnterPreviewValidator.m */; };
+		26E15DB81818F60C00AFAFA8 /* ICAValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15DB71818F60C00AFAFA8 /* ICAValidator.m */; };
+		26E15DB91818F60C00AFAFA8 /* ICAValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E15DB71818F60C00AFAFA8 /* ICAValidator.m */; };
 		26E2AD3017CD8C9F00BD2F3A /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB63CD917B278A1009E23EF /* KxMenu.m */; };
 		26E456E317C613EB0062AAF8 /* IndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E456E217C613EB0062AAF8 /* IndicatorView.m */; };
 		26E456E417C613EB0062AAF8 /* IndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E456E217C613EB0062AAF8 /* IndicatorView.m */; };
@@ -1120,7 +1129,7 @@
 		AFA0E203167E1DAA0001D1B4 /* IpodMusicLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4A4EE5160CEE8200F7535A /* IpodMusicLibraryViewController.m */; };
 		AFA0E207167E1DAA0001D1B4 /* FileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFC43A116120362003AAB45 /* FileManager.m */; };
 		AFA0E208167E1DAA0001D1B4 /* EditControlComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC2676F161231CD00B054E4 /* EditControlComponent.m */; };
-		AFA0E209167E1DAA0001D1B4 /* EditTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBADE6416139BD30004492A /* EditTextViewController.m */; };
+		AFA0E209167E1DAA0001D1B4 /* ICATextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBADE6416139BD30004492A /* ICATextViewController.m */; };
 		AFA0E20D167E1DAA0001D1B4 /* FacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFECEE27162190D7007B1293 /* FacebookManager.m */; };
 		AFA0E20E167E1DAA0001D1B4 /* FBAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF44A1621C326006DE700 /* FBAlbum.m */; };
 		AFA0E218167E1DAA0001D1B4 /* FBPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFBF483162206F7006DE700 /* FBPhoto.m */; };
@@ -1421,7 +1430,7 @@
 		AFB63CDA17B278A1009E23EF /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB63CD917B278A1009E23EF /* KxMenu.m */; };
 		AFB63CDB17B278A1009E23EF /* KxMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB63CD917B278A1009E23EF /* KxMenu.m */; };
 		AFB73B4D166FF654007A8DEE /* darkBGPattern1.png in Resources */ = {isa = PBXBuildFile; fileRef = AFB73B4C166FF654007A8DEE /* darkBGPattern1.png */; };
-		AFBADE6516139BD30004492A /* EditTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBADE6416139BD30004492A /* EditTextViewController.m */; };
+		AFBADE6516139BD30004492A /* ICATextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBADE6416139BD30004492A /* ICATextViewController.m */; };
 		AFBB7A49165C00EC00A304D5 /* IAPItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBB7A48165C00EC00A304D5 /* IAPItem.m */; };
 		AFC26770161231CD00B054E4 /* EditControlComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC2676F161231CD00B054E4 /* EditControlComponent.m */; };
 		AFC2A652167201ED00E58AD2 /* darkBGPattern2.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC2A651167201ED00E58AD2 /* darkBGPattern2.png */; };
@@ -1574,7 +1583,7 @@
 		2638A09B17DB5B68000270D8 /* icon_previewSettingWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_previewSettingWhite.png; sourceTree = "<group>"; };
 		2638A0A017DB70C3000270D8 /* AlbumCoverIconBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlbumCoverIconBG.png; sourceTree = "<group>"; };
 		2638A0A317DB712B000270D8 /* AlbumCoverIconBG2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AlbumCoverIconBG2.png; sourceTree = "<group>"; };
-		2644C63A1816C43C00CF1482 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
+		2644C63A1816C43C00CF1482 /* libPods.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libPods.a; path = "Pods/build/Debug-iphoneos/libPods.a"; sourceTree = "<group>"; };
 		264BC57117C891EA00340303 /* IMVTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMVTests.h; sourceTree = "<group>"; };
 		264BC57217C891EA00340303 /* IMVTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMVTests.m; sourceTree = "<group>"; };
 		264BF04417C7A2B700C5A58F /* SettingTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingTests.h; sourceTree = "<group>"; };
@@ -1594,8 +1603,6 @@
 		2683669D17DE0EFC00606F53 /* icon_Preview_playlist-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_Preview_playlist-off.png"; sourceTree = "<group>"; };
 		2683669E17DE0EFC00606F53 /* icon_Preview_playlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_Preview_playlist.png; sourceTree = "<group>"; };
 		2683669F17DE0EFC00606F53 /* icon_Preview_share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_Preview_share.png; sourceTree = "<group>"; };
-		26859F1317CB8C06000099B0 /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
-		26859F1417CB8C06000099B0 /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
 		26859F1817CB8C5E000099B0 /* SetStrokeColorCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetStrokeColorCommand.h; sourceTree = "<group>"; };
 		26859F1917CB8C5E000099B0 /* SetStrokeColorCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetStrokeColorCommand.m; sourceTree = "<group>"; };
 		26859F2217CB9A17000099B0 /* UnlockPasswordCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnlockPasswordCommand.h; sourceTree = "<group>"; };
@@ -1729,6 +1736,18 @@
 		26DD866B17F540F0009FC0D6 /* LandScapeNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LandScapeNavigationController.m; sourceTree = "<group>"; };
 		26DF210518051B9D0082B196 /* iCAInstructionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCAInstructionViewController.h; sourceTree = "<group>"; };
 		26DF210618051B9D0082B196 /* iCAInstructionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCAInstructionViewController.m; sourceTree = "<group>"; };
+		26E15D971818BF7500AFAFA8 /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		26E15D981818BF7500AFAFA8 /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
+		26E15D991818BF7500AFAFA8 /* StartupCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartupCommand.h; sourceTree = "<group>"; };
+		26E15D9A1818BF7500AFAFA8 /* StartupCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartupCommand.m; sourceTree = "<group>"; };
+		26E15D9F1818BF9E00AFAFA8 /* ICAStartupCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICAStartupCommand.h; sourceTree = "<group>"; };
+		26E15DA01818BF9E00AFAFA8 /* ICAStartupCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAStartupCommand.m; sourceTree = "<group>"; };
+		26E15DAE1818F36000AFAFA8 /* Validator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Validator.h; sourceTree = "<group>"; };
+		26E15DAF1818F36000AFAFA8 /* Validator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Validator.m; sourceTree = "<group>"; };
+		26E15DB21818F4BC00AFAFA8 /* EnterPreviewValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnterPreviewValidator.h; sourceTree = "<group>"; };
+		26E15DB31818F4BC00AFAFA8 /* EnterPreviewValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnterPreviewValidator.m; sourceTree = "<group>"; };
+		26E15DB61818F60C00AFAFA8 /* ICAValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICAValidator.h; sourceTree = "<group>"; };
+		26E15DB71818F60C00AFAFA8 /* ICAValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICAValidator.m; sourceTree = "<group>"; };
 		26E456E117C613EB0062AAF8 /* IndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndicatorView.h; sourceTree = "<group>"; };
 		26E456E217C613EB0062AAF8 /* IndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndicatorView.m; sourceTree = "<group>"; };
 		26E5C0BF17F01EC900520692 /* SPGripViewBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPGripViewBorderView.h; sourceTree = "<group>"; };
@@ -2317,8 +2336,8 @@
 		AFB63CD817B278A1009E23EF /* KxMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KxMenu.h; sourceTree = "<group>"; };
 		AFB63CD917B278A1009E23EF /* KxMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KxMenu.m; sourceTree = "<group>"; };
 		AFB73B4C166FF654007A8DEE /* darkBGPattern1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = darkBGPattern1.png; path = AlbumEdit/darkBGPattern1.png; sourceTree = "<group>"; };
-		AFBADE6316139BD30004492A /* EditTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditTextViewController.h; sourceTree = "<group>"; };
-		AFBADE6416139BD30004492A /* EditTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditTextViewController.m; sourceTree = "<group>"; };
+		AFBADE6316139BD30004492A /* ICATextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICATextViewController.h; sourceTree = "<group>"; };
+		AFBADE6416139BD30004492A /* ICATextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICATextViewController.m; sourceTree = "<group>"; };
 		AFBB7A47165C00EC00A304D5 /* IAPItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPItem.h; sourceTree = "<group>"; };
 		AFBB7A48165C00EC00A304D5 /* IAPItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPItem.m; sourceTree = "<group>"; };
 		AFBC5B9015FA17540098FAF8 /* Protocols.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Protocols.h; sourceTree = "<group>"; };
@@ -2529,8 +2548,6 @@
 		26859F2717CB9F44000099B0 /* Command */ = {
 			isa = PBXGroup;
 			children = (
-				26859F1317CB8C06000099B0 /* Command.h */,
-				26859F1417CB8C06000099B0 /* Command.m */,
 				26859F2217CB9A17000099B0 /* UnlockPasswordCommand.h */,
 				26859F2317CB9A17000099B0 /* UnlockPasswordCommand.m */,
 				26859F1817CB8C5E000099B0 /* SetStrokeColorCommand.h */,
@@ -2685,12 +2702,40 @@
 		26DF2104180511070082B196 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				26E15DAD1818F33200AFAFA8 /* Validator */,
+				26E15D961818BF7500AFAFA8 /* Command */,
 				AF490CA115BA94B50071D92A /* PhotoAlbumVC */,
 				AF9DE2371605CE210029CEF9 /* InfoVC */,
 				AF9DE25B160610860029CEF9 /* Instruction */,
 				2663B081180AF9BD00F785A6 /* AdView */,
 			);
 			name = Modules;
+			sourceTree = "<group>";
+		};
+		26E15D961818BF7500AFAFA8 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				26E15D971818BF7500AFAFA8 /* Command.h */,
+				26E15D981818BF7500AFAFA8 /* Command.m */,
+				26E15D991818BF7500AFAFA8 /* StartupCommand.h */,
+				26E15D9A1818BF7500AFAFA8 /* StartupCommand.m */,
+				26E15D9F1818BF9E00AFAFA8 /* ICAStartupCommand.h */,
+				26E15DA01818BF9E00AFAFA8 /* ICAStartupCommand.m */,
+			);
+			path = Command;
+			sourceTree = "<group>";
+		};
+		26E15DAD1818F33200AFAFA8 /* Validator */ = {
+			isa = PBXGroup;
+			children = (
+				26E15DAE1818F36000AFAFA8 /* Validator.h */,
+				26E15DAF1818F36000AFAFA8 /* Validator.m */,
+				26E15DB61818F60C00AFAFA8 /* ICAValidator.h */,
+				26E15DB71818F60C00AFAFA8 /* ICAValidator.m */,
+				26E15DB21818F4BC00AFAFA8 /* EnterPreviewValidator.h */,
+				26E15DB31818F4BC00AFAFA8 /* EnterPreviewValidator.m */,
+			);
+			path = Validator;
 			sourceTree = "<group>";
 		};
 		26E5C0BE17F01EC900520692 /* ZDStickerView */ = {
@@ -2976,8 +3021,8 @@
 			children = (
 				262670651809633700834683 /* TextViewController.h */,
 				262670661809633700834683 /* TextViewController.m */,
-				AFBADE6316139BD30004492A /* EditTextViewController.h */,
-				AFBADE6416139BD30004492A /* EditTextViewController.m */,
+				AFBADE6316139BD30004492A /* ICATextViewController.h */,
+				AFBADE6416139BD30004492A /* ICATextViewController.m */,
 				2626706E1809738400834683 /* TextSettingViewController.h */,
 				2626706F1809738400834683 /* TextSettingViewController.m */,
 				262670721809792300834683 /* LineScrollView.h */,
@@ -5252,12 +5297,13 @@
 				26DD866C17F540F0009FC0D6 /* LandScapeNavigationController.m in Sources */,
 				AFFC43A216120362003AAB45 /* FileManager.m in Sources */,
 				AFC26770161231CD00B054E4 /* EditControlComponent.m in Sources */,
-				AFBADE6516139BD30004492A /* EditTextViewController.m in Sources */,
+				AFBADE6516139BD30004492A /* ICATextViewController.m in Sources */,
 				AFECEE28162190D8007B1293 /* FacebookManager.m in Sources */,
 				AFFBF44B1621C326006DE700 /* FBAlbum.m in Sources */,
 				AFFBF484162206F7006DE700 /* FBPhoto.m in Sources */,
 				26094D8F1808526100049931 /* SDImageCache.m in Sources */,
 				26094D8B1808526100049931 /* iCarousel.m in Sources */,
+				26E15DB41818F4BC00AFAFA8 /* EnterPreviewValidator.m in Sources */,
 				57D37425163B1A9C0081C028 /* PathImageView.m in Sources */,
 				57A5EF0D163C637E00C8A370 /* PhotoEditRahmenView.m in Sources */,
 				26094D991808526100049931 /* UIButton+WebCache.m in Sources */,
@@ -5271,6 +5317,7 @@
 				2663B07D180AF3EC00F785A6 /* ICAAdView.m in Sources */,
 				AF222799165E3C6E00C0CED8 /* MomentShareView.m in Sources */,
 				AF8D62D01664D05B00CCD6DD /* CoverModel.m in Sources */,
+				26E15D9B1818BF7500AFAFA8 /* Command.m in Sources */,
 				AF0745551670C323005693C3 /* ImageConstentWidthCell.m in Sources */,
 				26C9F3CF17F13BC1008ACB53 /* EditSideControlViewController.m in Sources */,
 				AF12F8F717A657A200938805 /* IFFiltersViewController.m in Sources */,
@@ -5288,12 +5335,14 @@
 				AF12F92517A657A300938805 /* IFRiseFilter.m in Sources */,
 				AF12F92717A657A300938805 /* IFRotationFilter.m in Sources */,
 				AF12F92917A657A300938805 /* IFSierraFilter.m in Sources */,
+				26E15DB01818F36000AFAFA8 /* Validator.m in Sources */,
 				AF12F92B17A657A300938805 /* IFSutroFilter.m in Sources */,
 				AF12F92D17A657A300938805 /* IFToasterFilter.m in Sources */,
 				AF12F92F17A657A300938805 /* IFValenciaFilter.m in Sources */,
 				262670701809738400834683 /* TextSettingViewController.m in Sources */,
 				AF12F93117A657A300938805 /* IFWaldenFilter.m in Sources */,
 				AF12F93317A657A300938805 /* IFXproIIFilter.m in Sources */,
+				26E15DB81818F60C00AFAFA8 /* ICAValidator.m in Sources */,
 				262670671809633700834683 /* TextViewController.m in Sources */,
 				AF12F93517A657A300938805 /* IFImageFilter.m in Sources */,
 				AF12F93717A657A300938805 /* IFVideoCamera.m in Sources */,
@@ -5329,9 +5378,9 @@
 				260D5BDC17C66CEC00AA8745 /* SBJsonBase.m in Sources */,
 				26094D911808526100049931 /* SDWebImageDecoder.m in Sources */,
 				260D5BDE17C66CEC00AA8745 /* SBJsonParser.m in Sources */,
+				26E15D9D1818BF7500AFAFA8 /* StartupCommand.m in Sources */,
 				260D5BE017C66CEC00AA8745 /* SBJsonWriter.m in Sources */,
 				264BF05B17C7B84000C5A58F /* SMPageControl.m in Sources */,
-				26859F1517CB8C06000099B0 /* Command.m in Sources */,
 				26E5C0C517F01EC900520692 /* SPGripViewBorderView.m in Sources */,
 				26DF210718051B9D0082B196 /* iCAInstructionViewController.m in Sources */,
 				26859F1A17CB8C5E000099B0 /* SetStrokeColorCommand.m in Sources */,
@@ -5341,6 +5390,7 @@
 				26FFD05E17CC86FD000B2AAA /* EAKxMenu.m in Sources */,
 				26C9F3D317F1AA2C008ACB53 /* MomentChangeBGAlbumsTableViewController.m in Sources */,
 				2602827C17EE7818006EB715 /* PDFActivity.m in Sources */,
+				26E15DA11818BF9E00AFAFA8 /* ICAStartupCommand.m in Sources */,
 				26FFD06A17CCE1B8000B2AAA /* AlbumPhotoTableViewController.m in Sources */,
 				262670121809028E00834683 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				26094D9B1808526100049931 /* UIImageView+WebCache.m in Sources */,
@@ -5387,12 +5437,13 @@
 				26DD866D17F540F0009FC0D6 /* LandScapeNavigationController.m in Sources */,
 				AFA0E207167E1DAA0001D1B4 /* FileManager.m in Sources */,
 				AFA0E208167E1DAA0001D1B4 /* EditControlComponent.m in Sources */,
-				AFA0E209167E1DAA0001D1B4 /* EditTextViewController.m in Sources */,
+				AFA0E209167E1DAA0001D1B4 /* ICATextViewController.m in Sources */,
 				AFA0E20D167E1DAA0001D1B4 /* FacebookManager.m in Sources */,
 				AFA0E20E167E1DAA0001D1B4 /* FBAlbum.m in Sources */,
 				AFA0E218167E1DAA0001D1B4 /* FBPhoto.m in Sources */,
 				26094D901808526100049931 /* SDImageCache.m in Sources */,
 				26094D8C1808526100049931 /* iCarousel.m in Sources */,
+				26E15DB51818F4BC00AFAFA8 /* EnterPreviewValidator.m in Sources */,
 				AFA0E221167E1DAA0001D1B4 /* PathImageView.m in Sources */,
 				AFA0E223167E1DAA0001D1B4 /* PhotoEditRahmenView.m in Sources */,
 				26094D9A1808526100049931 /* UIButton+WebCache.m in Sources */,
@@ -5406,6 +5457,7 @@
 				2663B07E180AF3EC00F785A6 /* ICAAdView.m in Sources */,
 				AFA0E230167E1DAA0001D1B4 /* MomentShareView.m in Sources */,
 				AFA0E231167E1DAA0001D1B4 /* CoverModel.m in Sources */,
+				26E15D9C1818BF7500AFAFA8 /* Command.m in Sources */,
 				AFA0E233167E1DAA0001D1B4 /* ImageConstentWidthCell.m in Sources */,
 				26C9F3D017F13BC1008ACB53 /* EditSideControlViewController.m in Sources */,
 				AF12F8F817A657A200938805 /* IFFiltersViewController.m in Sources */,
@@ -5423,12 +5475,14 @@
 				AF12F92617A657A300938805 /* IFRiseFilter.m in Sources */,
 				AF12F92817A657A300938805 /* IFRotationFilter.m in Sources */,
 				AF12F92A17A657A300938805 /* IFSierraFilter.m in Sources */,
+				26E15DB11818F36000AFAFA8 /* Validator.m in Sources */,
 				AF12F92C17A657A300938805 /* IFSutroFilter.m in Sources */,
 				AF12F92E17A657A300938805 /* IFToasterFilter.m in Sources */,
 				AF12F93017A657A300938805 /* IFValenciaFilter.m in Sources */,
 				262670711809738400834683 /* TextSettingViewController.m in Sources */,
 				AF12F93217A657A300938805 /* IFWaldenFilter.m in Sources */,
 				AF12F93417A657A300938805 /* IFXproIIFilter.m in Sources */,
+				26E15DB91818F60C00AFAFA8 /* ICAValidator.m in Sources */,
 				262670681809633700834683 /* TextViewController.m in Sources */,
 				AF12F93617A657A300938805 /* IFImageFilter.m in Sources */,
 				AF12F93817A657A300938805 /* IFVideoCamera.m in Sources */,
@@ -5464,9 +5518,9 @@
 				260D5BDD17C66CEC00AA8745 /* SBJsonBase.m in Sources */,
 				26094D921808526100049931 /* SDWebImageDecoder.m in Sources */,
 				260D5BDF17C66CEC00AA8745 /* SBJsonParser.m in Sources */,
+				26E15D9E1818BF7500AFAFA8 /* StartupCommand.m in Sources */,
 				260D5BE117C66CEC00AA8745 /* SBJsonWriter.m in Sources */,
 				264BF05C17C7B84000C5A58F /* SMPageControl.m in Sources */,
-				26859F1617CB8C06000099B0 /* Command.m in Sources */,
 				26E5C0C617F01EC900520692 /* SPGripViewBorderView.m in Sources */,
 				26DF210818051B9D0082B196 /* iCAInstructionViewController.m in Sources */,
 				26859F1B17CB8C5E000099B0 /* SetStrokeColorCommand.m in Sources */,
@@ -5476,6 +5530,7 @@
 				26FFD05F17CC86FD000B2AAA /* EAKxMenu.m in Sources */,
 				26C9F3D417F1AA2C008ACB53 /* MomentChangeBGAlbumsTableViewController.m in Sources */,
 				2602827D17EE7818006EB715 /* PDFActivity.m in Sources */,
+				26E15DA21818BF9E00AFAFA8 /* ICAStartupCommand.m in Sources */,
 				26FFD06B17CCE1B8000B2AAA /* AlbumPhotoTableViewController.m in Sources */,
 				262670131809028E00834683 /* ALAssetsLibrary+CustomPhotoAlbum.m in Sources */,
 				26094D9C1808526100049931 /* UIImageView+WebCache.m in Sources */,
@@ -5510,7 +5565,6 @@
 				260A5D5A17C9DAEC00C58B1E /* Album.m in Sources */,
 				260A5D5D17C9EC4600C58B1E /* AlbumManagerTests.m in Sources */,
 				260A5D5E17C9EC7E00C58B1E /* AlbumManager.m in Sources */,
-				26859F1717CB8C06000099B0 /* Command.m in Sources */,
 				26859F1C17CB8C5E000099B0 /* SetStrokeColorCommand.m in Sources */,
 				26859F2617CB9A17000099B0 /* UnlockPasswordCommand.m in Sources */,
 				26221A0A17CC4D6C00548E17 /* CommandAlertView.m in Sources */,

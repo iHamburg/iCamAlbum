@@ -180,8 +180,8 @@ static id sharedInstance;
     if (self) {
         
         //load all album Name from album.plist
-        L();
-        report_memory();
+//        L();
+//        report_memory();
         
         _allAlbums = [NSMutableArray array];
         

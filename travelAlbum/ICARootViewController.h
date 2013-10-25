@@ -12,27 +12,11 @@
 #import "FacebookManager.h"
 #import "SlideViewController.h"
 #import "CoachView.h"
+//#import <ShipLib/ShipLib.h>
 
-
-//
 #define kCoachEditOffKey @"coachEditOff"
 #define kCoachManagerOffKey @"coachManagerOff"
 
-
-typedef enum {
-    CommandNone,
-    CommandChangeBGImage,
-    CommandChangeCoverImage,
-    CommandValidateEnterEditAlbum,
-    CommandValidateEnterPreviewAlbum,
-    CommandValidateChangeAlbumTitle,
-    CommandValidateChangeCoverImage,
-    CommandValidateShareAlbum,
-    CommandValidateDeleteAlbum,
-    CommandMax
-}CommandType;
-
-extern CommandType _command;
 
 void showLoading(void);
 void showMsg(NSString*);
@@ -56,7 +40,7 @@ void showMsg(NSString*);
 @property (nonatomic, strong) AppViewController *editVC;
 @property (nonatomic, strong) AlbumPreviewViewController *previewVC;
 @property (nonatomic, strong) AlbumManagerViewController *managerVC;
-@property (nonatomic, assign) CommandType command;
+
 
 
 - (void)setupCacheDocuments;

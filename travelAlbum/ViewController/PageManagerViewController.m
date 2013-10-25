@@ -7,7 +7,7 @@
 //
 
 #import "PageManagerViewController.h"
-
+#import "ICAAdView.h"
 
 @implementation PageManagerViewController
 
@@ -86,16 +86,15 @@
     
     [self loadBottomBanner];
 
-        carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0,0, _w, _h)];
-//    carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0,0, _w, _h - CGRectGetMaxY(topBanner.frame) - bottomBanner.height)];
-//    carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0, 0, _w, _h- 3* bottomBanner.height ) ];
+    carousel = [[iCarousel alloc] initWithFrame:CGRectMake(0,0, _w, _h)];
+
 	carousel.delegate = self;
 	carousel.dataSource = self;
-    //	carousel.contentOffset = itemOffset;
+
 	carousel.autoresizingMask = kAutoResize;
 	[carousel addGestureRecognizer:[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(handleTap:)]];
     carousel.type = iCarouselTypeCoverFlow2;
-//    carousel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.6];
+
     
     [self loadControlBanner];
 
@@ -107,6 +106,13 @@
   
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self layoutADBanner:[ICAAdView sharedInstance]];
+    
+}
+
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
@@ -115,7 +121,8 @@
     [self switchToIndex:self.momentManager.currentMomentIndex];
     
     [[carousel currentItemView] addSubview:controlBanner];
-//     NSLog(@"coding element # %@",self.momentManager.currentMoment.codingElements);
+    
+
 }
 - (void)didReceiveMemoryWarning
 {
@@ -234,11 +241,14 @@
 			
             
             //            NSLog(@"svContainer # %@",svContainer);
+            [bottomBanner setOrigin:CGPointMake(0, _h -bottomBanner.height - banner.height)];
             [banner setOrigin:CGPointMake(0, _h- banner.height)];
+            
             
 		}
 		else{
 			
+            [bottomBanner setOrigin:CGPointMake(0, _h -bottomBanner.height)];
 			[banner setOrigin:CGPointMake(0, _h)];
 		}
 		

@@ -10,7 +10,7 @@
 #import "ICARootViewController.h"
 #import "AlbumManager.h"
 #import "MomentManager.h"
-#import "AdView.h"
+#import "ICAAdView.h"
 
 @interface AppViewController : UIViewController<UIAlertViewDelegate>{
 
@@ -22,6 +22,7 @@
 	ICARootViewController *root;
     Album *_album;
 
+    NSUndoManager *undoManager;
     
     UIPopoverController *pop;
 }

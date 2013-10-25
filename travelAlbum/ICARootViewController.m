@@ -34,7 +34,6 @@
 #import "FontNameLineScrollView.h"
 #import "MBProgressHUD.h"
 
-#define kSaveWhenUsingInterval 120
 
 typedef int (^MyBlockType)(int);
 
@@ -53,7 +52,6 @@ void showMsg(NSString* msg){
 @implementation ICARootViewController
 
 
-CommandType _command;
 
 
 @synthesize editVC, previewVC,managerVC;
@@ -86,7 +84,12 @@ CommandType _command;
 - (void)loadView{
     [super loadView];
 
+}
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear: animated];
+    
+//    [self printer:nil];
 }
 
 - (void)loadAdView{
@@ -260,7 +263,7 @@ CommandType _command;
         
     } completion:^(BOOL finished) {
         //        NSLog(@"animation finished");
-        [self.previewVC layoutADBanner:[AdView sharedInstance]];
+//        [self.previewVC layoutADBanner:[AdView sharedInstance]];
         
         if ([[AlbumManager sharedInstance] isCurrentAlbumEmpty]) {
             [previewVC hintEmptyAlbum];
@@ -340,7 +343,7 @@ CommandType _command;
         managerVC.view.transform = CGAffineTransformIdentity;
         
     } completion:^(BOOL finished) {
-        [managerVC layoutADBanner:[AdView sharedInstance]];
+//        [managerVC layoutADBanner:[AdView sharedInstance]];
        
         [self.previewVC.view removeFromSuperview];
          previewVC = nil;
@@ -355,8 +358,6 @@ CommandType _command;
 		infoVC.view.alpha = 1;
         infoVC.delegate = self;
 	}
-
-
 
      [UIView transitionFromView:managerVC.view toView:infoVC.view duration:0.8 options:UIViewAnimationOptionTransitionFlipFromLeft completion:nil];
 
@@ -461,7 +462,7 @@ CommandType _command;
     
 //    [self testView:[[FontNameLineScrollView alloc] initWithFrame:CGRectMake(100, 100, 400, 60)]];
     
-    [self expandToEditVC];
+//    [self expandToEditVC];
  
 //    UIView *window1 =  [[[UIApplication sharedApplication] windows] objectAtIndex:0];
 //    UIView *window2 = UIApplication.sharedApplication.keyWindow;
@@ -470,7 +471,11 @@ CommandType _command;
 //    NSLog(@"abc # %@");
     
 //    [self testHUDText];
+    
+//    [self printer:nil];
 }
+
+
 
 - (void)testHUDText{
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];

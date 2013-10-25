@@ -12,7 +12,7 @@
 
 @interface PageManagerViewController : UIViewController<iCarouselDataSource,iCarouselDelegate>{
 
-//    UIView *topBanner;
+
     UIView *bottomBanner;
     UIView *controlBanner;
     UILabel *titleL;

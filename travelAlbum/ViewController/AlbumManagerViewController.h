@@ -9,6 +9,7 @@
 #import "AppViewController.h"
 #import "iCarousel.h"
 #import "AlbumsTableViewController.h"
+#import "ICAValidator.h"
 
 typedef void (^AlertDidDoneBlock)(void);
 
@@ -27,10 +28,11 @@ typedef void (^AlertDidDoneBlock)(void);
     UIPageControl *pageControl;
     
     AlbumsTableViewController *photoAlbumVC;
+    ICAValidator *validator;
     
     UIAlertView *wrongPasswordAlert;
     UIAlertView *titleAlert, *newAlbumTitleAlert, *deleteAlbumAlert, *setupPasswordAlert, *_setupAgainPasswordAlert, *unlockPasswordAlert;
-    UIAlertView *validatePasswordAlert, *importPhotosAlert;
+    UIAlertView *importPhotosAlert;
     
     NSString *password;
     NSMutableArray *importImages;

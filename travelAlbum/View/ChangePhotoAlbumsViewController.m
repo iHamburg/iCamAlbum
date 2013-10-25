@@ -45,18 +45,11 @@
 	
 	if (section == 0) {
         
-        
             return 1;
       	}
 	else if(section == 1){
-        
-//        if (isAlbumOpened) {
-//            return [assetGroups count] + 1;
-//        }
-//        else
-//            return 1;
 
-        return [assetGroups count];
+        return [assetGroups count] + 2;
     }
     
     return 1;
@@ -78,30 +71,21 @@
 
 	}
   	else if (indexPath.section == 1){ //photoalbum
-//		if (indexPath.row == 0) {
-//            cell.imageView.image = [UIImage imageNamed:@"icon_AlbumVC_photoalbum.png"];
-//            cell.textLabel.text = @"Photo Album";
-//            
-//        }
-//        else{
-//
-//            
-//            ALAssetsGroup *g = (ALAssetsGroup*)[assetGroups objectAtIndex:indexPath.row - 1];
-//            NSInteger gCount = [g numberOfAssets];
-//
-//            cell.textLabel.font = [UIFont fontWithName:kFontName size:isPad?28:14];
-//            cell.textLabel.text = [NSString stringWithFormat:@"       %@ (%d)",[g valueForProperty:ALAssetsGroupPropertyName], gCount];
-//            [cell.imageView setImage:[UIImage imageWithCGImage:[g posterImage]]];
-//            
-//
-//        }
 
-        ALAssetsGroup *g = (ALAssetsGroup*)[assetGroups objectAtIndex:indexPath.row ];
-        NSInteger gCount = [g numberOfAssets];
-        
-        cell.textLabel.text = [NSString stringWithFormat:@"%@ (%d)",[g valueForProperty:ALAssetsGroupPropertyName], gCount];
-        [cell.imageView setImage:[UIImage imageWithCGImage:[g posterImage]]];
-        
+
+        int row = indexPath.row;
+        if (row < [assetGroups count]) {
+            ALAssetsGroup *g = (ALAssetsGroup*)[assetGroups objectAtIndex:indexPath.row ];
+            NSInteger gCount = [g numberOfAssets];
+            
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ (%d)",[g valueForProperty:ALAssetsGroupPropertyName], gCount];
+            [cell.imageView setImage:[UIImage imageWithCGImage:[g posterImage]]];
+            
+        }
+        else{
+            cell.textLabel.text = nil;
+            cell.imageView.image = nil;
+        }
 
     }
 }
@@ -126,27 +110,6 @@
   
     }
 	else if (indexPath.section == 1) {
-		
-//        if (indexPath.row == 0) {
-//            
-//            NSMutableArray *indexPaths = [NSMutableArray arrayWithCapacity:[assetGroups count]];
-//            for (int i = 0; i<[assetGroups count]; i++) {
-//                 NSIndexPath *path = [NSIndexPath indexPathForRow:[indexPath row]+1+i inSection:[indexPath section]];
-//                [indexPaths addObject:path];
-//            }
-//
-//            if (!isAlbumOpened) {
-//                isAlbumOpened = YES;
-//                [tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
-//            }
-//            else{
-//                isAlbumOpened = NO;
-//                [tableView deleteRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
-//                
-//            }
-//            
-//        }
-//        else{
             ALAssetsGroup *group = assetGroups[indexPath.row ];
             [group setAssetsFilter:[ALAssetsFilter allPhotos]];
             
@@ -166,7 +129,7 @@
 
         }
         
-//        }
+
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

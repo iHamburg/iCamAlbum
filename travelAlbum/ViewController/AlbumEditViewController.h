@@ -14,7 +14,7 @@
 #import "MomentView.h"
 #import "MomentShareView.h"
 #import "MomentManager.h"
-
+#import "ICAValidator.h"
 
 
 //@class EditSidebar;
@@ -30,13 +30,14 @@
     PhotoCropViewController *photoCropVC;
     EditPhotoViewController *photoVC;  // PhotoEdit
     PageManagerViewController *pageManagerVC;
-    
-    EditSideControlViewController *editSideControlVC;
 
+    EditSideControlViewController *editSideControlVC;
+    UINavigationController *editSideNav;
     
 	MomentShareView *momentShareV;
 	MomentView *momentView;
 	
+    ICAValidator *validator;
 	
 	UIView *momentContainer;  // 为什么要container？
     UIView *bottomBanner;

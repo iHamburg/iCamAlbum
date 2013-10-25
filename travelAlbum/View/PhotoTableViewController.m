@@ -25,12 +25,12 @@ static CGFloat margin = 4;;
     [super loadView];
     
     
-//    thumbs = [NSMutableArray array];
+
 	thumbsInRow = [NSMutableArray array];
 
 	_numOfColumn = 4;
 	_thumbSize = isPad?CGSizeMake(75, 75):CGSizeMake(48, 48);
-//	margin = isPad?6:4;
+
 	
 	self.view.backgroundColor = [UIColor blackColor];
 
@@ -45,8 +45,6 @@ static CGFloat margin = 4;;
     
     /// 这里控制pop+nav 的size！！
     self.contentSizeForViewInPopover = CGSizeMake(self.view.width, self.view.height);
-//    UIBarButtonItem *backBB = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(back:)];
-//    self.navigationController.navigationItem.rightBarButtonItem = backBB;
 
 }
 
@@ -75,7 +73,7 @@ static CGFloat margin = 4;;
 		num = ceil((float)allCount/_numOfColumn);
 	}
 
-	return num;
+	return num + 2;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

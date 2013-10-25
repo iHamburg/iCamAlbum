@@ -37,6 +37,7 @@
 @property (nonatomic, readonly, assign) BOOL isCurrentAlbumLoved;
 @property (nonatomic, readonly, assign) BOOL isCurrentAlbumLocked;
 @property (nonatomic, readonly, assign) BOOL isCurrentAlbumEmpty;
+
 - (Album*)musterAlbum;
 - (Album*)newAlbum;
 

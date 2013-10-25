@@ -17,6 +17,7 @@
 #import "ImagePhotoTableViewController.h"
 #import "BGViewController.h"
 #import "PDFActivity.h"
+#import "Validator.h"
 
 #define coverSize CGSizeMake(isPad?600:300, isPad?400:220)
 #define itemSpace (isPad?700:350)
@@ -222,6 +223,13 @@
 //    L();
     [super viewWillAppear:animated];
     
+    undoManager = [[NSUndoManager alloc] init];
+    undoManager.levelsOfUndo = 1;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(undoManagerDidUnRedo:) name:NSUndoManagerDidUndoChangeNotification object:undoManager];
+}
+
+- (void)undoManagerDidUnRedo:(NSNotification*)notification{
+    L();
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -230,15 +238,31 @@
     [self pageSwitchToCurrentAlbum];
     [self updateAlbum];
     
+    [self becomeFirstResponder];
 //    NSLog(@"manager # %@, topbanner # %@",self.view,topBanner);
+    
+//    validator = [[ICAValidator alloc] initWithPassword:@"abc"];
+//    validator.completionHandler = ^(BOOL completed){
+//        NSLog(@"completed # %d",completed);
+//    };
+//    [validator validate];
 
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     L();
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:NSUndoManagerDidUndoChangeNotification object:undoManager];
+    undoManager = nil;
+    
     [super viewWillDisappear:animated];
 }
 
+- (void)viewDidDisappear:(BOOL)animated{
+    
+    [super viewDidDisappear:animated];
+    
+    [self resignFirstResponder];
+}
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -389,7 +413,7 @@
 	UIImage *originalImage = info[UIImagePickerControllerOriginalImage];
 //    NSURL *url = info[UIImagePickerControllerMediaURL];
 //    [importImages addObject:originalImage];
-//    NSLog(@"edit pic # %@, origi pic # %@,url # %@",editedImage,originalImage,url.absoluteString);
+
   
     UIImage *photoPreviewImage = [originalImage imageByScalingAndCroppingForSize:CGSizeMake(kwPhotoPreviewImage, kwPhotoPreviewImage)];
     
@@ -526,17 +550,17 @@
     [deleteAlbumAlert show];
 }
 
-- (void)showValidatePasswordAlert{
-    if (!validatePasswordAlert) {
-        validatePasswordAlert = [[UIAlertView alloc]initWithTitle:SEnterPWToValidate message:nil delegate:self cancelButtonTitle:LString(@"Cancel") otherButtonTitles:LString(@"Done"), nil];
-        validatePasswordAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
-
-    }
-    
-    [[validatePasswordAlert textFieldAtIndex:0] setText:nil];
-    
-    [validatePasswordAlert show];
-}
+//- (void)showValidatePasswordAlert{
+//    if (!validatePasswordAlert) {
+//        validatePasswordAlert = [[UIAlertView alloc]initWithTitle:SEnterPWToValidate message:nil delegate:self cancelButtonTitle:LString(@"Cancel") otherButtonTitles:LString(@"Done"), nil];
+//        validatePasswordAlert.alertViewStyle = UIAlertViewStyleSecureTextInput;
+//
+//    }
+//    
+//    [[validatePasswordAlert textFieldAtIndex:0] setText:nil];
+//    
+//    [validatePasswordAlert show];
+//}
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex{
        
@@ -609,88 +633,32 @@
 
         }
     }
-
-    else if(alertView == validatePasswordAlert){
-        UITextField *tf = [alertView textFieldAtIndex:0];
-        NSString *title = tf.text;
-
-        
-        if (buttonIndex == 1) {
-            if ( [manager isPasswordCorrect:title]) {
-                switch (_command) {
-//                    case CommandValidateEnterEditAlbum:
-//                        
-//                        [self editAlbum];
-//                        break;
-                    case CommandValidateEnterPreviewAlbum:
-                        
-                        [self previewAlbum];
-                        break;
-                    case CommandValidateChangeCoverImage:
-                        _command = CommandChangeCoverImage;
-                        [self showPhotoAlbumVC:CGRectMake(_w/2, _h/2, 10, 10)];
-
-                        break;
-                    case CommandValidateChangeAlbumTitle:
-                        
-                        [self showChangeTitleAlert];
-                        break;
-                    case CommandValidateDeleteAlbum:
-                        [self showDeleteAlbumAlert];
-                        break;
-                    case CommandValidateShareAlbum:
-                        
-                        [self showShareAlbum:shareRect];
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else{
-                
-                showMsg(SEnterWrongPW);
-            }
-        
-        }
-    }
+    
+//        }
+//    }
     
     alertView = nil;
-    report_memory();
+//    report_memory();
 }
 
 
 
 #pragma mark - PhotoAlbum
-//- (void)albumTableViewController:(AlbumsTableViewController *)photoAlbum didSelectedImage:(UIImage *)image{
-//    switch (_command) {
-//        case CommandChangeBGImage:
-//            [self changeBGWithImage:image];
-//            
-//            break;
-//        case CommandChangeCoverImage:
-//            [self changeCoverWithImage:image];
-//
-//            break;
-//        default:
-//            break;
-//    }
-//    
-//    
-//}
+
 
 - (void)albumTableViewController:(AlbumsTableViewController *)photoAlbum didSelectedImgName:(NSString *)imgName{
-    if (_command == CommandChangeCoverImage) {
-      
+//    if (_command == CommandChangeCoverImage) {
+    
         UIImage *image = [UIImage imageWithContentsOfFileName:imgName];
         
         [self changeCoverWithImage:image];
-    }
+//    }
 }
 
 - (void)albumTableViewController:(AlbumsTableViewController *)photoAlbum didSelectedALAsset:(ALAsset *)asset{
 
 
-    if (_command == CommandChangeCoverImage) {
+//    if (_command == CommandChangeCoverImage) {
         ALAssetRepresentation *rep = [asset defaultRepresentation];
         // ipad 最大1024， ipadretina,最大2048
         CGImageRef iref = [rep fullScreenImage];
@@ -698,7 +666,7 @@
         UIImage *largeimage = [UIImage imageWithCGImage:iref scale:kRetinaScale orientation:UIImageOrientationUp];
 
         [self changeCoverWithImage:largeimage];
-    }
+//    }
     
     if (isPad) {
 //        [root dismissPopVC];
@@ -763,12 +731,14 @@
 
 - (void)buttonClicked:(id)sender{
     L();
-    if (sender == infoB) {
-        [self toInfo:sender];
-    }
-    else if(sender == addB){
-        [self addAlbum:sender];
-    }
+
+    [undoManager undo];
+//    if (sender == infoB) {
+//        [self toInfo:sender];
+//    }
+//    else if(sender == addB){
+//        [self addAlbum:sender];
+//    }
 
 }
 
@@ -821,9 +791,23 @@
 - (IBAction)deleteAlbum:(id)sender{
 
     if ([manager isCurrentAlbumLocked]) {
-        [self showValidatePasswordAlert];
-        _command = CommandValidateDeleteAlbum;
+        
+       validator = [[ICAValidator alloc] initWithPassword:manager.currentAlbum.password];
+        __weak AlbumManagerViewController *vc = self;
+      
+        validator.completionHandler = ^(BOOL completed){
+            
+            NSLog(@"completed # %d",completed);
+            if (completed) {
+                [vc showDeleteAlbumAlert];
+            }
+            else{
+                
+            }
+            
+        };
     }
+
     else{
         [self showDeleteAlbumAlert];
     }
@@ -848,8 +832,21 @@
 - (IBAction)previewAlbum:(id)sender{
     
     if ([manager isCurrentAlbumLocked]) {
-        [self showValidatePasswordAlert];
-        _command = CommandValidateEnterPreviewAlbum;
+        validator = [[ICAValidator alloc] initWithPassword:manager.currentAlbum.password];
+        
+        __weak AlbumManagerViewController *vc = self;
+
+        validator.completionHandler = ^(BOOL completed){
+            
+//            NSLog(@"completed # %d",completed);
+            if (completed) {
+                [vc previewAlbum];
+            }
+            else{
+                
+            }
+            
+        };
         
     }
     else{
@@ -859,8 +856,22 @@
 
 - (IBAction)toEditAlbum:(id)sender{
     if ([manager isCurrentAlbumLocked]) {
-        [self showValidatePasswordAlert];
-        _command = CommandValidateEnterEditAlbum;
+        validator = [[ICAValidator alloc] initWithPassword:manager.currentAlbum.password];
+        
+        __weak AlbumManagerViewController *vc = self;
+        
+        validator.completionHandler = ^(BOOL completed){
+            
+            //            NSLog(@"completed # %d",completed);
+            if (completed) {
+                [vc toEditAlbum];
+            }
+            else{
+                
+            }
+            
+        };
+
         
     }
     else{
@@ -872,12 +883,26 @@
 - (IBAction)popShareAlbumView:(UIButton*)sender{
 
     
-    shareRect = [self.currentAlbumCover convertRect:[(AlbumCover*)carousel.currentItemView shareButtonRect] toView:self.view];
+     shareRect = [self.currentAlbumCover convertRect:[(AlbumCover*)carousel.currentItemView shareButtonRect] toView:self.view];
  
     
     if ([manager isCurrentAlbumLocked]) {
-        [self showValidatePasswordAlert];
-        _command = CommandValidateShareAlbum;
+
+       validator = [[ICAValidator alloc] initWithPassword:manager.currentAlbum.password];
+
+        __weak AlbumManagerViewController *vc = self;
+        CGRect rect = shareRect;
+        validator.completionHandler = ^(BOOL completed){
+            
+            NSLog(@"completed # %d",completed);
+            if (completed) {
+                [vc showShareAlbum:rect];
+            }
+            else{
+                
+            }
+            
+        };
     }
     else{
         
@@ -931,38 +956,56 @@
     
 }
 
-//
-//- (IBAction)changeBGImage:(UITapGestureRecognizer*)sender{
-//    CGPoint point = [sender locationInView:self.view];
-//    
-//    _command = CommandChangeBGImage;
-//    [self showPhotoAlbumVC:CGRectMake(point.x, point.y, 5, 5)];
-//
-//}
-//
 
 
 - (IBAction)changeCoverImage:(id)sender{
     if ([manager isCurrentAlbumLocked]) {
-        _command = CommandValidateChangeCoverImage;
-        [self showValidatePasswordAlert];
+        validator = [[ICAValidator alloc] initWithPassword:manager.currentAlbum.password];
+        
+        __weak AlbumManagerViewController *vc = self;
+        validator.completionHandler = ^(BOOL completed){
+//            
+
+            if (completed) {
+             
+                  [vc showPhotoAlbumVC:CGRectMake(_w/2, _h/2, 0, 0)];
+            }
+            else{
+                
+            }
+            
+        };
+        [validator validate];
     
     }
     else{
-        _command = CommandChangeCoverImage;
+       
         [self showPhotoAlbumVC:CGRectMake(_w/2, _h/2, 0, 0)];
         
     }
 }
 
 
-/// callback: changeTitleWithStr:
 - (IBAction)changeTitle:(id)sender{
     L();
     
     if ([manager isCurrentAlbumLocked]) {
-        [self showValidatePasswordAlert];
-        _command = CommandValidateChangeAlbumTitle;
+
+        validator = [[ICAValidator alloc] initWithPassword:manager.currentAlbum.password];
+     
+        __weak AlbumManagerViewController *vc = self;
+        validator.completionHandler = ^(BOOL completed){
+          
+            NSLog(@"completed # %d",completed);
+            if (completed) {
+                [vc showChangeTitleAlert];
+            }
+            else{
+                
+            }
+    
+        };
+        [validator validate];
     }
     else{
         [self showChangeTitleAlert];
@@ -1152,7 +1195,6 @@
 - (void)loveCurrentAlbum{
     [manager loveAlbum];
 
-//    [self handleViewLoveCurrentAlbum];
   
 }
 
@@ -1165,13 +1207,20 @@
 }
 - (void)changeTitleWithStr:(NSString*)title{
  
+    NSString *currentTitle = manager.currentAlbum.title;
+    [[undoManager prepareWithInvocationTarget:self] changeTitleWithStr:currentTitle];
+    
     [manager setTitleOfCurrentAlbum:title];
+    
+    [undoManager setActionName:@"Title Change"];
     
     [self reloadCurrentAlbumCover];
 
 }
 
-
+- (BOOL)canBecomeFirstResponder{
+    return YES;
+}
 
 //- (void)changeBGWithImage:(UIImage*)image{
 //    image = [image imageByScalingAndCroppingForSize:CGSizeMake(_w, _h)];
