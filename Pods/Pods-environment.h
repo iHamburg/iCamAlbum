@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Appirater 0
 #define COCOAPODS_VERSION_PATCH_Appirater 2
 
+// CocoaLumberjack
+#define COCOAPODS_POD_AVAILABLE_CocoaLumberjack
+#define COCOAPODS_VERSION_MAJOR_CocoaLumberjack 1
+#define COCOAPODS_VERSION_MINOR_CocoaLumberjack 6
+#define COCOAPODS_VERSION_PATCH_CocoaLumberjack 2
+
 // FoundationExtension
 #define COCOAPODS_POD_AVAILABLE_FoundationExtension
 #define COCOAPODS_VERSION_MAJOR_FoundationExtension 0
@@ -35,6 +41,12 @@
 #define COCOAPODS_VERSION_MAJOR_GIKPopoverBackgroundView_Core 0
 #define COCOAPODS_VERSION_MINOR_GIKPopoverBackgroundView_Core 0
 #define COCOAPODS_VERSION_PATCH_GIKPopoverBackgroundView_Core 1
+
+// KFLogFormatter
+#define COCOAPODS_POD_AVAILABLE_KFLogFormatter
+#define COCOAPODS_VERSION_MAJOR_KFLogFormatter 0
+#define COCOAPODS_VERSION_MINOR_KFLogFormatter 2
+#define COCOAPODS_VERSION_PATCH_KFLogFormatter 0
 
 // SevenSwitch
 #define COCOAPODS_POD_AVAILABLE_SevenSwitch

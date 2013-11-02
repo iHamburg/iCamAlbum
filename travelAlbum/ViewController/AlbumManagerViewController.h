@@ -52,8 +52,20 @@ typedef void (^AlertDidDoneBlock)(void);
 - (IBAction)previewAlbum:(id)sender;
 - (IBAction)toEditAlbum:(id)sender;
 - (IBAction)popShareAlbumView:(id)sender;
+/**
+ *	@brief	Toggle Love
+ *
+ *	@param 	sender 	Button
+ */
 - (IBAction)toggleLoveAlbum:(id)sender;
+
+/**
+ *	@brief	<#Description#>
+ *
+ *	@param 	sender 	<#sender description#>
+ */
 - (IBAction)toggleLockAlbum:(id)sender;
+
 - (IBAction)toInfo:(id)sender;
 - (IBAction)openCamera:(id)sender;
 

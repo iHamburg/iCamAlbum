@@ -239,14 +239,8 @@
     [self updateAlbum];
     
     [self becomeFirstResponder];
-//    NSLog(@"manager # %@, topbanner # %@",self.view,topBanner);
     
-//    validator = [[ICAValidator alloc] initWithPassword:@"abc"];
-//    validator.completionHandler = ^(BOOL completed){
-//        NSLog(@"completed # %d",completed);
-//    };
-//    [validator validate];
-
+//    NSLog(@"%@",NSStringFromCGSize(<#CGSize size#>))
 }
 
 - (void)viewWillDisappear:(BOOL)animated{

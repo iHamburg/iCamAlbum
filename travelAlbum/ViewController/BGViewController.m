@@ -29,6 +29,7 @@
     currentImgName = [bgImgNames randomObject];
     bgV1.image = [UIImage imageWithSystemName:currentImgName];
     
+    
     [self.view addSubview:bgV1];
 }
 
@@ -47,14 +48,9 @@
     [self stopUpdate];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 - (void)update{
-//    L();
+
 
     NSString *newImgName;
     do {
@@ -83,6 +79,8 @@
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(update) object:nil];
 	[self performSelector:@selector(update) withObject:nil afterDelay:kTimerInterval];
 
+    
+    
 }
 
 - (void)beginUpdate{
@@ -94,10 +92,11 @@
     
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(update) object:nil];
     
+
 }
+
 - (NSArray*)loadBGImageNames{
-    //    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:[NSString dataFilePath:@"Material.plist"]];
-    //    return dict[@"PageBGs"];
+  
     
     NSMutableArray *arr = [NSMutableArray array];
     for (int i = 1; i<16; i++) {

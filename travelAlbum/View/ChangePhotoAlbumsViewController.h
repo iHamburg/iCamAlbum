@@ -7,9 +7,10 @@
 //
 
 #import "AlbumsTableViewController.h"
-
-@interface ChangePhotoAlbumsViewController : AlbumsTableViewController{
-    
+#import "EGORefreshTableHeaderView.h"
+@interface ChangePhotoAlbumsViewController : AlbumsTableViewController<EGORefreshTableHeaderDelegate>{
+    EGORefreshTableHeaderView *_refreshHeaderView;
+    BOOL _reloading;
 }
 
 @end
