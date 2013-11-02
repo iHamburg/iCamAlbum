@@ -98,7 +98,7 @@
 
 - (NSArray*)loadBGImageNames{
   
-    
+    // after switch t0 rb1.0
     NSMutableArray *arr = [NSMutableArray array];
     for (int i = 1; i<16; i++) {
         NSString *str = [NSString stringWithFormat:@"AlbumBG_%d.jpg",i];
