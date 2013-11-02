@@ -92,7 +92,7 @@
     
     [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(update) object:nil];
     
-    //
+    //after create rb1.0
 
 }
 
