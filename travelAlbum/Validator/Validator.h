@@ -12,7 +12,6 @@ typedef void (^ValidatorCompletionHandler)(BOOL completed);
 
 @interface Validator : NSObject<UIAlertViewDelegate>{
 
-//    UIAlertView *validatePasswordAlert;
     ValidatorCompletionHandler completionHandler;
 
     

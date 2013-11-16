@@ -4,5 +4,6 @@ pod "UI7Kit"
 pod "Appirater"
 pod "ShipLib"
 pod "KFLogFormatter"
+pod "MBProgressHUD"
 
 

@@ -787,6 +787,7 @@
     if ([manager isCurrentAlbumLocked]) {
         
        validator = [[ICAValidator alloc] initWithPassword:manager.currentAlbum.password];
+      
         __weak AlbumManagerViewController *vc = self;
       
         validator.completionHandler = ^(BOOL completed){

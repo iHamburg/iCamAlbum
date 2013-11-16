@@ -10,7 +10,7 @@
 
 
 @interface ICAValidator : Validator{
-//   __unsafe_unretained AlbumManagerViewController *vc;
+
     NSString *truePW;
 }
 
